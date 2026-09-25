@@ -1,0 +1,376 @@
+/* =========================================================
+   AF7 PRELOADER
+========================================================= */
+
+.af7-loader {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  background: #243146;
+
+  z-index: 99999;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.af7-loader__bg {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.055),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   WATERMARK
+========================================================= */
+
+.af7-loader__watermark {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-family: var(--heading-font);
+
+  font-size: min(52vw, 700px);
+
+  font-weight: 800;
+
+  line-height: 0.7;
+
+  letter-spacing: -0.12em;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.025);
+
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.af7-loader__center {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  width: 180px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 10;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.af7-loader__logo {
+  width: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.af7-loader__logo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   BAR
+========================================================= */
+
+.af7-loader__bar {
+  width: 180px;
+
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.af7-loader__track {
+  position: relative;
+
+  width: 100%;
+  height: 38px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.12),
+    0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   WHITE LIQUID FILL
+========================================================= */
+
+.af7-loader__fill {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 0%;
+
+  border-radius: inherit;
+
+  background: #ffffff;
+
+  box-shadow:
+    5px 0 15px rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   SHINE
+========================================================= */
+
+.af7-loader__shine {
+  position: absolute;
+
+  top: -100%;
+  left: -30%;
+
+  width: 20%;
+  height: 300%;
+
+  transform: rotate(12deg);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+
+  filter: blur(5px);
+
+  opacity: 0.45;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PERCENTAGE
+========================================================= */
+
+.af7-loader__percent {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #243146;
+
+  font-family: var(--heading-font);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.03em;
+
+  line-height: 1;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTTOM INFORMATION
+========================================================= */
+
+.af7-loader__bottom {
+  position: absolute;
+
+  left: 42px;
+  right: 42px;
+  bottom: 32px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: var(--heading-font);
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  color: rgba(255, 255, 255, 0.32);
+
+  z-index: 10;
+}
+
+
+/* =========================================================
+   WHITE ROUND REVEAL
+========================================================= */
+
+.af7-loader__complete {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 30;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .af7-loader__center {
+    width: 170px;
+  }
+
+  .af7-loader__logo,
+  .af7-loader__bar {
+    width: 170px;
+  }
+
+  .af7-loader__bar {
+    margin-top: 23px;
+  }
+
+  .af7-loader__track {
+    height: 36px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .af7-loader__center {
+    width: 155px;
+  }
+
+  .af7-loader__logo,
+  .af7-loader__bar {
+    width: 155px;
+  }
+
+  .af7-loader__bar {
+    margin-top: 21px;
+  }
+
+  .af7-loader__track {
+    height: 34px;
+  }
+
+  .af7-loader__percent {
+    font-size: 12px;
+  }
+
+  .af7-loader__bottom {
+    left: 18px;
+    right: 18px;
+    bottom: 22px;
+
+    font-size: 5px;
+
+    letter-spacing: 0.1em;
+  }
+
+  .af7-loader__watermark {
+    font-size: 72vw;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .af7-loader__center {
+    width: 145px;
+  }
+
+  .af7-loader__logo,
+  .af7-loader__bar {
+    width: 145px;
+  }
+
+  .af7-loader__bar {
+    margin-top: 20px;
+  }
+
+  .af7-loader__track {
+    height: 32px;
+  }
+}

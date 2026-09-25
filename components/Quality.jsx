@@ -1,0 +1,304 @@
+"use client";
+
+import { motion } from "framer-motion";
+import "./Quality.css";
+
+const qualityPoints = [
+  {
+    title: "VISUAL CHECKING",
+    text: "Finished fastening components are visually reviewed for overall appearance, construction and finishing.",
+  },
+  {
+    title: "COMPONENT CHECK",
+    text: "Zippers and sliders are checked as individual components before becoming part of the finished product.",
+  },
+  {
+    title: "CONSISTENCY",
+    text: "Attention to consistency supports a more uniform product across the fastening range.",
+  },
+  {
+    title: "FINISHED PRODUCT",
+    text: "The final component is considered as part of the wider apparel or accessory construction.",
+  },
+];
+
+const qualityImages = [
+  {
+    image: "/quality/inspection.jpg",
+    label: "QUALITY INSPECTION",
+  },
+  {
+    image: "/quality/zipper-check.jpg",
+    label: "ZIPPER CHECKING",
+  },
+  {
+    image: "/quality/slider-check.jpg",
+    label: "SLIDER CHECKING",
+  },
+];
+
+export default function Quality() {
+  return (
+    <section className="quality-section" id="quality">
+      {/* HEADER */}
+      <header className="quality-section__header">
+        <div className="quality-section__header-inner">
+          <div className="quality-section__header-left">
+            <span>QUALITY</span>
+            <i />
+            <span>AF7 / APPAREL FASTENER</span>
+          </div>
+
+          <span className="quality-section__header-right">
+            LAHORE · PAKISTAN
+          </span>
+        </div>
+      </header>
+
+      {/* INTRO */}
+      <div className="quality-section__intro">
+        <div className="quality-section__intro-inner">
+          <div className="quality-section__intro-title">
+            <span>QUALITY APPROACH</span>
+
+            <h2>
+              Attention to
+              <br />
+              every component.
+            </h2>
+          </div>
+
+          <div className="quality-section__intro-copy">
+            <p>
+              Quality at AF7 is approached through attention to the fastening
+              component at different stages of production and checking.
+            </p>
+
+            <p>
+              From individual zippers and sliders to finished components,
+              consistent inspection helps maintain focus on construction,
+              appearance and finishing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* FEATURED INSPECTION */}
+      <div className="quality-section__featured">
+        <div className="quality-section__featured-image">
+          <img
+            src="/quality/inspection.jpg"
+            alt="AF7 quality inspection"
+          />
+
+          <div className="quality-section__featured-overlay" />
+
+          <div className="quality-section__featured-label">
+            <span>AF7</span>
+            <i />
+            <strong>QUALITY / INSPECTION</strong>
+          </div>
+
+          <span className="quality-section__crop quality-section__crop--tl" />
+          <span className="quality-section__crop quality-section__crop--tr" />
+          <span className="quality-section__crop quality-section__crop--bl" />
+          <span className="quality-section__crop quality-section__crop--br" />
+        </div>
+
+        <div className="quality-section__featured-info">
+          <span className="quality-section__featured-kicker">
+            QUALITY CONTROL
+          </span>
+
+          <h3>
+            CHECK
+            <br />
+            EVERY
+            <br />
+            DETAIL.
+          </h3>
+
+          <p>
+            A fastening component is only effective when its construction,
+            appearance and finishing work together. AF7 keeps these details
+            within the focus of its checking process.
+          </p>
+
+          <div className="quality-section__featured-rule" />
+
+          <div className="quality-section__featured-detail">
+            <span>FOCUS</span>
+            <strong>ZIPPER + SLIDER</strong>
+          </div>
+
+          <div className="quality-section__featured-detail">
+            <span>CHECK</span>
+            <strong>COMPONENT / FINISH / APPEARANCE</strong>
+          </div>
+
+          <div className="quality-section__featured-detail">
+            <span>APPLICATION</span>
+            <strong>APPAREL + RELATED PRODUCTS</strong>
+          </div>
+        </div>
+      </div>
+
+      {/* QUALITY IMAGES */}
+      <div className="quality-section__visuals">
+        <div className="quality-section__visuals-heading">
+          <span>QUALITY IN PRACTICE</span>
+
+          <p>
+            Inspection and checking bring attention back to the physical
+            component — its details, construction and finished appearance.
+          </p>
+        </div>
+
+        <div className="quality-section__visual-grid">
+          {qualityImages.slice(1).map((item, index) => (
+            <motion.figure
+              className={`quality-visual ${
+                index === 1 ? "quality-visual--wide" : ""
+              }`}
+              key={item.label}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{
+                once: true,
+                amount: 0.12,
+              }}
+              transition={{
+                duration: 0.65,
+                delay: index * 0.08,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            >
+              <div className="quality-visual__image">
+                <img src={item.image} alt={item.label} />
+
+                <span className="quality-visual__crop quality-visual__crop--tl" />
+                <span className="quality-visual__crop quality-visual__crop--br" />
+              </div>
+
+              <figcaption>
+                <span>AF7</span>
+                <i />
+                <strong>{item.label}</strong>
+              </figcaption>
+            </motion.figure>
+          ))}
+        </div>
+      </div>
+
+      {/* QUALITY SYSTEM */}
+      <div className="quality-section__system">
+        <div className="quality-section__system-inner">
+          <div className="quality-section__system-title">
+            <span>CHECKING POINTS</span>
+
+            <h3>
+              Quality is built
+              <br />
+              into the process.
+            </h3>
+          </div>
+
+          <div className="quality-section__points">
+            {qualityPoints.map((point) => (
+              <div
+                className="quality-point"
+                key={point.title}
+              >
+                <div className="quality-point__top">
+                  <span>{point.title}</span>
+                  <i />
+                </div>
+
+                <p>{point.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* PRODUCT DETAIL */}
+      <div className="quality-section__detail">
+        <div className="quality-section__detail-image">
+          <img
+            src="/quality/detail.jpg"
+            alt="AF7 fastening component detail"
+          />
+
+          <div className="quality-section__detail-overlay" />
+
+          <div className="quality-section__detail-label">
+            <span>AF7</span>
+            <i />
+            <span>COMPONENT DETAIL</span>
+          </div>
+        </div>
+
+        <div className="quality-section__detail-copy">
+          <span>FINISHED COMPONENT</span>
+
+          <h3>
+            Precision
+            <br />
+            at component level.
+          </h3>
+
+          <p>
+            The quality of a finished product begins with attention to the
+            individual fastening component. AF7 keeps the zipper and slider at
+            the centre of the checking process.
+          </p>
+
+          <div className="quality-section__detail-line" />
+
+          <div className="quality-section__detail-meta">
+            <span>AF7 / APPAREL FASTENER</span>
+            <span>LAHORE · PAKISTAN</span>
+          </div>
+        </div>
+      </div>
+
+      {/* STATEMENT */}
+      <div className="quality-section__statement">
+        <div className="quality-section__statement-inner">
+          <div className="quality-section__statement-mark">
+            <span>AF7</span>
+            <i />
+            <span>QUALITY</span>
+          </div>
+
+          <h3>
+            Detail is not
+            <br />
+            an afterthought.
+          </h3>
+
+          <p>
+            Every fastening component becomes part of a finished product.
+            Attention to its details helps maintain the consistency expected
+            from the AF7 product range.
+          </p>
+        </div>
+      </div>
+
+      {/* FOOTER */}
+      <footer className="quality-section__footer">
+        <div className="quality-section__footer-inner">
+          <span>AF7 / APPAREL FASTENER</span>
+
+          <div className="quality-section__footer-mark">
+            <i />
+            <b />
+            <i />
+          </div>
+
+          <span>LAHORE · PAKISTAN</span>
+        </div>
+      </footer>
+    </section>
+  );
+}
