@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./Manufacturing.css";
@@ -24,15 +24,15 @@ const processSteps = [
 
 const productionImages = [
   {
-    image: "/manufacturing/factory.jpg",
+    image: "/manufacturing/factory.webp",
     label: "PRODUCTION ENVIRONMENT",
   },
   {
-    image: "/manufacturing/machinery.jpg",
+    image: "/manufacturing/machinery.webp",
     label: "MACHINERY",
   },
   {
-    image: "/manufacturing/production.jpg",
+    image: "/manufacturing/production.webp",
     label: "PRODUCTION PROCESS",
   },
 ];
@@ -52,7 +52,7 @@ export default function Manufacturing() {
           </div>
 
           <span className="manufacturing-section__header-right">
-            LAHORE · PAKISTAN
+            LAHORE Â· PAKISTAN
           </span>
         </div>
       </header>
@@ -94,7 +94,7 @@ export default function Manufacturing() {
       <div className="manufacturing-section__featured">
         <div className="manufacturing-section__featured-image">
           <img
-            src="/manufacturing/factory.jpg"
+            src="/manufacturing/factory.webp"
             alt="AF7 manufacturing environment"
           />
 
@@ -250,7 +250,7 @@ export default function Manufacturing() {
 
           <p>
             A focused production approach keeps the attention on the fastening
-            component — its construction, assembly, consistency and role in
+            component â€” its construction, assembly, consistency and role in
             the finished product.
           </p>
         </div>
@@ -269,9 +269,10 @@ export default function Manufacturing() {
             <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </footer>
     </section>
   );
 }
+

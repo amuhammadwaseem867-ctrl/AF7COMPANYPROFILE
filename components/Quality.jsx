@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./Quality.css";
@@ -24,15 +24,15 @@ const qualityPoints = [
 
 const qualityImages = [
   {
-    image: "/quality/inspection.jpg",
+    image: "/quality/inspection.webp",
     label: "QUALITY INSPECTION",
   },
   {
-    image: "/quality/zipper-check.jpg",
+    image: "/quality/zipper-check.webp",
     label: "ZIPPER CHECKING",
   },
   {
-    image: "/quality/slider-check.jpg",
+    image: "/quality/slider-check.webp",
     label: "SLIDER CHECKING",
   },
 ];
@@ -50,7 +50,7 @@ export default function Quality() {
           </div>
 
           <span className="quality-section__header-right">
-            LAHORE · PAKISTAN
+            LAHORE Â· PAKISTAN
           </span>
         </div>
       </header>
@@ -87,7 +87,7 @@ export default function Quality() {
       <div className="quality-section__featured">
         <div className="quality-section__featured-image">
           <img
-            src="/quality/inspection.jpg"
+            src="/quality/inspection.webp"
             alt="AF7 quality inspection"
           />
 
@@ -150,7 +150,7 @@ export default function Quality() {
 
           <p>
             Inspection and checking bring attention back to the physical
-            component — its details, construction and finished appearance.
+            component â€” its details, construction and finished appearance.
           </p>
         </div>
 
@@ -225,7 +225,7 @@ export default function Quality() {
       <div className="quality-section__detail">
         <div className="quality-section__detail-image">
           <img
-            src="/quality/detail.jpg"
+            src="/quality/detail.webp"
             alt="AF7 fastening component detail"
           />
 
@@ -257,7 +257,7 @@ export default function Quality() {
 
           <div className="quality-section__detail-meta">
             <span>AF7 / APPAREL FASTENER</span>
-            <span>LAHORE · PAKISTAN</span>
+            <span>LAHORE Â· PAKISTAN</span>
           </div>
         </div>
       </div>
@@ -296,9 +296,10 @@ export default function Quality() {
             <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </footer>
     </section>
   );
 }
+

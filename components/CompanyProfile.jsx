@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./CompanyProfile.css";
 
 const facts = [
-  ["LOCATION", "LAHORE · PAKISTAN"],
+  ["LOCATION", "LAHORE Â· PAKISTAN"],
   ["CATEGORY", "APPAREL FASTENER"],
   ["PRODUCT RANGE", "ZIPPERS + SLIDERS"],
   ["FOCUS", "MANUFACTURING"],
@@ -26,7 +26,7 @@ export default function CompanyProfile() {
 
           <div className="company-profile__nav-right">
             <span>APPAREL FASTENER</span>
-            <span>LAHORE · PAKISTAN</span>
+            <span>LAHORE Â· PAKISTAN</span>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ export default function CompanyProfile() {
 
             <div className="company-profile__image">
               <img
-                src="/hero.jpeg"
+                src="/hero.webp"
                 alt="AF7 apparel fastener"
               />
 
@@ -142,7 +142,7 @@ export default function CompanyProfile() {
         <div className="company-profile__vertical">
           <span>AF7 / APPAREL FASTENER</span>
           <i />
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </div>
 
@@ -203,9 +203,10 @@ export default function CompanyProfile() {
             <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </div>
     </section>
   );
 }
+

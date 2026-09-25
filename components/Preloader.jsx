@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -155,7 +155,7 @@ export default function Preloader() {
         {/* BOTTOM INFO */}
         <div className="af7-loader__bottom">
           <span>AF7 / APPAREL FASTENER</span>
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
           <span>2026</span>
         </div>
 
@@ -181,3 +181,4 @@ export default function Preloader() {
     </AnimatePresence>
   );
 }
+

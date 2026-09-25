@@ -1,20 +1,20 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./PackagingDispatch.css";
 
 const corrugatedBoxes = [
-  "20 × 11 × 12",
-  "18 × 12 × 8",
-  "18 × 12 × 8",
-  "15 × 10 × 6",
+  "20 Ã— 11 Ã— 12",
+  "18 Ã— 12 Ã— 8",
+  "18 Ã— 12 Ã— 8",
+  "15 Ã— 10 Ã— 6",
 ];
 
 const lldBags = [
-  "6.5 × 11.5",
-  "6.5 × 8.8",
-  "9.5 × 14",
-  "10.5 × 32.5",
+  "6.5 Ã— 11.5",
+  "6.5 Ã— 8.8",
+  "9.5 Ã— 14",
+  "10.5 Ã— 32.5",
 ];
 
 const packingSteps = [
@@ -49,7 +49,7 @@ export default function PackagingDispatch() {
           </div>
 
           <span className="packaging-section__header-right">
-            LAHORE · PAKISTAN
+            LAHORE Â· PAKISTAN
           </span>
         </div>
       </header>
@@ -86,7 +86,7 @@ export default function PackagingDispatch() {
       <div className="packaging-section__featured">
         <div className="packaging-section__featured-image">
           <img
-            src="/packaging/corrugated-box.jpg"
+            src="/packaging/corrugated-box.webp"
             alt="AF7 corrugated box"
           />
 
@@ -173,7 +173,7 @@ export default function PackagingDispatch() {
 
               <div className="packaging-format__image">
                 <img
-                  src="/packaging/corrugated-box.jpg"
+                  src="/packaging/corrugated-box.webp"
                   alt="AF7 corrugated box packaging"
                 />
 
@@ -211,7 +211,7 @@ export default function PackagingDispatch() {
 
               <div className="packaging-format__image">
                 <img
-                  src="/packaging/lld-bag.jpg"
+                  src="/packaging/lld-bag.webp"
                   alt="AF7 LLD poly bag"
                 />
 
@@ -279,7 +279,7 @@ export default function PackagingDispatch() {
             }}
           >
             <img
-              src="/packaging/box-stack.jpg"
+              src="/packaging/box-stack.webp"
               alt="AF7 corrugated boxes stacked for packaging"
             />
 
@@ -385,9 +385,10 @@ export default function PackagingDispatch() {
             <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </footer>
     </section>
   );
 }
+

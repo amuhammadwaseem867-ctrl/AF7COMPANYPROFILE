@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./GlobalBusiness.css";
@@ -44,7 +44,7 @@ export default function GlobalBusiness() {
           </div>
 
           <span className="global-business__header-right">
-            LAHORE · PAKISTAN
+            LAHORE Â· PAKISTAN
           </span>
         </div>
       </header>
@@ -127,7 +127,7 @@ export default function GlobalBusiness() {
 
           <div className="global-business__map-label">
             <span>AF7 BASE</span>
-            <strong>LAHORE · PAKISTAN</strong>
+            <strong>LAHORE Â· PAKISTAN</strong>
           </div>
 
           <div className="global-business__map-caption">
@@ -252,7 +252,7 @@ export default function GlobalBusiness() {
 
             <div className="global-business__connection-meta">
               <span>AF7 / APPAREL FASTENER</span>
-              <span>LAHORE · PAKISTAN</span>
+              <span>LAHORE Â· PAKISTAN</span>
             </div>
           </div>
 
@@ -318,9 +318,10 @@ export default function GlobalBusiness() {
             <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </footer>
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-import Preloader from "../components/Preloader";
+﻿import Preloader from "../components/Preloader";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import CompanyProfile from "../components/CompanyProfile";
@@ -42,3 +42,4 @@ export default function HomePage() {
     </>
   );
 }
+

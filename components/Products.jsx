@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./Products.css";
@@ -7,47 +7,47 @@ const products = [
   {
     name: "METAL ZIPPER",
     size: "#3",
-    image: "/products/metal-zipper-3.jpg.JPG",
+    image: "/products/metal-zipper-3.jpg.webp",
   },
   {
     name: "METAL ZIPPER",
     size: "#4.5",
-    image: "/products/metal-zipper-4-5.jpg.JPG",
+    image: "/products/metal-zipper-4-5.jpg.webp",
   },
   {
     name: "METAL ZIPPER",
     size: "#5",
-    image: "/products/metal-zipper-5.jpg.JPG",
+    image: "/products/metal-zipper-5.jpg.webp",
   },
   {
     name: "BRASS SLIDER",
     size: "SLIDER",
-    image: "/products/brass-slider.jpg.JPG",
+    image: "/products/brass-slider.jpg.webp",
   },
   {
     name: "SS SLIDER",
     size: "SLIDER",
-    image: "/products/ss-slider.jpg.JPG",
+    image: "/products/ss-slider.jpg.webp",
   },
   {
     name: "ALUMINIUM ZIPPER",
     size: "#4.5",
-    image: "/products/aluminium-zipper-4-5.jpg.JPG",
+    image: "/products/aluminium-zipper-4-5.jpg.webp",
   },
   {
     name: "ALUMINIUM ZIPPER",
     size: "#5",
-    image: "/products/aluminium-zipper-5.jpg.JPG",
+    image: "/products/aluminium-zipper-5.jpg.webp",
   },
   {
     name: "NYLON ZIPPER",
     size: "ZIPPER",
-    image: "/products/nylon-zipper.jpg.JPG",
+    image: "/products/nylon-zipper.jpg.webp",
   },
   {
     name: "VISLON ZIPPER",
     size: "ZIPPER",
-    image: "/products/vislon-zipper.jpg.JPG",
+    image: "/products/vislon-zipper.jpg.webp",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function Products() {
           </div>
 
           <span className="products-section__header-location">
-            LAHORE · PAKISTAN
+            LAHORE Â· PAKISTAN
           </span>
         </div>
       </header>
@@ -254,9 +254,10 @@ export default function Products() {
             <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </footer>
     </section>
   );
 }
+

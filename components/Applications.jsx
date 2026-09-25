@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./Applications.css";
@@ -8,37 +8,37 @@ const applications = [
     title: "APPAREL",
     description:
       "Fastening components integrated into apparel products where construction, appearance and finishing work together.",
-    image: "/applications/apparel.jpg",
+    image: "/applications/apparel.webp",
   },
   {
     title: "DENIM",
     description:
       "Zipper and slider applications across denim garments, from everyday construction to premium product detailing.",
-    image: "/applications/denim.jpg",
+    image: "/applications/denim.webp",
   },
   {
     title: "JACKETS",
     description:
       "Fastening components used across jackets and outerwear where the zipper becomes an important part of the garment.",
-    image: "/applications/jackets.jpg",
+    image: "/applications/jackets.webp",
   },
   {
     title: "BAGS",
     description:
       "Zipper applications for bags and accessories, bringing fastening functionality into finished product design.",
-    image: "/applications/bags.jpg",
+    image: "/applications/bags.webp",
   },
   {
     title: "FOOTWEAR",
     description:
       "Fastening components integrated into footwear and related product constructions.",
-    image: "/applications/footwear.jpg",
+    image: "/applications/footwear.webp",
   },
   {
     title: "SPORTSWEAR",
     description:
       "Zipper applications across performance-inspired apparel and sportswear products.",
-    image: "/applications/sportswear.jpg",
+    image: "/applications/sportswear.webp",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Applications() {
           </div>
 
           <span className="applications-section__header-right">
-            LAHORE · PAKISTAN
+            LAHORE Â· PAKISTAN
           </span>
         </div>
       </header>
@@ -81,7 +81,7 @@ export default function Applications() {
             <p>
               AF7 fastening components are intended for use across apparel and
               related product categories. The zipper becomes part of the final
-              product — contributing to its construction, appearance and
+              product â€” contributing to its construction, appearance and
               everyday use.
             </p>
 
@@ -105,7 +105,7 @@ export default function Applications() {
       <div className="applications-section__featured">
         <div className="applications-section__featured-image">
           <img
-            src="/applications/apparel.jpg"
+            src="/applications/apparel.webp"
             alt="AF7 apparel application"
           />
 
@@ -250,9 +250,10 @@ export default function Applications() {
             <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </footer>
     </section>
   );
 }
+

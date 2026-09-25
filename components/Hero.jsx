@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./Hero.css";
@@ -9,13 +9,13 @@ export default function Hero() {
       {/* Background */}
       <div className="profile-hero__media">
         <img
-          src="/hero.jpeg"
+          src="/hero.webp"
           alt="AF7 Apparel Fastener"
         />
         <div className="profile-hero__overlay" />
       </div>
 
-      {/* Technical top line — intentionally below navbar */}
+      {/* Technical top line â€” intentionally below navbar */}
       <div className="profile-hero__topline">
         <span>COMPANY PROFILE</span>
         <span>01 / 12</span>
@@ -82,7 +82,7 @@ export default function Hero() {
         </div>
 
         <div className="profile-hero__footer-center">
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
 
         <div className="profile-hero__footer-right">
@@ -98,3 +98,4 @@ export default function Hero() {
     </section>
   );
 }
+

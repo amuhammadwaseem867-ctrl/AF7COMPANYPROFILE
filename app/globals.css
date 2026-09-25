@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600&display=swap");
-
-:root {
+﻿:root {
   --af7-navy: #243146;
   --af7-light: #d9ded8;
   --af7-grey: #bcc6cc;
@@ -10,8 +8,8 @@
   --container: min(1400px, calc(100% - 96px));
   --border: rgba(36, 49, 70, 0.14);
 
-  --heading-font: "Montserrat", sans-serif;
-  --body-font: "Poppins", sans-serif;
+  --heading-font: var(--font-montserrat), sans-serif;
+  --body-font: var(--font-poppins), sans-serif;
 }
 
 * {

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import "./Customization.css";
@@ -24,15 +24,15 @@ const customizationPoints = [
 
 const customizationVisuals = [
   {
-    image: "/customization/custom-zipper.jpg",
+    image: "/customization/custom-zipper.webp",
     label: "CUSTOM ZIPPER DETAIL",
   },
   {
-    image: "/customization/custom-slider.jpg",
+    image: "/customization/custom-slider.webp",
     label: "CUSTOM SLIDER",
   },
   {
-    image: "/customization/logo-application.jpg",
+    image: "/customization/logo-application.webp",
     label: "LOGO APPLICATION",
   },
 ];
@@ -50,7 +50,7 @@ export default function Customization() {
           </div>
 
           <span className="customization-section__header-right">
-            LAHORE · PAKISTAN
+            LAHORE Â· PAKISTAN
           </span>
         </div>
       </header>
@@ -88,7 +88,7 @@ export default function Customization() {
       <div className="customization-section__featured">
         <div className="customization-section__featured-image">
           <img
-            src="/customization/custom-zipper.jpg"
+            src="/customization/custom-zipper.webp"
             alt="AF7 custom zipper detail"
           />
 
@@ -253,7 +253,7 @@ export default function Customization() {
 
         <div className="customization-section__detail-image">
           <img
-            src="/customization/logo-application.jpg"
+            src="/customization/logo-application.webp"
             alt="AF7 logo application on fastening component"
           />
 
@@ -301,9 +301,10 @@ export default function Customization() {
             <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
+          <span>LAHORE Â· PAKISTAN</span>
         </div>
       </footer>
     </section>
   );
 }
+
