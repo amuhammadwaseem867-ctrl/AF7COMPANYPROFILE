@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import "./Applications.css";
@@ -57,7 +57,7 @@ export default function Applications() {
           </div>
 
           <span className="applications-section__header-right">
-            LAHORE Â· PAKISTAN
+            LAHORE · PAKISTAN
           </span>
         </div>
       </header>
@@ -81,7 +81,7 @@ export default function Applications() {
             <p>
               AF7 fastening components are intended for use across apparel and
               related product categories. The zipper becomes part of the final
-              product â€” contributing to its construction, appearance and
+              product — contributing to its construction, appearance and
               everyday use.
             </p>
 
@@ -250,7 +250,7 @@ export default function Applications() {
             <i />
           </div>
 
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
         </div>
       </footer>
     </section>

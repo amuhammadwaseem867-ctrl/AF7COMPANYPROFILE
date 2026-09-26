@@ -24,10 +24,6 @@ const qualityPoints = [
 
 const qualityImages = [
   {
-    image: "/quality/inspection.webp",
-    label: "QUALITY INSPECTION",
-  },
-  {
     image: "/quality/zipper-check.webp",
     label: "ZIPPER CHECKING",
   },
@@ -50,7 +46,7 @@ export default function Quality() {
           </div>
 
           <span className="quality-section__header-right">
-            LAHORE Â· PAKISTAN
+            LAHORE · PAKISTAN
           </span>
         </div>
       </header>
@@ -83,29 +79,48 @@ export default function Quality() {
         </div>
       </div>
 
-      {/* FEATURED INSPECTION */}
+      {/* FEATURED QUALITY */}
       <div className="quality-section__featured">
-        <div className="quality-section__featured-image">
+        <motion.div
+          className="quality-featured__image"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{
+            duration: 0.75,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
           <img
             src="/quality/inspection.webp"
             alt="AF7 quality inspection"
           />
 
-          <div className="quality-section__featured-overlay" />
+          <div className="quality-featured__gradient" />
 
-          <div className="quality-section__featured-label">
+          <div className="quality-featured__label">
             <span>AF7</span>
             <i />
             <strong>QUALITY / INSPECTION</strong>
           </div>
 
-          <span className="quality-section__crop quality-section__crop--tl" />
-          <span className="quality-section__crop quality-section__crop--tr" />
-          <span className="quality-section__crop quality-section__crop--bl" />
-          <span className="quality-section__crop quality-section__crop--br" />
-        </div>
+          <span className="quality-featured__crop quality-featured__crop--tl" />
+          <span className="quality-featured__crop quality-featured__crop--tr" />
+          <span className="quality-featured__crop quality-featured__crop--bl" />
+          <span className="quality-featured__crop quality-featured__crop--br" />
+        </motion.div>
 
-        <div className="quality-section__featured-info">
+        <motion.div
+          className="quality-section__featured-info"
+          initial={{ opacity: 0, x: 25 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{
+            duration: 0.7,
+            delay: 0.08,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
           <span className="quality-section__featured-kicker">
             QUALITY CONTROL
           </span>
@@ -140,33 +155,36 @@ export default function Quality() {
             <span>APPLICATION</span>
             <strong>APPAREL + RELATED PRODUCTS</strong>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      {/* QUALITY IMAGES */}
+      {/* QUALITY IN PRACTICE */}
       <div className="quality-section__visuals">
         <div className="quality-section__visuals-heading">
-          <span>QUALITY IN PRACTICE</span>
+          <div>
+            <span>QUALITY IN PRACTICE</span>
+
+            <h3>
+              Inspection at
+              <br />
+              component level.
+            </h3>
+          </div>
 
           <p>
             Inspection and checking bring attention back to the physical
-            component â€” its details, construction and finished appearance.
+            component — its details, construction and finished appearance.
           </p>
         </div>
 
         <div className="quality-section__visual-grid">
-          {qualityImages.slice(1).map((item, index) => (
+          {qualityImages.map((item, index) => (
             <motion.figure
-              className={`quality-visual ${
-                index === 1 ? "quality-visual--wide" : ""
-              }`}
+              className="quality-visual"
               key={item.label}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{
-                once: true,
-                amount: 0.12,
-              }}
+              viewport={{ once: true, amount: 0.12 }}
               transition={{
                 duration: 0.65,
                 delay: index * 0.08,
@@ -204,10 +222,18 @@ export default function Quality() {
           </div>
 
           <div className="quality-section__points">
-            {qualityPoints.map((point) => (
-              <div
+            {qualityPoints.map((point, index) => (
+              <motion.div
                 className="quality-point"
                 key={point.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.12 }}
+                transition={{
+                  duration: 0.55,
+                  delay: index * 0.06,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
               >
                 <div className="quality-point__top">
                   <span>{point.title}</span>
@@ -215,7 +241,7 @@ export default function Quality() {
                 </div>
 
                 <p>{point.text}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -223,7 +249,16 @@ export default function Quality() {
 
       {/* PRODUCT DETAIL */}
       <div className="quality-section__detail">
-        <div className="quality-section__detail-image">
+        <motion.div
+          className="quality-section__detail-image"
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{
+            duration: 0.75,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
           <img
             src="/quality/detail.webp"
             alt="AF7 fastening component detail"
@@ -236,9 +271,19 @@ export default function Quality() {
             <i />
             <span>COMPONENT DETAIL</span>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="quality-section__detail-copy">
+        <motion.div
+          className="quality-section__detail-copy"
+          initial={{ opacity: 0, x: 25 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{
+            duration: 0.7,
+            delay: 0.08,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
           <span>FINISHED COMPONENT</span>
 
           <h3>
@@ -249,17 +294,17 @@ export default function Quality() {
 
           <p>
             The quality of a finished product begins with attention to the
-            individual fastening component. AF7 keeps the zipper and slider at
-            the centre of the checking process.
+            individual fastening component. AF7 keeps the zipper and slider
+            at the centre of the checking process.
           </p>
 
           <div className="quality-section__detail-line" />
 
           <div className="quality-section__detail-meta">
             <span>AF7 / APPAREL FASTENER</span>
-            <span>LAHORE Â· PAKISTAN</span>
+            <span>LAHORE · PAKISTAN</span>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* STATEMENT */}
@@ -296,10 +341,9 @@ export default function Quality() {
             <i />
           </div>
 
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
         </div>
       </footer>
     </section>
   );
 }
-

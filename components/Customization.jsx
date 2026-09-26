@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import "./Customization.css";
@@ -50,7 +50,7 @@ export default function Customization() {
           </div>
 
           <span className="customization-section__header-right">
-            LAHORE Â· PAKISTAN
+            LAHORE · PAKISTAN
           </span>
         </div>
       </header>
@@ -301,7 +301,7 @@ export default function Customization() {
             <i />
           </div>
 
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
         </div>
       </footer>
     </section>

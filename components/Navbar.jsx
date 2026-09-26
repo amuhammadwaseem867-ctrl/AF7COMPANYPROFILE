@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -76,7 +76,7 @@ export default function Navbar() {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <span className="profile-nav__location">
-              LAHORE Â· PAKISTAN
+              LAHORE · PAKISTAN
             </span>
 
             <a href="#contact" className="profile-nav__contact">
@@ -194,7 +194,7 @@ export default function Navbar() {
 
               <div className="profile-mobile__footer">
                 <span>AF7 / APPAREL FASTENER</span>
-                <span>LAHORE Â· PAKISTAN</span>
+                <span>LAHORE · PAKISTAN</span>
               </div>
             </motion.div>
           </motion.div>

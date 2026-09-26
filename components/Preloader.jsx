@@ -155,7 +155,7 @@ export default function Preloader() {
         {/* BOTTOM INFO */}
         <div className="af7-loader__bottom">
           <span>AF7 / APPAREL FASTENER</span>
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
           <span>2026</span>
         </div>
 

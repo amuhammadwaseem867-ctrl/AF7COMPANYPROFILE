@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import "./Products.css";
@@ -66,7 +66,7 @@ export default function Products() {
           </div>
 
           <span className="products-section__header-location">
-            LAHORE Â· PAKISTAN
+            LAHORE · PAKISTAN
           </span>
         </div>
       </header>
@@ -254,7 +254,7 @@ export default function Products() {
             <i />
           </div>
 
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
         </div>
       </footer>
     </section>

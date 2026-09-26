@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import "./Manufacturing.css";
@@ -52,7 +52,7 @@ export default function Manufacturing() {
           </div>
 
           <span className="manufacturing-section__header-right">
-            LAHORE Â· PAKISTAN
+            LAHORE · PAKISTAN
           </span>
         </div>
       </header>
@@ -250,7 +250,7 @@ export default function Manufacturing() {
 
           <p>
             A focused production approach keeps the attention on the fastening
-            component â€” its construction, assembly, consistency and role in
+            component — its construction, assembly, consistency and role in
             the finished product.
           </p>
         </div>
@@ -269,7 +269,7 @@ export default function Manufacturing() {
             <i />
           </div>
 
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
         </div>
       </footer>
     </section>

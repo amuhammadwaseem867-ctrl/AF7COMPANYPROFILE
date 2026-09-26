@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 import "./PackagingDispatch.css";
 
 const corrugatedBoxes = [
-  "20 Ã— 11 Ã— 12",
-  "18 Ã— 12 Ã— 8",
-  "18 Ã— 12 Ã— 8",
-  "15 Ã— 10 Ã— 6",
+  "20 in — 11 in — 12 in",
+  "18 in — 12 in — 8 in",
+  "18 in — 12 in — 8 in",
+  "15 in — 10 in — 6 in",
 ];
 
 const lldBags = [
-  "6.5 Ã— 11.5",
-  "6.5 Ã— 8.8",
-  "9.5 Ã— 14",
-  "10.5 Ã— 32.5",
+  "6.5 in — 11.5 in",
+  "6.5 in — 8.8 in",
+  "9.5 in — 14 in",
+  "10.5 in — 32.5 in",
 ];
 
 const packingSteps = [
@@ -49,7 +49,7 @@ export default function PackagingDispatch() {
           </div>
 
           <span className="packaging-section__header-right">
-            LAHORE Â· PAKISTAN
+            LAHORE · PAKISTAN
           </span>
         </div>
       </header>
@@ -385,7 +385,7 @@ export default function PackagingDispatch() {
             <i />
           </div>
 
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
         </div>
       </footer>
     </section>

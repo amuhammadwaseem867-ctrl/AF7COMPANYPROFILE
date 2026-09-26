@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import "./CompanyProfile.css";
 
 const facts = [
-  ["LOCATION", "LAHORE Â· PAKISTAN"],
+  ["LOCATION", "LAHORE · PAKISTAN"],
   ["CATEGORY", "APPAREL FASTENER"],
   ["PRODUCT RANGE", "ZIPPERS + SLIDERS"],
   ["FOCUS", "MANUFACTURING"],
@@ -26,7 +26,7 @@ export default function CompanyProfile() {
 
           <div className="company-profile__nav-right">
             <span>APPAREL FASTENER</span>
-            <span>LAHORE Â· PAKISTAN</span>
+            <span>LAHORE · PAKISTAN</span>
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@ export default function CompanyProfile() {
         <div className="company-profile__vertical">
           <span>AF7 / APPAREL FASTENER</span>
           <i />
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
         </div>
       </div>
 
@@ -203,7 +203,7 @@ export default function CompanyProfile() {
             <i />
           </div>
 
-          <span>LAHORE Â· PAKISTAN</span>
+          <span>LAHORE · PAKISTAN</span>
         </div>
       </div>
     </section>

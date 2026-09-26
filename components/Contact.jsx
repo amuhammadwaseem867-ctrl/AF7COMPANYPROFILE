@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
@@ -138,7 +138,7 @@ export default function Contact() {
           </div>
 
           <span className="contact-section__header-right">
-            LAHORE Â· PAKISTAN
+            LAHORE · PAKISTAN
           </span>
 
         </div>
@@ -292,7 +292,7 @@ export default function Contact() {
             <div className="contact-section__panel-bottom">
               <span>APPAREL FASTENER</span>
               <i />
-              <span>LAHORE Â· PAKISTAN</span>
+              <span>LAHORE · PAKISTAN</span>
             </div>
 
           </motion.div>
@@ -358,7 +358,7 @@ export default function Contact() {
               <div>
                 <span>AF7 / APPAREL FASTENER</span>
                 <strong>
-                  33B Â· SUNDER II Â· LAHORE
+                  33B · SUNDER II · LAHORE
                 </strong>
               </div>
 
@@ -424,7 +424,7 @@ export default function Contact() {
               <div>
                 <span>LOCATION</span>
                 <strong>
-                  LAHORE Â· PAKISTAN
+                  LAHORE · PAKISTAN
                 </strong>
               </div>
 
@@ -452,7 +452,7 @@ export default function Contact() {
             </span>
 
             <span>
-              COMPANY PROFILE Â· 2026
+              COMPANY PROFILE · 2026
             </span>
           </div>
 
@@ -502,7 +502,7 @@ export default function Contact() {
           <div className="contact-section__closing-bottom">
 
             <span>
-              LAHORE Â· PAKISTAN
+              LAHORE · PAKISTAN
             </span>
 
             <div className="contact-section__closing-mark">
@@ -534,7 +534,7 @@ export default function Contact() {
           </span>
 
           <span>
-            LAHORE Â· PAKISTAN
+            LAHORE · PAKISTAN
           </span>
 
           <span>
