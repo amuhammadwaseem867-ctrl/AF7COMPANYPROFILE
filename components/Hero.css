@@ -69,14 +69,14 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
   line-height: 1;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* =========================================
@@ -110,7 +110,7 @@
   font-weight: 600;
   line-height: 1;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 
   color: rgba(255, 255, 255, 0.72);
@@ -180,7 +180,7 @@
   margin: 0;
 
   font-family: var(--body-font);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
 
   line-height: 1.75;
@@ -208,14 +208,14 @@
   align-items: center;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
   line-height: 1;
 
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .profile-hero__footer-left {
@@ -448,8 +448,8 @@
 
     padding-bottom: 11px;
 
-    font-size: 7px;
-    letter-spacing: 0.16em;
+    font-size: 9px;
+    letter-spacing: 0.14em;
   }
 
   /* -----------------------------------------
@@ -473,8 +473,8 @@
 
     margin-bottom: 20px;
 
-    font-size: 7px;
-    letter-spacing: 0.16em;
+    font-size: 9px;
+    letter-spacing: 0.14em;
   }
 
   .profile-hero__eyebrow i {
@@ -519,9 +519,9 @@
   }
 
   .profile-hero__description p {
-    font-size: 10px;
+    font-size: 13px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 
     letter-spacing: 0.01em;
   }
@@ -535,8 +535,8 @@
     right: 20px;
     bottom: 22px;
 
-    font-size: 6px;
-    letter-spacing: 0.15em;
+    font-size: 9px;
+    letter-spacing: 0.13em;
   }
 
   .profile-hero__footer-center {
@@ -612,10 +612,10 @@
   }
 
   .profile-hero__description p {
-    font-size: 9px;
+    font-size: 14px;
   }
 
   .profile-hero__footer {
-    font-size: 5.5px;
+    font-size: 9px;
   }
 }

@@ -35,9 +35,9 @@
   gap: 14px;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.14em;
 }
 
 .company-profile__nav-left i {
@@ -47,7 +47,7 @@
 }
 
 .company-profile__nav-left span:last-child {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .company-profile__nav-right {
@@ -56,10 +56,10 @@
   gap: 34px;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* =========================================
@@ -145,11 +145,11 @@
   margin-bottom: 28px;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
 
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .company-profile__eyebrow i {
@@ -193,7 +193,7 @@
   font-family: var(--body-font);
   font-size: 11.5px;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .company-profile__location {
@@ -232,15 +232,15 @@
 
 .company-profile__location small {
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .company-profile__location strong {
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.78);
@@ -264,10 +264,10 @@
   justify-content: space-between;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.36);
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .company-profile__image {
@@ -410,10 +410,10 @@
   gap: 10px;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.62);
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .company-profile__media-caption::before {
@@ -432,7 +432,7 @@
   gap: 13px;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.14em;
   color: rgba(255, 255, 255, 0.28);
@@ -460,9 +460,9 @@
   transform-origin: right center;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: rgba(255, 255, 255, 0.25);
 }
 
@@ -500,10 +500,10 @@
   margin-bottom: 18px;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.17em;
-  color: rgba(36, 49, 70, 0.4);
+  letter-spacing: 0.14em;
+  color: #3F4852;
 }
 
 .company-profile__information-title h3 {
@@ -527,7 +527,7 @@
   font-family: var(--body-font);
   font-size: 11.5px;
   line-height: 1.95;
-  color: rgba(36, 49, 70, 0.67);
+  color: #3F4852;
 }
 
 .company-profile__information-copy p:last-child {
@@ -573,10 +573,10 @@
   margin-bottom: 9px;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.17em;
-  color: rgba(36, 49, 70, 0.38);
+  letter-spacing: 0.14em;
+  color: #3F4852;
 }
 
 .company-profile__fact strong {
@@ -609,9 +609,9 @@
   align-items: center;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
   color: rgba(255, 255, 255, 0.28);
 }
 
@@ -679,7 +679,7 @@
   }
 
   .company-profile__nav-right span:last-child {
-    font-size: 6px;
+    font-size: 9px;
   }
 
   .company-profile__hero-inner {
@@ -802,6 +802,6 @@
   }
 
   .company-profile__fact strong {
-    font-size: 8px;
+    font-size: 10px;
   }
 }

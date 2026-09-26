@@ -69,7 +69,7 @@
   color: #ffffff;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.12em;
 
@@ -118,7 +118,7 @@
   font-family: var(--heading-font);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
 }
 
 .contact-section__header-left i {
@@ -128,7 +128,7 @@
 }
 
 .contact-section__header-right {
-  color: rgba(36, 49, 70, 0.5);
+  color: #3F4852;
 }
 
 /* =========================================
@@ -157,7 +157,7 @@
   font-family: var(--heading-font);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
 }
 
 .contact-section__copy h2 {
@@ -171,7 +171,7 @@
 .contact-section__copy > p {
   max-width: 470px;
 
-  color: rgba(36, 49, 70, 0.62);
+  color: #3F4852;
   font-size: 14px;
   line-height: 1.9;
 }
@@ -207,11 +207,11 @@
 .contact-section__location small {
   margin-bottom: 5px;
 
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.14em;
 
-  color: rgba(36, 49, 70, 0.4);
+  color: #3F4852;
 }
 
 .contact-section__location strong {
@@ -253,11 +253,11 @@
 .contact-section__phone small {
   margin-bottom: 2px;
 
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.13em;
 
-  color: rgba(36, 49, 70, 0.42);
+  color: #3F4852;
 }
 
 .contact-section__phone strong {
@@ -271,7 +271,7 @@
 }
 
 .contact-section__phone:hover small {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* =========================================
@@ -292,11 +292,11 @@
   align-items: center;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.14em;
 
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .contact-section__panel-top {
@@ -321,21 +321,21 @@
 
 .contact-enquiry > span {
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .contact-enquiry strong {
   font-family: var(--heading-font);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
 
 .contact-enquiry svg {
   justify-self: end;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
 
   transition:
     transform 0.3s ease,
@@ -383,7 +383,7 @@
   font-family: var(--heading-font);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
 }
 
 .contact-section__map-heading h3 {
@@ -397,8 +397,8 @@
 .contact-section__map-heading p {
   max-width: 390px;
 
-  color: rgba(36, 49, 70, 0.58);
-  font-size: 13px;
+  color: #3F4852;
+  font-size: 14px;
   line-height: 1.85;
 }
 
@@ -415,7 +415,7 @@
   border-bottom: 1px solid var(--af7-navy);
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.13em;
 }
@@ -466,15 +466,15 @@
 .contact-section__map-label span {
   margin-bottom: 3px;
 
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.13em;
 
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .contact-section__map-label strong {
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.09em;
 }
@@ -551,8 +551,8 @@
 .contact-section__information-copy > p {
   max-width: 620px;
 
-  color: rgba(36, 49, 70, 0.61);
-  font-size: 13px;
+  color: #3F4852;
+  font-size: 14px;
   line-height: 1.9;
 }
 
@@ -588,11 +588,11 @@
 .contact-section__information-meta span {
   margin-bottom: 7px;
 
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.13em;
 
-  color: rgba(36, 49, 70, 0.4);
+  color: #3F4852;
 }
 
 .contact-section__information-meta strong {
@@ -677,11 +677,11 @@
   align-items: center;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
 
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .contact-section__closing-center {
@@ -709,11 +709,11 @@
   margin-bottom: 43px;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
 
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .contact-section__closing-rule i {
@@ -771,11 +771,11 @@
   justify-content: space-between;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.14em;
 
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* =========================================
@@ -850,7 +850,7 @@
 
   .contact-section__header-left {
     gap: 9px;
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .contact-section__header-left span:nth-child(3) {
@@ -858,7 +858,7 @@
   }
 
   .contact-section__header-right {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .contact-section__main {
@@ -872,7 +872,7 @@
   .contact-section__kicker,
   .contact-section__information-heading > span {
     margin-bottom: 17px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .contact-section__copy h2 {
@@ -881,7 +881,7 @@
   }
 
   .contact-section__copy > p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .contact-section__location {
@@ -944,7 +944,7 @@
   }
 
   .contact-section__information-copy > p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .contact-section__information-meta {
@@ -974,7 +974,7 @@
 
   .contact-section__closing-top,
   .contact-section__closing-bottom {
-    font-size: 6px;
+    font-size: 9px;
   }
 
   .contact-section__closing-logo {
@@ -983,7 +983,7 @@
 
   .contact-section__closing-rule {
     margin-bottom: 32px;
-    font-size: 6px;
+    font-size: 9px;
   }
 
   .contact-section__closing-center h3 {
@@ -995,6 +995,6 @@
     min-height: 70px;
     padding-bottom: 65px;
 
-    font-size: 6px;
+    font-size: 9px;
   }
 }

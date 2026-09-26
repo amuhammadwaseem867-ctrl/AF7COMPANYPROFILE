@@ -30,9 +30,9 @@
   gap: 14px;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.14em;
 }
 
 .applications-section__header-left i {
@@ -42,15 +42,15 @@
 }
 
 .applications-section__header-left span:last-child {
-  color: rgba(36, 49, 70, 0.42);
+  color: #3F4852;
 }
 
 .applications-section__header-right {
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
-  color: rgba(36, 49, 70, 0.38);
+  letter-spacing: 0.13em;
+  color: #3F4852;
 }
 
 /* =========================================
@@ -73,10 +73,10 @@
   margin-bottom: 20px;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  color: rgba(36, 49, 70, 0.42);
+  letter-spacing: 0.14em;
+  color: #3F4852;
 }
 
 .applications-section__intro-title h2 {
@@ -99,9 +99,9 @@
   margin: 0 0 27px;
 
   font-family: var(--body-font);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.95;
-  color: rgba(36, 49, 70, 0.67);
+  color: #3F4852;
 }
 
 .applications-section__intro-rule {
@@ -119,10 +119,10 @@
 
 .applications-section__intro-meta span {
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  color: rgba(36, 49, 70, 0.42);
+  letter-spacing: 0.13em;
+  color: #3F4852;
 }
 
 /* =========================================
@@ -184,9 +184,9 @@
   gap: 12px;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
 }
 
 .applications-section__featured-label i {
@@ -206,7 +206,7 @@
   width: 20px;
   height: 20px;
 
-  border-color: rgba(255, 255, 255, 0.68);
+  border-color: rgba(255, 255, 255, 0.85);
   border-style: solid;
 }
 
@@ -249,10 +249,10 @@
   margin-bottom: 25px;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.17em;
-  color: rgba(255, 255, 255, 0.43);
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .applications-section__featured-info h3 {
@@ -269,9 +269,9 @@
   max-width: 360px;
   margin-bottom: 35px;
 
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.64);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .applications-section__featured-rule {
@@ -293,17 +293,17 @@
 .applications-section__featured-detail span,
 .applications-section__featured-detail strong {
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 0.13em;
 }
 
 .applications-section__featured-detail span {
-  color: rgba(255, 255, 255, 0.34);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .applications-section__featured-detail strong {
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* =========================================
@@ -331,15 +331,15 @@
   font-family: var(--heading-font);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.14em;
 }
 
 .applications-section__catalog-heading p {
   max-width: 470px;
 
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.85;
-  color: rgba(36, 49, 70, 0.58);
+  color: #3F4852;
 }
 
 /* GRID */
@@ -395,9 +395,9 @@
   bottom: 18px;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: rgba(255, 255, 255, 0.72);
 }
 
@@ -410,10 +410,10 @@
   margin-bottom: 8px;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  color: rgba(36, 49, 70, 0.4);
+  letter-spacing: 0.14em;
+  color: #3F4852;
 }
 
 .application-card__heading h3 {
@@ -435,9 +435,9 @@
   max-width: 500px;
 
   font-family: var(--body-font);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.85;
-  color: rgba(36, 49, 70, 0.62);
+  color: #3F4852;
 }
 
 /* =========================================
@@ -466,9 +466,9 @@
   gap: 9px;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
 }
 
 .applications-section__statement-mark i {
@@ -487,9 +487,9 @@
 .applications-section__statement-inner > p {
   max-width: 390px;
 
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
-  color: rgba(36, 49, 70, 0.6);
+  color: #3F4852;
 }
 
 /* =========================================
@@ -511,10 +511,10 @@
   align-items: center;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .applications-section__footer-inner > span:last-child {
@@ -576,7 +576,7 @@
   }
 
   .applications-section__header-left {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .applications-section__intro-inner {

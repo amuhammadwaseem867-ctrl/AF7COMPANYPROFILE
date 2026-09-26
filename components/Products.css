@@ -30,9 +30,9 @@
   gap: 14px;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.14em;
 }
 
 .products-section__header-left i {
@@ -42,15 +42,15 @@
 }
 
 .products-section__header-left span:last-child {
-  color: rgba(36, 49, 70, 0.42);
+  color: #3F4852;
 }
 
 .products-section__header-location {
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
-  color: rgba(36, 49, 70, 0.38);
+  letter-spacing: 0.13em;
+  color: #3F4852;
 }
 
 /* =========================================
@@ -78,10 +78,10 @@
   margin-bottom: 20px;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  color: rgba(36, 49, 70, 0.42);
+  letter-spacing: 0.14em;
+  color: #3F4852;
 }
 
 .products-section__intro-title h2 {
@@ -104,9 +104,9 @@
   margin-bottom: 28px;
 
   font-family: var(--body-font);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.95;
-  color: rgba(36, 49, 70, 0.67);
+  color: #3F4852;
 }
 
 .products-section__intro-line {
@@ -118,11 +118,11 @@
 
 .products-section__intro-text > span {
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   line-height: 1.8;
-  letter-spacing: 0.15em;
-  color: rgba(36, 49, 70, 0.4);
+  letter-spacing: 0.13em;
+  color: #3F4852;
 }
 
 /* =========================================
@@ -154,9 +154,9 @@
 
 .products-section__range-label span {
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.14em;
 }
 
 .products-section__range-label p {
@@ -165,7 +165,7 @@
   font-family: var(--body-font);
   font-size: 9px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .products-section__range-line {
@@ -259,9 +259,9 @@
   gap: 11px;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
   color: rgba(255, 255, 255, 0.72);
 }
 
@@ -278,7 +278,7 @@
   width: 19px;
   height: 19px;
 
-  border-color: rgba(255, 255, 255, 0.65);
+  border-color: rgba(255, 255, 255, 0.85);
   border-style: solid;
 }
 
@@ -325,13 +325,13 @@
   margin-bottom: 24px;
 
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
 }
 
 .product-spread__category span {
-  color: rgba(36, 49, 70, 0.38);
+  color: #3F4852;
 }
 
 .product-spread__category i {
@@ -359,9 +359,9 @@
   max-width: 360px;
 
   font-family: var(--body-font);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.9;
-  color: rgba(36, 49, 70, 0.62);
+  color: #3F4852;
 }
 
 .product-spread__info-rule {
@@ -386,15 +386,15 @@
 
 .product-spread__meta span {
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  color: rgba(36, 49, 70, 0.35);
+  letter-spacing: 0.13em;
+  color: #3F4852;
 }
 
 .product-spread__meta strong {
   font-family: var(--heading-font);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.08em;
@@ -409,10 +409,10 @@
   gap: 10px;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  color: rgba(36, 49, 70, 0.3);
+  letter-spacing: 0.13em;
+  color: #3F4852;
 }
 
 .product-spread__mark div {
@@ -446,10 +446,10 @@
   margin-bottom: 18px;
 
   font-family: var(--heading-font);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.17em;
-  color: rgba(36, 49, 70, 0.45);
+  letter-spacing: 0.14em;
+  color: #3F4852;
 }
 
 .products-section__closing h3 {
@@ -463,9 +463,9 @@
   max-width: 400px;
 
   font-family: var(--body-font);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
-  color: rgba(36, 49, 70, 0.62);
+  color: #3F4852;
 }
 
 /* =========================================
@@ -488,10 +488,10 @@
   align-items: center;
 
   font-family: var(--heading-font);
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .products-section__footer-inner > span:last-child {
@@ -558,7 +558,7 @@
   }
 
   .products-section__header-left {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .products-section__intro-inner {

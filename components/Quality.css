@@ -6,8 +6,8 @@
   --navy: #243146;
   --light: #f2f4f2;
   --grey: #dce1df;
-  --mid: #7f8790;
-  --text: #59616a;
+  --mid: #66707A;
+  --text: #3F4852;
   --border: rgba(36, 49, 70, 0.15);
 
   width: 100%;
@@ -48,7 +48,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
 }
 
 .quality-section__header-left i {
@@ -61,7 +61,7 @@
 
 .quality-section__header-right {
   font-family: "Montserrat", sans-serif;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.14em;
 
@@ -100,7 +100,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 
   color: var(--mid);
@@ -225,9 +225,9 @@
   color: #fff;
 
   font-family: "Montserrat", sans-serif;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
 }
 
 .quality-featured__label i {
@@ -312,7 +312,7 @@
 .quality-section__featured-kicker {
   margin-bottom: 28px;
 
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .quality-section__featured-info h3 {
@@ -331,10 +331,10 @@
   margin: 38px 0 0;
 
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
 
-  color: rgba(255, 255, 255, 0.67);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .quality-section__featured-rule {
@@ -358,21 +358,21 @@
 
 .quality-section__featured-detail span {
   font-family: "Montserrat", sans-serif;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.14em;
 
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .quality-section__featured-detail strong {
   font-family: "Poppins", sans-serif;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 1.4;
   font-weight: 500;
   letter-spacing: 0.04em;
 
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 
@@ -414,7 +414,7 @@
   margin: 0;
 
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
 
   color: var(--text);
@@ -493,7 +493,7 @@
 }
 
 .quality-visual figcaption span {
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
 }
@@ -507,7 +507,7 @@
 }
 
 .quality-visual figcaption strong {
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.12em;
 }
@@ -582,10 +582,10 @@
   margin: 0;
 
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
 
-  color: #606870;
+  color: #3F4852;
 }
 
 
@@ -649,7 +649,7 @@
   gap: 12px;
 
   font-family: "Montserrat", sans-serif;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
 
@@ -681,7 +681,7 @@
   margin: 32px 0 0;
 
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.85;
 
   color: var(--text);
@@ -702,11 +702,11 @@
   gap: 20px;
 
   font-family: "Montserrat", sans-serif;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.12em;
 
-  color: #777f87;
+  color: #66707A;
 }
 
 
@@ -735,9 +735,9 @@
   margin-bottom: 52px;
 
   font-family: "Montserrat", sans-serif;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
 }
 
 .quality-section__statement-mark i {
@@ -765,10 +765,10 @@
   margin: 55px 0 0 auto;
 
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.85;
 
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 
@@ -793,11 +793,11 @@
   justify-content: space-between;
 
   font-family: "Montserrat", sans-serif;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
 
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .quality-section__footer-mark {
@@ -911,7 +911,7 @@
 
   .quality-section__header-left {
     gap: 9px;
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .quality-section__header-left span:last-child {
@@ -919,7 +919,7 @@
   }
 
   .quality-section__header-right {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   /* INTRO */
@@ -941,7 +941,7 @@
   .quality-section__detail-copy > span {
     margin-bottom: 18px;
 
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .quality-section__intro-title h2 {
@@ -949,7 +949,7 @@
   }
 
   .quality-section__intro-copy p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.8;
   }
 
@@ -978,7 +978,7 @@
     left: 20px;
     bottom: 20px;
 
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .quality-featured__crop {
@@ -1019,7 +1019,7 @@
 
   .quality-section__featured-info > p {
     margin-top: 32px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
 
@@ -1039,7 +1039,7 @@
   }
 
   .quality-section__visuals-heading p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .quality-section__visual-grid {
@@ -1071,7 +1071,7 @@
   }
 
   .quality-point p {
-    font-size: 11px;
+    font-size: 14px;
   }
 
 
@@ -1091,7 +1091,7 @@
   }
 
   .quality-section__detail-copy p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .quality-section__detail-meta {
@@ -1116,7 +1116,7 @@
 
   .quality-section__statement-inner p {
     margin: 40px 0 0;
-    font-size: 12px;
+    font-size: 14px;
   }
 
 
@@ -1127,7 +1127,7 @@
   }
 
   .quality-section__footer-inner > span {
-    font-size: 6px;
+    font-size: 9px;
   }
 }
 
