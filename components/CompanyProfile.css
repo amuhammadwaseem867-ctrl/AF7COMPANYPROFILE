@@ -191,7 +191,7 @@
   margin: 0;
 
   font-family: var(--body-font);
-  font-size: 11.5px;
+  font-size: 14px;
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -525,7 +525,7 @@
   margin: 0 0 22px;
 
   font-family: var(--body-font);
-  font-size: 11.5px;
+  font-size: 14px;
   line-height: 1.95;
   color: #3F4852;
 }
@@ -710,7 +710,7 @@
   }
 
   .company-profile__body {
-    font-size: 10.5px;
+    font-size: 13.5px;
     line-height: 1.9;
   }
 
@@ -748,7 +748,7 @@
   }
 
   .company-profile__information-copy p {
-    font-size: 10.5px;
+    font-size: 13.5px;
     line-height: 1.9;
   }
 

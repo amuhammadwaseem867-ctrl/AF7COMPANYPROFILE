@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import "./Contact.css";
 
@@ -176,7 +177,7 @@ export default function Contact() {
             </span>
 
             <h2>
-              Let's talk
+              Let&apos;s talk
               <br />
               fastening.
             </h2>
@@ -477,9 +478,11 @@ export default function Contact() {
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <img
+              <Image
                 src="/af7logowhite.svg"
                 alt="AF7 Apparel Fastener"
+                width={390}
+                height={234}
               />
             </motion.div>
 

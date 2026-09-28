@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import "./Applications.css";
 
 const applications = [
@@ -104,9 +105,12 @@ export default function Applications() {
       ========================================= */}
       <div className="applications-section__featured">
         <div className="applications-section__featured-image">
-          <img
+          <Image
             src="/applications/apparel.webp"
             alt="AF7 apparel application"
+            fill
+            sizes="(max-width: 1050px) 100vw, 55vw"
+            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1072" }}
           />
 
           <div className="applications-section__featured-overlay" />
@@ -185,9 +189,12 @@ export default function Applications() {
               }}
             >
               <div className="application-card__image">
-                <img
+                <Image
                   src={application.image}
                   alt={`AF7 ${application.title}`}
+                  fill
+                  sizes="(max-width: 1050px) 100vw, 30vw"
+                  style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1072" }}
                 />
 
                 <div className="application-card__overlay" />

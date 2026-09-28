@@ -818,6 +818,8 @@
     right: 50%;
     bottom: 15px;
 
+    z-index: 90;
+
     flex-direction: row;
 
     transform: translateX(50%);

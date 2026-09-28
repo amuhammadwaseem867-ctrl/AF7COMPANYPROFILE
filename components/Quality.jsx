@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import "./Quality.css";
 
 const qualityPoints = [
@@ -91,9 +92,12 @@ export default function Quality() {
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          <img
+          <Image
             src="/quality/inspection.webp"
             alt="AF7 quality inspection"
+            fill
+            sizes="(max-width: 1000px) 100vw, 66vw"
+            style={{ objectFit: "contain", objectPosition: "center", aspectRatio: "1920 / 1280" }}
           />
 
           <div className="quality-featured__gradient" />
@@ -192,7 +196,13 @@ export default function Quality() {
               }}
             >
               <div className="quality-visual__image">
-                <img src={item.image} alt={item.label} />
+                <Image
+                  src={item.image}
+                  alt={item.label}
+                  fill
+                  sizes="(max-width: 700px) 100vw, 45vw"
+                  style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1280" }}
+                />
 
                 <span className="quality-visual__crop quality-visual__crop--tl" />
                 <span className="quality-visual__crop quality-visual__crop--br" />
@@ -259,9 +269,12 @@ export default function Quality() {
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          <img
+          <Image
             src="/quality/detail.webp"
             alt="AF7 fastening component detail"
+            fill
+            sizes="(max-width: 1000px) 100vw, 57vw"
+            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1280" }}
           />
 
           <div className="quality-section__detail-overlay" />

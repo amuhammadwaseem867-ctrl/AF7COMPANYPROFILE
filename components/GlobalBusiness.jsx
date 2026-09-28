@@ -154,7 +154,7 @@ export default function GlobalBusiness() {
             </h3>
 
             <p>
-              AF7's fastening components can be considered across a range of
+              AF7&apos;s fastening components can be considered across a range of
               finished product categories where zipper and slider components
               form part of the construction.
             </p>

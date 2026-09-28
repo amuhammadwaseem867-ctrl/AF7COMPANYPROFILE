@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import Image from "next/image";
 import "./Navbar.css";
 
 const navItems = [
@@ -30,10 +31,12 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
-            <img
+            <Image
               src="/af7logowhite.svg"
               alt="AF7"
               className="profile-nav__logo"
+              width={390}
+              height={234}
             />
 
             <span className="profile-nav__divider" />
@@ -123,9 +126,11 @@ export default function Navbar() {
                   className="profile-mobile__brand"
                   onClick={closeMenu}
                 >
-                  <img
+                  <Image
                     src="/af7logowhite.svg"
                     alt="AF7"
+                    width={390}
+                    height={234}
                   />
 
                   <span />

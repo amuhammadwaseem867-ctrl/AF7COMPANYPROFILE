@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import "./CompanyProfile.css";
 
 const facts = [
@@ -104,9 +105,12 @@ export default function CompanyProfile() {
             </div>
 
             <div className="company-profile__image">
-              <img
+              <Image
                 src="/hero.webp"
                 alt="AF7 apparel fastener"
+                fill
+                sizes="(max-width: 760px) 100vw, 50vw"
+                style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1072" }}
               />
 
               <div className="company-profile__image-overlay" />

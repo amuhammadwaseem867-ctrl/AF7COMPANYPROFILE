@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import "./Customization.css";
 
 const customizationPoints = [
@@ -87,9 +88,12 @@ export default function Customization() {
       {/* FEATURED CUSTOMIZATION */}
       <div className="customization-section__featured">
         <div className="customization-section__featured-image">
-          <img
+          <Image
             src="/customization/custom-zipper.webp"
             alt="AF7 custom zipper detail"
+            fill
+            sizes="(max-width: 760px) 100vw, 60vw"
+            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1072" }}
           />
 
           <div className="customization-section__featured-overlay" />
@@ -176,9 +180,12 @@ export default function Customization() {
               }}
             >
               <div className="customization-visual__image">
-                <img
+                <Image
                   src={item.image}
                   alt={item.label}
+                  fill
+                  sizes="(max-width: 760px) 100vw, 45vw"
+                  style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1072" }}
                 />
 
                 <span className="customization-visual__crop customization-visual__crop--tl" />
@@ -252,9 +259,12 @@ export default function Customization() {
         </div>
 
         <div className="customization-section__detail-image">
-          <img
+          <Image
             src="/customization/logo-application.webp"
             alt="AF7 logo application on fastening component"
+            fill
+            sizes="(max-width: 760px) 100vw, 45vw"
+            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1536 / 2752" }}
           />
 
           <div className="customization-section__detail-overlay" />

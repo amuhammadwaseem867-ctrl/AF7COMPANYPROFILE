@@ -533,7 +533,7 @@
   .profile-hero__footer {
     left: 20px;
     right: 20px;
-    bottom: 22px;
+    bottom: 80px; /* clears the floating contact pill */
 
     font-size: 9px;
     letter-spacing: 0.13em;

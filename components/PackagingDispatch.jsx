@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import "./PackagingDispatch.css";
 
 const corrugatedBoxes = [
@@ -85,9 +86,12 @@ export default function PackagingDispatch() {
       {/* FEATURED SINGLE BOX */}
       <div className="packaging-section__featured">
         <div className="packaging-section__featured-image">
-          <img
+          <Image
             src="/packaging/corrugated-box.webp"
             alt="AF7 corrugated box"
+            fill
+            sizes="(max-width: 760px) 100vw, 60vw"
+            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1440" }}
           />
 
           <div className="packaging-section__featured-overlay" />
@@ -172,9 +176,12 @@ export default function PackagingDispatch() {
               </div>
 
               <div className="packaging-format__image">
-                <img
+                <Image
                   src="/packaging/corrugated-box.webp"
                   alt="AF7 corrugated box packaging"
+                  fill
+                  sizes="(max-width: 1000px) 100vw, 45vw"
+                  style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1440" }}
                 />
 
                 <span className="packaging-format__corner packaging-format__corner--tl" />
@@ -210,9 +217,12 @@ export default function PackagingDispatch() {
               </div>
 
               <div className="packaging-format__image">
-                <img
+                <Image
                   src="/packaging/lld-bag.webp"
                   alt="AF7 LLD poly bag"
+                  fill
+                  sizes="(max-width: 1000px) 100vw, 45vw"
+                  style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1358" }}
                 />
 
                 <span className="packaging-format__corner packaging-format__corner--tl" />
@@ -278,9 +288,12 @@ export default function PackagingDispatch() {
               ease: [0.16, 1, 0.3, 1],
             }}
           >
-            <img
+            <Image
               src="/packaging/box-stack.webp"
               alt="AF7 corrugated boxes stacked for packaging"
+              fill
+              sizes="(max-width: 1000px) 100vw, 55vw"
+              style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1440" }}
             />
 
             <div className="packaging-section__stack-overlay" />

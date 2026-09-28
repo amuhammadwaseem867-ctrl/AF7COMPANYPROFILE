@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import "./Hero.css";
 
 export default function Hero() {
@@ -8,9 +9,13 @@ export default function Hero() {
     <section className="profile-hero" id="home">
       {/* Background */}
       <div className="profile-hero__media">
-        <img
+        <Image
           src="/hero.webp"
           alt="AF7 Apparel Fastener"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "center" }}
         />
         <div className="profile-hero__overlay" />
       </div>
