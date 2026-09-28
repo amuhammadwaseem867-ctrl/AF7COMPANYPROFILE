@@ -177,9 +177,9 @@ export default function Contact() {
             </span>
 
             <h2>
-              Let&apos;s talk
+              Let&apos;s Talk
               <br />
-              fastening.
+              Fastening.
             </h2>
 
             <p>
@@ -314,9 +314,9 @@ export default function Contact() {
             <span>OUR LOCATION</span>
 
             <h3>
-              Find us
+              Find Us
               <br />
-              in Lahore.
+              In Lahore.
             </h3>
 
             <p>
@@ -389,9 +389,9 @@ export default function Contact() {
             <span>BUSINESS ENQUIRIES</span>
 
             <h3>
-              Start with
+              Start With
               <br />
-              the requirement.
+              The Requirement.
             </h3>
 
           </div>
@@ -493,11 +493,11 @@ export default function Contact() {
             </div>
 
             <h3>
-              PRECISION
+              Precision
               <br />
-              IN EVERY
+              In Every
               <br />
-              DETAIL.
+              Detail.
             </h3>
 
           </div>

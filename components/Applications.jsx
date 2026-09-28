@@ -1,266 +1,312 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import "./Applications.css";
 
 const applications = [
   {
-    title: "APPAREL",
+    title: "Apparel",
     description:
       "Fastening components integrated into apparel products where construction, appearance and finishing work together.",
     image: "/applications/apparel.webp",
+    width: 2752,
+    height: 1536,
+    ratio: "landscape",
   },
   {
-    title: "DENIM",
+    title: "Denim",
     description:
       "Zipper and slider applications across denim garments, from everyday construction to premium product detailing.",
     image: "/applications/denim.webp",
+    width: 1920,
+    height: 1072,
+    ratio: "landscape",
   },
   {
-    title: "JACKETS",
+    title: "Jackets",
     description:
       "Fastening components used across jackets and outerwear where the zipper becomes an important part of the garment.",
     image: "/applications/jackets.webp",
+    width: 1536,
+    height: 2752,
+    ratio: "portrait",
   },
   {
-    title: "BAGS",
+    title: "Bags",
     description:
       "Zipper applications for bags and accessories, bringing fastening functionality into finished product design.",
     image: "/applications/bags.webp",
+    width: 1920,
+    height: 1072,
+    ratio: "landscape",
   },
   {
-    title: "FOOTWEAR",
+    title: "Footwear",
     description:
       "Fastening components integrated into footwear and related product constructions.",
     image: "/applications/footwear.webp",
+    width: 1920,
+    height: 1072,
+    ratio: "landscape",
   },
   {
-    title: "SPORTSWEAR",
+    title: "Sportswear",
     description:
       "Zipper applications across performance-inspired apparel and sportswear products.",
     image: "/applications/sportswear.webp",
+    width: 1920,
+    height: 1072,
+    ratio: "landscape",
   },
 ];
 
+const featuredApplication = applications[0];
+
 export default function Applications() {
   return (
-    <section className="applications-section" id="applications">
-      {/* =========================================
-          HEADER
-      ========================================= */}
-      <header className="applications-section__header">
-        <div className="applications-section__header-inner">
-          <div className="applications-section__header-left">
-            <span>APPLICATIONS</span>
-            <i />
-            <span>AF7 / APPAREL FASTENER</span>
+    <section className="applications-page" id="applications">
+
+      {/* HEADER */}
+      <header className="applications-header">
+        <div className="applications-header-inner">
+          <div className="applications-kicker">
+            AF7 / APPLICATIONS
           </div>
 
-          <span className="applications-section__header-right">
+          <div className="applications-location">
             LAHORE · PAKISTAN
-          </span>
+          </div>
         </div>
       </header>
 
-      {/* =========================================
-          INTRO
-      ========================================= */}
-      <div className="applications-section__intro">
-        <div className="applications-section__intro-inner">
-          <div className="applications-section__intro-title">
-            <span>APPLICATION RANGE</span>
 
-            <h2>
-              Designed to become
-              <br />
-              part of the product.
-            </h2>
+      {/* INTRO */}
+      <section className="applications-intro">
+        <div className="applications-container">
+          <div className="applications-intro-grid">
+
+            <div className="applications-intro-label">
+              APPLICATIONS
+            </div>
+
+            <div className="applications-intro-content">
+              <motion.h1
+                initial={{ opacity: 0, y: 22 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.65 }}
+              >
+                Built Into The Products
+                <br />
+                People Use Every Day.
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.65, delay: 0.08 }}
+              >
+                AF7 fastening components are developed for a wide range of
+                finished products. From apparel and denim to bags, footwear,
+                jackets and sportswear, our components become part of the
+                construction, function and final appearance of the product.
+              </motion.p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      {/* FEATURED */}
+      <section className="applications-featured">
+
+        <div className="applications-featured-media">
+          <Image
+            src={featuredApplication.image}
+            alt="AF7 apparel application"
+            width={featuredApplication.width}
+            height={featuredApplication.height}
+            priority
+            sizes="(max-width: 760px) 100vw, 58vw"
+            className="applications-featured-img"
+          />
+        </div>
+
+        <div className="applications-featured-panel">
+
+          <div className="applications-panel-top">
+            <span>01</span>
+            <span>APPAREL</span>
           </div>
 
-          <div className="applications-section__intro-copy">
+          <div className="applications-panel-content">
+            <span className="applications-panel-eyebrow">
+              APPLICATION / 01
+            </span>
+
+            <h2>Apparel</h2>
+
             <p>
-              AF7 fastening components are intended for use across apparel and
-              related product categories. The zipper becomes part of the final
-              product — contributing to its construction, appearance and
-              everyday use.
+              Fastening components integrated into apparel products where
+              construction, appearance and finishing work together.
+            </p>
+          </div>
+
+          <div className="applications-panel-bottom">
+            AF7 / APPAREL FASTENER
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* APPLICATION RANGE */}
+      <section className="applications-catalog">
+        <div className="applications-container">
+
+          <div className="applications-catalog-header">
+
+            <div>
+              <span className="applications-section-label">
+                APPLICATION RANGE
+              </span>
+
+              <h2>
+                Across Categories.
+                <br />
+                Across Products.
+              </h2>
+            </div>
+
+            <p>
+              A selection of product environments where AF7 fastening
+              components become part of the finished construction.
             </p>
 
-            <div className="applications-section__intro-rule" />
-
-            <div className="applications-section__intro-meta">
-              <span>APPAREL</span>
-              <span>DENIM</span>
-              <span>JACKETS</span>
-              <span>BAGS</span>
-              <span>FOOTWEAR</span>
-              <span>SPORTSWEAR</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* =========================================
-          FEATURED APPLICATION
-      ========================================= */}
-      <div className="applications-section__featured">
-        <div className="applications-section__featured-image">
-          <Image
-            src="/applications/apparel.webp"
-            alt="AF7 apparel application"
-            fill
-            sizes="(max-width: 1050px) 100vw, 55vw"
-            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1072" }}
-          />
-
-          <div className="applications-section__featured-overlay" />
-
-          <div className="applications-section__featured-label">
-            <span>APPLICATION</span>
-            <i />
-            <strong>APPAREL</strong>
           </div>
 
-          <span className="applications-section__crop applications-section__crop--tl" />
-          <span className="applications-section__crop applications-section__crop--tr" />
-          <span className="applications-section__crop applications-section__crop--bl" />
-          <span className="applications-section__crop applications-section__crop--br" />
-        </div>
 
-        <div className="applications-section__featured-info">
-          <span className="applications-section__featured-kicker">
-            PRIMARY APPLICATION
-          </span>
+          <div className="applications-grid">
 
-          <h3>
-            APPAREL
-            <br />
-            FASTENING
-          </h3>
+            {applications.slice(1).map((application, index) => (
+              <motion.article
+                className={`application-card ${
+                  application.ratio === "portrait"
+                    ? "application-card-portrait"
+                    : ""
+                }`}
+                key={application.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.12 }}
+                transition={{
+                  duration: 0.55,
+                  delay: index * 0.04,
+                }}
+              >
 
-          <p>
-            From garment construction to visible product detailing, fastening
-            components form an important part of how an apparel product comes
-            together.
-          </p>
+                <div className="application-card-meta">
+                  <span>
+                    {String(index + 2).padStart(2, "0")}
+                  </span>
 
-          <div className="applications-section__featured-rule" />
-
-          <div className="applications-section__featured-detail">
-            <span>PRODUCT</span>
-            <strong>ZIPPER + SLIDER</strong>
-          </div>
-
-          <div className="applications-section__featured-detail">
-            <span>APPLICATION</span>
-            <strong>APPAREL PRODUCTS</strong>
-          </div>
-        </div>
-      </div>
-
-      {/* =========================================
-          APPLICATION GRID
-      ========================================= */}
-      <div className="applications-section__catalog">
-        <div className="applications-section__catalog-heading">
-          <span>APPLICATIONS</span>
-
-          <p>
-            A selection of product categories where fastening components form
-            part of the finished construction.
-          </p>
-        </div>
-
-        <div className="applications-section__grid">
-          {applications.slice(1).map((application, index) => (
-            <motion.article
-              className="application-card"
-              key={application.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{
-                once: true,
-                amount: 0.15,
-              }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.06,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              <div className="application-card__image">
-                <Image
-                  src={application.image}
-                  alt={`AF7 ${application.title}`}
-                  fill
-                  sizes="(max-width: 1050px) 100vw, 30vw"
-                  style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1072" }}
-                />
-
-                <div className="application-card__overlay" />
-
-                <span className="application-card__label">
-                  AF7
-                </span>
-              </div>
-
-              <div className="application-card__content">
-                <div className="application-card__heading">
-                  <span>APPLICATION</span>
-                  <h3>{application.title}</h3>
+                  <span>AF7</span>
                 </div>
 
-                <div className="application-card__rule" />
 
-                <p>{application.description}</p>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </div>
+                <div className="application-image-frame">
 
-      {/* =========================================
-          APPLICATION STATEMENT
-      ========================================= */}
-      <div className="applications-section__statement">
-        <div className="applications-section__statement-inner">
-          <div className="applications-section__statement-mark">
-            <span>AF7</span>
-            <i />
-            <span>APPLICATION</span>
+                  <Image
+                    src={application.image}
+                    alt={`AF7 ${application.title}`}
+                    width={application.width}
+                    height={application.height}
+                    sizes="(max-width: 760px) 100vw, 42vw"
+                    className="application-card-img"
+                  />
+
+                </div>
+
+
+                <div className="application-card-content">
+
+                  <div>
+                    <span className="application-card-category">
+                      APPLICATION
+                    </span>
+
+                    <h3>{application.title}</h3>
+                  </div>
+
+                  <p>
+                    {application.description}
+                  </p>
+
+                </div>
+
+              </motion.article>
+            ))}
+
           </div>
 
-          <h3>
-            From component
-            <br />
-            to finished product.
-          </h3>
-
-          <p>
-            AF7 components are developed as part of a wider product
-            construction, connecting fastening functionality with the visual
-            language of the finished garment or accessory.
-          </p>
         </div>
-      </div>
+      </section>
 
-      {/* =========================================
-          FOOTER
-      ========================================= */}
-      <footer className="applications-section__footer">
-        <div className="applications-section__footer-inner">
-          <span>AF7 / APPAREL FASTENER</span>
 
-          <div className="applications-section__footer-mark">
-            <i />
-            <b />
-            <i />
+      {/* STATEMENT */}
+      <section className="applications-statement">
+        <div className="applications-container">
+
+          <div className="applications-statement-grid">
+
+            <span className="applications-section-label">
+              AF7 / APPLICATION
+            </span>
+
+            <div>
+              <h2>
+                The Right Fastening
+                <br />
+                Becomes Part Of The Product.
+              </h2>
+
+              <p>
+                Whether visible as a design detail or integrated into the
+                construction, AF7 fastening components are made to work
+                within the finished product.
+              </p>
+            </div>
+
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
         </div>
+      </section>
+
+
+      {/* FOOTER */}
+      <footer className="applications-footer">
+
+        <div className="applications-footer-inner">
+
+          <div className="applications-footer-brand">
+            AF7
+          </div>
+
+          <div className="applications-footer-info">
+            <span>APPAREL FASTENER</span>
+            <span>LAHORE · PAKISTAN</span>
+          </div>
+
+          <div className="applications-footer-mark">
+            APPLICATIONS / 2026
+          </div>
+
+        </div>
+
       </footer>
+
     </section>
   );
 }
-

@@ -2,21 +2,27 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 import Image from "next/image";
 import "./Navbar.css";
 
 const navItems = [
   { number: "01", label: "Profile", href: "#profile" },
   { number: "02", label: "Products", href: "#products" },
-  { number: "03", label: "Manufacturing", href: "#manufacturing" },
-  { number: "04", label: "Applications", href: "#applications" },
+  { number: "03", label: "Applications", href: "#applications" },
+  { number: "04", label: "Manufacturing", href: "#manufacturing" },
+  { number: "05", label: "Quality", href: "#quality" },
+  { number: "06", label: "Customization", href: "#customization" },
+  { number: "07", label: "Packaging", href: "#packaging" },
+  { number: "08", label: "Global Business", href: "#global" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <>
@@ -26,47 +32,49 @@ export default function Navbar() {
           <motion.a
             href="#home"
             className="profile-nav__brand"
-            aria-label="AF7 Apparel Fastener"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
+            aria-label="AF7"
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              ease: [0.16, 1, 0.3, 1],
+            }}
           >
             <Image
-              src="/af7logowhite.svg"
+              src="/af7logo-27.svg"
               alt="AF7"
-              className="profile-nav__logo"
               width={390}
               height={234}
+              priority
+              className="profile-nav__logo"
             />
-
-            <span className="profile-nav__divider" />
-
-            <span className="profile-nav__name">
-              APPAREL
-              <br />
-              FASTENER
-            </span>
           </motion.a>
 
-          {/* DESKTOP NAV */}
-          <nav className="profile-nav__links">
+          {/* DESKTOP NAVIGATION */}
+          <nav
+            className="profile-nav__links"
+            aria-label="Primary navigation"
+          >
             {navItems.map((item, index) => (
               <motion.a
                 key={item.number}
                 href={item.href}
                 className="profile-nav__link"
-                initial={{ opacity: 0, y: -8 }}
+                initial={{ opacity: 0, y: -5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.45,
-                  delay: 0.35 + index * 0.08,
+                  duration: 0.4,
+                  delay: 0.08 + index * 0.045,
+                  ease: [0.16, 1, 0.3, 1],
                 }}
               >
                 <span className="profile-nav__link-number">
                   {item.number}
                 </span>
 
-                <span>{item.label}</span>
+                <span className="profile-nav__link-label">
+                  {item.label}
+                </span>
               </motion.a>
             ))}
           </nav>
@@ -74,17 +82,27 @@ export default function Navbar() {
           {/* RIGHT */}
           <motion.div
             className="profile-nav__right"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.3,
+              ease: [0.16, 1, 0.3, 1],
+            }}
           >
             <span className="profile-nav__location">
               LAHORE · PAKISTAN
             </span>
 
-            <a href="#contact" className="profile-nav__contact">
-              CONTACT
-              <ArrowUpRight size={14} strokeWidth={1.4} />
+            <a
+              href="#contact"
+              className="profile-nav__contact"
+            >
+              <span>CONTACT</span>
+              <ArrowUpRight
+                size={14}
+                strokeWidth={1.3}
+              />
             </a>
 
             <button
@@ -116,57 +134,69 @@ export default function Navbar() {
               animate={{ y: 0 }}
               exit={{ y: "-100%" }}
               transition={{
-                duration: 0.55,
+                duration: 0.5,
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
+              {/* MOBILE HEADER */}
               <div className="profile-mobile__header">
                 <a
                   href="#home"
                   className="profile-mobile__brand"
                   onClick={closeMenu}
+                  aria-label="AF7"
                 >
                   <Image
                     src="/af7logowhite.svg"
                     alt="AF7"
                     width={390}
                     height={234}
+                    priority
+                    className="profile-mobile__logo"
                   />
-
-                  <span />
-
-                  <div>
-                    APPAREL
-                    <br />
-                    FASTENER
-                  </div>
                 </a>
 
                 <button
                   type="button"
-                  onClick={closeMenu}
                   className="profile-mobile__close"
+                  onClick={closeMenu}
                   aria-label="Close navigation"
                 >
-                  <X size={22} strokeWidth={1.3} />
+                  <X
+                    size={21}
+                    strokeWidth={1.3}
+                  />
                 </button>
               </div>
 
-              <nav className="profile-mobile__links">
+              {/* MOBILE LINKS */}
+              <nav
+                className="profile-mobile__links"
+                aria-label="Mobile navigation"
+              >
                 {navItems.map((item, index) => (
                   <motion.a
                     key={item.number}
                     href={item.href}
                     onClick={closeMenu}
                     className="profile-mobile__link"
-                    initial={{ opacity: 0, x: -18 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{
+                      opacity: 0,
+                      x: -15,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                    }}
                     transition={{
-                      duration: 0.4,
-                      delay: 0.1 + index * 0.07,
+                      duration: 0.35,
+                      delay: 0.08 + index * 0.045,
+                      ease: [0.16, 1, 0.3, 1],
                     }}
                   >
-                    <span>{item.number}</span>
+                    <span className="profile-mobile__number">
+                      {item.number}
+                    </span>
 
                     <strong>{item.label}</strong>
 
@@ -177,19 +207,31 @@ export default function Navbar() {
                   </motion.a>
                 ))}
 
+                {/* CONTACT */}
                 <motion.a
                   href="#contact"
                   onClick={closeMenu}
                   className="profile-mobile__link profile-mobile__link--contact"
-                  initial={{ opacity: 0, x: -18 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{
+                    opacity: 0,
+                    x: -15,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
                   transition={{
-                    duration: 0.4,
-                    delay: 0.42,
+                    duration: 0.35,
+                    delay: 0.46,
+                    ease: [0.16, 1, 1, 0.3],
                   }}
                 >
-                  <span>05</span>
+                  <span className="profile-mobile__number">
+                    09
+                  </span>
+
                   <strong>Contact</strong>
+
                   <ArrowUpRight
                     size={18}
                     strokeWidth={1.2}
@@ -197,8 +239,9 @@ export default function Navbar() {
                 </motion.a>
               </nav>
 
+              {/* MOBILE FOOTER */}
               <div className="profile-mobile__footer">
-                <span>AF7 / APPAREL FASTENER</span>
+                <span>AF7</span>
                 <span>LAHORE · PAKISTAN</span>
               </div>
             </motion.div>
@@ -208,4 +251,3 @@ export default function Navbar() {
     </>
   );
 }
-

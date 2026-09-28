@@ -59,9 +59,9 @@ export default function Quality() {
             <span>QUALITY APPROACH</span>
 
             <h2>
-              Attention to
+              Attention To
               <br />
-              every component.
+              Every Component.
             </h2>
           </div>
 
@@ -97,7 +97,7 @@ export default function Quality() {
             alt="AF7 quality inspection"
             fill
             sizes="(max-width: 1000px) 100vw, 66vw"
-            style={{ objectFit: "contain", objectPosition: "center", aspectRatio: "1920 / 1280" }}
+            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1280" }}
           />
 
           <div className="quality-featured__gradient" />
@@ -130,11 +130,11 @@ export default function Quality() {
           </span>
 
           <h3>
-            CHECK
+            Check
             <br />
-            EVERY
+            Every
             <br />
-            DETAIL.
+            Detail.
           </h3>
 
           <p>
@@ -169,9 +169,9 @@ export default function Quality() {
             <span>QUALITY IN PRACTICE</span>
 
             <h3>
-              Inspection at
+              Inspection At
               <br />
-              component level.
+              Component Level.
             </h3>
           </div>
 
@@ -225,9 +225,9 @@ export default function Quality() {
             <span>CHECKING POINTS</span>
 
             <h3>
-              Quality is built
+              Quality Is Built
               <br />
-              into the process.
+              Into The Process.
             </h3>
           </div>
 
@@ -302,7 +302,7 @@ export default function Quality() {
           <h3>
             Precision
             <br />
-            at component level.
+            At Component Level.
           </h3>
 
           <p>
@@ -330,9 +330,9 @@ export default function Quality() {
           </div>
 
           <h3>
-            Detail is not
+            Detail Is Not
             <br />
-            an afterthought.
+            An Afterthought.
           </h3>
 
           <p>

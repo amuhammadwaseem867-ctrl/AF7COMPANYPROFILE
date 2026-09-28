@@ -1,216 +1,326 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import "./CompanyProfile.css";
 
 const facts = [
-  ["LOCATION", "LAHORE · PAKISTAN"],
-  ["CATEGORY", "APPAREL FASTENER"],
-  ["PRODUCT RANGE", "ZIPPERS + SLIDERS"],
-  ["FOCUS", "MANUFACTURING"],
+  {
+    number: "01",
+    label: "Based In",
+    value: "Lahore, Pakistan",
+  },
+  {
+    number: "02",
+    label: "Focus",
+    value: "Apparel Fastening",
+  },
+  {
+    number: "03",
+    label: "Serving",
+    value: "Global Product Industries",
+  },
+  {
+    number: "04",
+    label: "Profile",
+    value: "Manufacturing & Supply",
+  },
 ];
 
 export default function CompanyProfile() {
   return (
     <section className="company-profile" id="profile">
-      {/* =========================================
-          NAV / PAGE HEADER
-      ========================================= */}
-      <div className="company-profile__nav">
-        <div className="company-profile__nav-inner">
-          <div className="company-profile__nav-left">
-            <span>COMPANY PROFILE</span>
-            <i />
-            <span>AF7</span>
-          </div>
 
-          <div className="company-profile__nav-right">
-            <span>APPAREL FASTENER</span>
-            <span>LAHORE · PAKISTAN</span>
-          </div>
-        </div>
-      </div>
+      {/* =====================================================
+          INTRODUCTION
+      ===================================================== */}
 
-      {/* =========================================
-          MAIN NAVY PAGE
-      ========================================= */}
-      <div className="company-profile__hero">
-        <div className="company-profile__grid" />
+      <div className="company-profile__intro">
+        <motion.div
+          className="company-profile__eyebrow"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="company-profile__eyebrow-number">
+            01
+          </span>
 
-        <div className="company-profile__hero-inner">
-          {/* LEFT CONTENT */}
-          <motion.div
-            className="company-profile__copy"
-            initial={{ opacity: 0, y: 20 }}
+          <span className="company-profile__eyebrow-line" />
+
+          <span>Company Profile</span>
+        </motion.div>
+
+        <div className="company-profile__intro-grid">
+
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          >
+            Built Around
+            <br />
+            What Connects
+          </motion.h2>
+
+          <motion.div
+            className="company-profile__intro-copy"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
             transition={{
               duration: 0.7,
+              delay: 0.1,
               ease: [0.16, 1, 0.3, 1],
             }}
           >
-            <div className="company-profile__eyebrow">
-              <span>AF7</span>
-              <i />
-              <span>APPAREL FASTENER</span>
-            </div>
-
-            <h2>
-              BUILT FOR
-              <br />
-              WHAT CONNECTS.
-            </h2>
-
-            <p className="company-profile__lead">
-              AF7 is an apparel fastener brand based in Lahore, Pakistan,
-              focused on fastening components for apparel and related product
-              applications.
+            <p>
+              AF7 is a fastening-focused manufacturing company based
+              in Lahore, Pakistan, serving apparel, fashion and related
+              product industries.
             </p>
 
-            <div className="company-profile__copy-rule" />
-
-            <p className="company-profile__body">
-              Our product range brings together zippers and sliders developed
-              for different apparel requirements, including metal, aluminium,
-              nylon and Vislon zippers alongside brass and stainless steel
-              sliders. AF7 brings these fastening components together through
-              a focused manufacturing approach and clear product standards.
+            <p>
+              Our work is centered on dependable construction,
+              consistent production and fastening solutions designed
+              to become part of the finished product.
             </p>
-
-            <div className="company-profile__location">
-              <span className="company-profile__location-dot" />
-
-              <div>
-                <small>BASED IN</small>
-                <strong>LAHORE, PAKISTAN</strong>
-              </div>
-            </div>
           </motion.div>
 
-          {/* RIGHT IMAGE */}
-          <motion.div
-            className="company-profile__media"
-            initial={{ opacity: 0, scale: 0.975 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{
-              duration: 0.9,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-          >
-            <div className="company-profile__media-top">
-              <span>PRODUCT / FASTENING COMPONENT</span>
-              <span>AF7</span>
-            </div>
-
-            <div className="company-profile__image">
-              <Image
-                src="/hero.webp"
-                alt="AF7 apparel fastener"
-                fill
-                sizes="(max-width: 760px) 100vw, 50vw"
-                style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1072" }}
-              />
-
-              <div className="company-profile__image-overlay" />
-
-              <span className="company-profile__crop company-profile__crop--tl" />
-              <span className="company-profile__crop company-profile__crop--tr" />
-              <span className="company-profile__crop company-profile__crop--bl" />
-              <span className="company-profile__crop company-profile__crop--br" />
-
-              <span className="company-profile__marker company-profile__marker--one">
-                <i />
-              </span>
-
-              <span className="company-profile__marker company-profile__marker--two">
-                <i />
-              </span>
-
-              <div className="company-profile__media-caption">
-                <span>AF7</span>
-                <span>APPAREL FASTENER</span>
-              </div>
-            </div>
-
-            <div className="company-profile__media-bottom">
-              <span>PRECISION COMPONENT</span>
-              <i />
-              <span>APPAREL APPLICATION</span>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* SIDE DETAIL */}
-        <div className="company-profile__vertical">
-          <span>AF7 / APPAREL FASTENER</span>
-          <i />
-          <span>LAHORE · PAKISTAN</span>
         </div>
       </div>
 
-      {/* =========================================
-          FULL-WIDTH WHITE INFORMATION PAGE
-      ========================================= */}
-      <div className="company-profile__information">
-        <div className="company-profile__information-inner">
-          <div className="company-profile__information-title">
-            <span>COMPANY OVERVIEW</span>
 
-            <h3>
-              A focused approach to
-              <br />
-              apparel fastening.
+      {/* =====================================================
+          VISUAL SPREAD
+      ===================================================== */}
+
+      <motion.div
+        className="company-profile__visual"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{
+          duration: 0.8,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+      >
+
+        {/* IMAGE */}
+
+        <div className="company-profile__visual-image">
+          <Image
+            src="/hero.webp"
+            alt="AF7 Apparel Fastener"
+            fill
+            sizes="(max-width: 800px) 100vw, 65vw"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
+
+          <div className="company-profile__image-caption">
+            <span>AF7</span>
+            <span>Apparel Fastener</span>
+          </div>
+        </div>
+
+
+        {/* NAVY INFORMATION PANEL */}
+
+        <div className="company-profile__visual-panel">
+
+          <div className="company-profile__panel-content">
+
+            <span className="company-profile__panel-label">
+              Our Approach
+            </span>
+
+            <h3 className="company-profile__panel-title">
+              <span>Focused</span>
+              <span>Manufacturing</span>
             </h3>
-          </div>
-
-          <div className="company-profile__information-copy">
-            <p>
-              AF7 / Apparel Fastener represents a focused range of fastening
-              components for apparel and related product applications. Based
-              in Lahore, Pakistan, the company brings together a defined
-              selection of zipper and slider products under one consistent
-              identity.
-            </p>
 
             <p>
-              From metal and aluminium constructions to nylon and Vislon
-              zippers, supported by brass and stainless steel sliders, the
-              range is structured around the practical fastening requirements
-              of modern apparel and accessories.
+              We focus on the details that define dependable
+              fastening — construction, consistency, finishing
+              and controlled manufacturing.
             </p>
-          </div>
-        </div>
 
-        {/* FACTS INSIDE SAME WHITE PAGE */}
-        <div className="company-profile__facts">
-          {facts.map(([label, value]) => (
-            <div className="company-profile__fact" key={label}>
-              <span>{label}</span>
-              <strong>{value}</strong>
+          </div>
+
+
+          <div className="company-profile__panel-bottom">
+
+            <div className="company-profile__panel-detail">
+              <span>Location</span>
+              <strong>Lahore · Pakistan</strong>
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* =========================================
-          PAGE FOOTER
-      ========================================= */}
-      <div className="company-profile__footer">
-        <div className="company-profile__footer-inner">
-          <span>AF7 / APPAREL FASTENER</span>
+            <div className="company-profile__panel-detail">
+              <span>Company</span>
+              <strong>AF7</strong>
+            </div>
 
-          <div className="company-profile__footer-mark">
-            <i />
-            <b />
-            <i />
           </div>
 
-          <span>LAHORE · PAKISTAN</span>
         </div>
+
+      </motion.div>
+
+
+      {/* =====================================================
+          COMPANY OVERVIEW
+      ===================================================== */}
+
+      <div className="company-profile__overview">
+
+        <motion.div
+          className="company-profile__section-label"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Company Overview
+        </motion.div>
+
+
+        <div className="company-profile__overview-grid">
+
+          <motion.h3
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+          >
+            Built For
+            <br />
+            Everyday Use
+          </motion.h3>
+
+
+          <motion.div
+            className="company-profile__overview-copy"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.7,
+              delay: 0.1,
+            }}
+          >
+            <p>
+              From individual fastening components to finished
+              zipper constructions, AF7 works across the details
+              that help garments and related products come together.
+            </p>
+
+            <p>
+              Based in Lahore, our company combines product
+              understanding, manufacturing experience and a
+              practical approach to serving customers across
+              different product categories.
+            </p>
+          </motion.div>
+
+        </div>
+
       </div>
+
+
+      {/* =====================================================
+          COMPANY FACTS
+      ===================================================== */}
+
+      <div className="company-profile__facts">
+
+        <div className="company-profile__facts-inner">
+
+          {facts.map((fact, index) => (
+            <motion.div
+              className="company-profile__fact"
+              key={fact.number}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{
+                duration: 0.55,
+                delay: index * 0.07,
+              }}
+            >
+
+              <span className="company-profile__fact-number">
+                {fact.number}
+              </span>
+
+              <span className="company-profile__fact-label">
+                {fact.label}
+              </span>
+
+              <strong>
+                {fact.value}
+              </strong>
+
+            </motion.div>
+          ))}
+
+        </div>
+
+      </div>
+
+
+      {/* =====================================================
+          CLOSING
+      ===================================================== */}
+
+      <div className="company-profile__closing">
+
+        <div className="company-profile__closing-inner">
+
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            AF7 · Apparel Fastener
+          </motion.span>
+
+
+          <motion.h3
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          >
+            Precision In Every Detail
+          </motion.h3>
+
+
+          <div className="company-profile__closing-meta">
+            <span>
+              Lahore · Pakistan
+            </span>
+
+            <span>
+              2026
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
   );
 }
-

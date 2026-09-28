@@ -1,7 +1,8 @@
-﻿﻿"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import "./Preloader.css";
 
 export default function Preloader() {
@@ -90,9 +91,11 @@ export default function Preloader() {
               ease: [0.16, 1, 0.3, 1],
             }}
           >
-            <img
+            <Image
               src="/af7logowhite.svg"
               alt="AF7 Apparel Fastener"
+              width={390}
+              height={234}
             />
           </motion.div>
 

@@ -62,9 +62,9 @@ export default function PackagingDispatch() {
             <span>PACKAGING SYSTEM</span>
 
             <h2>
-              Packed with
+              Packed With
               <br />
-              clear purpose.
+              Clear Purpose.
             </h2>
           </div>
 
@@ -114,9 +114,9 @@ export default function PackagingDispatch() {
           </span>
 
           <h3>
-            CORRUGATED
+            Corrugated
             <br />
-            BOXES
+            Boxes.
           </h3>
 
           <p>
@@ -151,9 +151,9 @@ export default function PackagingDispatch() {
               <span>PACKAGING FORMATS</span>
 
               <h3>
-                Two formats.
+                Two Formats.
                 <br />
-                Multiple dimensions.
+                Multiple Dimensions.
               </h3>
             </div>
 
@@ -256,9 +256,9 @@ export default function PackagingDispatch() {
             <span>PACKAGING IN PRACTICE</span>
 
             <h3>
-              Organized for
+              Organized For
               <br />
-              clear handling.
+              Clear Handling.
             </h3>
 
             <p>
@@ -319,9 +319,9 @@ export default function PackagingDispatch() {
             <span>PACKING FLOW</span>
 
             <h3>
-              From product
+              From Product
               <br />
-              to dispatch.
+              To Dispatch.
             </h3>
 
             <p>
@@ -375,9 +375,9 @@ export default function PackagingDispatch() {
           </div>
 
           <h3>
-            Clear packaging.
+            Clear Packaging.
             <br />
-            Clear handling.
+            Clear Handling.
           </h3>
 
           <p>

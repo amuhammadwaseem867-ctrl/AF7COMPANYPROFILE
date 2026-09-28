@@ -1,34 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import "./GlobalBusiness.css";
 
 const businessPoints = [
   {
-    title: "LAHORE BASE",
+    title: "Lahore Base",
     text: "AF7 / Apparel Fastener is based in Lahore, Pakistan, with its business identity centered around apparel fastening products.",
   },
   {
-    title: "APPAREL FOCUS",
+    title: "Apparel Focus",
     text: "The product range is structured around fastening components used across apparel and related product applications.",
   },
   {
-    title: "PRODUCT RANGE",
+    title: "Product Range",
     text: "Metal, aluminium, nylon and Vislon zippers are supported by brass and stainless steel slider components.",
   },
   {
-    title: "BUSINESS APPROACH",
+    title: "Business Approach",
     text: "A focused product range allows AF7 to communicate clearly with manufacturers, designers and product businesses.",
   },
 ];
 
 const regions = [
-  "APPAREL",
-  "DENIM",
-  "OUTERWEAR",
-  "BAGS",
-  "FOOTWEAR",
-  "SPORTSWEAR",
+  "Apparel",
+  "Denim",
+  "Outerwear",
+  "Bags",
+  "Footwear",
+  "Sportswear",
 ];
 
 export default function GlobalBusiness() {
@@ -56,9 +57,9 @@ export default function GlobalBusiness() {
             <span>BUSINESS PROFILE</span>
 
             <h2>
-              Built in Lahore.
+              Built In Lahore.
               <br />
-              Connected to product.
+              Connected To Product.
             </h2>
           </div>
 
@@ -92,9 +93,9 @@ export default function GlobalBusiness() {
             </span>
 
             <h3>
-              LAHORE
+              Lahore
               <br />
-              PAKISTAN
+              Pakistan
             </h3>
 
             <div className="global-business__coordinates">
@@ -112,13 +113,6 @@ export default function GlobalBusiness() {
 
         <div className="global-business__map">
           <div className="global-business__map-grid" />
-
-          <div className="global-business__map-outline">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
 
           <div className="global-business__map-marker">
             <div className="global-business__map-pulse" />
@@ -148,15 +142,15 @@ export default function GlobalBusiness() {
             <span>BUSINESS AREAS</span>
 
             <h3>
-              A focused product
+              A Focused Product
               <br />
-              system for industry.
+              System For Industry.
             </h3>
 
             <p>
-              AF7&apos;s fastening components can be considered across a range of
-              finished product categories where zipper and slider components
-              form part of the construction.
+              AF7&apos;s fastening components can be considered across a range
+              of finished product categories where zipper and slider
+              components form part of the construction.
             </p>
           </div>
 
@@ -235,11 +229,11 @@ export default function GlobalBusiness() {
             <span>BUSINESS CONNECTION</span>
 
             <h3>
-              From fastening
+              From Fastening
               <br />
-              component to
+              Component To
               <br />
-              finished product.
+              Finished Product.
             </h3>
 
             <p>
@@ -256,14 +250,26 @@ export default function GlobalBusiness() {
             </div>
           </div>
 
+          {/* GEOMETRIC BUSINESS CONNECTION */}
           <div className="global-business__connection-graphic">
             <div className="connection-ring connection-ring--outer" />
             <div className="connection-ring connection-ring--middle" />
             <div className="connection-ring connection-ring--inner" />
 
+            <span className="connection-spoke connection-spoke--top" />
+            <span className="connection-spoke connection-spoke--right" />
+            <span className="connection-spoke connection-spoke--bottom" />
+            <span className="connection-spoke connection-spoke--left" />
+
             <div className="connection-core">
-              <span>AF7</span>
-              <small>APPAREL<br />FASTENER</small>
+              <div className="connection-core__logo">
+                <Image
+                  src="/af7logo-27.svg"
+                  alt="AF7 Apparel Fastener"
+                  fill
+                  sizes="120px"
+                />
+              </div>
             </div>
 
             <div className="connection-node connection-node--top">
@@ -295,9 +301,9 @@ export default function GlobalBusiness() {
           </div>
 
           <h3>
-            A clear product
+            A Clear Product
             <br />
-            identity, built from Lahore.
+            Identity, Built From Lahore.
           </h3>
 
           <p>
@@ -324,4 +330,3 @@ export default function GlobalBusiness() {
     </section>
   );
 }
-

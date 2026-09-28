@@ -63,9 +63,9 @@ export default function Customization() {
             <span>CUSTOM FASTENING</span>
 
             <h2>
-              Details shaped
+              Details Shaped
               <br />
-              around the product.
+              Around The Product.
             </h2>
           </div>
 
@@ -116,11 +116,11 @@ export default function Customization() {
           </span>
 
           <h3>
-            MADE
+            Made
             <br />
-            FOR THE
+            For The
             <br />
-            PRODUCT.
+            Product.
           </h3>
 
           <p>
@@ -209,9 +209,9 @@ export default function Customization() {
             <span>CUSTOMIZATION AREAS</span>
 
             <h3>
-              The component
+              The Component
               <br />
-              follows the product.
+              Follows The Product.
             </h3>
           </div>
 
@@ -239,9 +239,9 @@ export default function Customization() {
           <span>BRAND IDENTIFICATION</span>
 
           <h3>
-            Your brand
+            Your Brand
             <br />
-            in the detail.
+            In The Detail.
           </h3>
 
           <p>
@@ -287,9 +287,9 @@ export default function Customization() {
           </div>
 
           <h3>
-            The smallest
+            The Smallest
             <br />
-            detail matters.
+            Detail Matters.
           </h3>
 
           <p>
