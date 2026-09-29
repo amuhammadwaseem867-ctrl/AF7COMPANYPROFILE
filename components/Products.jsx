@@ -1,125 +1,115 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import "./Products.css";
 
-const LOGO = "/af7logo-27.svg";
-
-const products = [
+const productCategories = [
   {
-    id: "metal-45",
-    number: "01",
-    category: "METAL ZIPPER",
-    name: "Metal Zipper",
-    size: "#4.5",
+    id: "2way",
+    title: "2-Way Zippers",
     description:
-      "Metal zipper construction for apparel and fashion applications.",
+      "Two-way zipper systems designed for applications requiring flexible opening, controlled movement and dependable fastening performance.",
     images: [
-      "/products/metalzippers4.5/4.5.webp",
+      "/products/2wayzippers/1.webp",
+      "/products/2wayzippers/2.webp",
+      "/products/2wayzippers/3.webp",
+      "/products/2wayzippers/4.webp",
+      "/products/2wayzippers/5.webp",
+      "/products/2wayzippers/7.webp",
+      "/products/2wayzippers/8.webp",
+      "/products/2wayzippers/9.webp",
+      "/products/2wayzippers/10.webp",
+      "/products/2wayzippers/images.webp",
+      "/products/2wayzippers/IMG_2104-optimized.webp",
+      "/products/2wayzippers/silver-two-ways-zipper.webp",
     ],
   },
 
   {
-    id: "metal-5",
-    number: "02",
-    category: "METAL ZIPPER",
-    name: "Metal Zipper",
-    size: "#5",
+    id: "aluminium",
+    title: "Aluminium Zippers",
     description:
-      "A complete visual reference of the AF7 #5 metal zipper collection.",
+      "Aluminium zipper constructions combining a refined metallic appearance with dependable fastening performance for contemporary applications.",
     images: [
-      "/products/metalzippers5/IMG_2071.webp",
-      "/products/metalzippers5/IMG_2074.webp",
-      "/products/metalzippers5/IMG_2076.webp",
-      "/products/metalzippers5/IMG_2077.webp",
-      "/products/metalzippers5/IMG_2078.webp",
-      "/products/metalzippers5/IMG_2079.webp",
-      "/products/metalzippers5/IMG_2080.webp",
-      "/products/metalzippers5/IMG_2083.webp",
-      "/products/metalzippers5/IMG_2085.webp",
-      "/products/metalzippers5/IMG_2086.webp",
-      "/products/metalzippers5/IMG_2087.webp",
-      "/products/metalzippers5/IMG_2089.webp",
-      "/products/metalzippers5/IMG_2091.webp",
-      "/products/metalzippers5/IMG_2092.webp",
-      "/products/metalzippers5/IMG_2093.webp",
-      "/products/metalzippers5/IMG_2094.webp",
-      "/products/metalzippers5/IMG_2095.webp",
-      "/products/metalzippers5/IMG_2096.webp",
-      "/products/metalzippers5/IMG_2099.webp",
-      "/products/metalzippers5/IMG_2100.webp",
-      "/products/metalzippers5/IMG_2101.webp",
-      "/products/metalzippers5/IMG_2102.webp",
-      "/products/metalzippers5/IMG_2103.webp",
-    ],
-  },
-
-  {
-    id: "aluminium-45",
-    number: "03",
-    category: "ALUMINIUM ZIPPER",
-    name: "Aluminium Zipper",
-    size: "#4.5",
-    description:
-      "Lightweight aluminium construction with a clean technical appearance.",
-    images: [
+      "/products/alumuniumzippers/3.webp",
+      "/products/alumuniumzippers/4.webp",
+      "/products/alumuniumzippers/5.webp",
+      "/products/alumuniumzippers/6.webp",
+      "/products/alumuniumzippers/7.webp",
+      "/products/alumuniumzippers/8.webp",
+      "/products/alumuniumzippers/17eb0fb5be5ca47779ac246a5c767a13.webp",
       "/products/alumuniumzippers/alumunium zipper.webp",
       "/products/alumuniumzippers/alumuniumzipper2.webp",
     ],
   },
 
   {
-    id: "aluminium-5",
-    number: "04",
-    category: "ALUMINIUM ZIPPER",
-    name: "Aluminium Zipper",
-    size: "#5",
+    id: "brass45",
+    title: "Brass Zippers 4.5",
     description:
-      "Lightweight aluminium zipper construction for contemporary applications.",
+      "Brass zipper constructions developed for applications where durability, finish and precise fastening are essential.",
     images: [
-      "/products/alumuniumzippers/alumunium.webp",
+      "/products/brasszippers4.5/4.5.webp",
+      "/products/brasszippers4.5/IMG_2089.webp",
+      "/products/brasszippers4.5/IMG_2091.webp",
+      "/products/brasszippers4.5/IMG_2095.webp",
+      "/products/brasszippers4.5/IMG_2096.webp",
+      "/products/brasszippers4.5/IMG_2100.webp",
+      "/products/brasszippers4.5/IMG_2101.webp",
+      "/products/brasszippers4.5/IMG_2102.webp",
     ],
   },
 
   {
-    id: "slider-45",
-    number: "05",
-    category: "SLIDER",
-    name: "Slider",
-    size: "#4.5",
+    id: "brass5",
+    title: "Brass Zippers 5",
     description:
-      "A detailed collection of #4.5 slider components and variations.",
+      "Size 5 zipper components offering a balance of structure, durability and refined finishing for a range of product applications.",
     images: [
-      "/products/sliders4.5/slider.webp",
-      "/products/sliders4.5/slider10.webp",
-      "/products/sliders4.5/slider11.webp",
-      "/products/sliders4.5/slider12.webp",
-      "/products/sliders4.5/slider13.webp",
-      "/products/sliders4.5/slider14.webp",
-      "/products/sliders4.5/slider15.webp",
-      "/products/sliders4.5/slider16.webp",
-      "/products/sliders4.5/slider17.webp",
-      "/products/sliders4.5/slider18.webp",
-      "/products/sliders4.5/slider2 (2).webp",
-      "/products/sliders4.5/slider3.webp",
-      "/products/sliders4.5/slider4.webp",
-      "/products/sliders4.5/slider5.webp",
-      "/products/sliders4.5/slider6.webp",
-      "/products/sliders4.5/slider7.webp",
-      "/products/sliders4.5/slider8.webp",
-      "/products/sliders4.5/slider9.webp",
+      "/products/brasszippers5/alumunium.webp",
+      "/products/brasszippers5/IMG_2071.webp",
+      "/products/brasszippers5/IMG_2074.webp",
+      "/products/brasszippers5/IMG_2076.webp",
+      "/products/brasszippers5/IMG_2077.webp",
+      "/products/brasszippers5/IMG_2078.webp",
+      "/products/brasszippers5/IMG_2079.webp",
+      "/products/brasszippers5/IMG_2080.webp",
+      "/products/brasszippers5/IMG_2083.webp",
+      "/products/brasszippers5/IMG_2085.webp",
+      "/products/brasszippers5/IMG_2086.webp",
+      "/products/brasszippers5/IMG_2087.webp",
+      "/products/brasszippers5/IMG_2092.webp",
+      "/products/brasszippers5/IMG_2093.webp",
+      "/products/brasszippers5/IMG_2094.webp",
+      "/products/brasszippers5/IMG_2103.webp",
     ],
   },
 
   {
-    id: "slider-5",
-    number: "06",
-    category: "SLIDER",
-    name: "Slider",
-    size: "#5",
+    id: "nylon",
+    title: "Nylon Zippers",
     description:
-      "The #5 slider collection presented through its available component forms.",
+      "Lightweight nylon zipper solutions designed for versatile apparel and product applications, including reversible and waterproof constructions.",
+    images: [
+      "/products/nylonzippers/2.webp",
+      "/products/nylonzippers/3.webp",
+      "/products/nylonzippers/4.webp",
+      "/products/nylonzippers/5.webp",
+      "/products/nylonzippers/6.webp",
+      "/products/nylonzippers/reversible nylon zipper.webp",
+      "/products/nylonzippers/waterproofnylon zipper 2.webp",
+      "/products/nylonzippers/waterproofnylonzipper.webp",
+      "/products/nylonzippers/Zip003-edited.webp",
+    ],
+  },
+
+  {
+    id: "slider5",
+    title: "Sliders 5",
+    description:
+      "Size 5 sliders designed to complement zipper systems with reliable movement, secure engagement and consistent finishing.",
     images: [
       "/products/slider5/IMG_2028.webp",
       "/products/slider5/IMG_2029.webp",
@@ -141,374 +131,181 @@ const products = [
   },
 
   {
-    id: "nylon",
-    number: "07",
-    category: "NYLON ZIPPER",
-    name: "Nylon Zipper",
-    size: "",
+    id: "yg45",
+    title: "Y/G Sliders 4.5",
     description:
-      "Flexible nylon zipper solutions including reversible and waterproof constructions.",
+      "Y/G sliders in size 4.5, designed for dependable zipper operation with a clean and precise component profile.",
     images: [
-      "/products/nylonzippers/reversible nylon zipper.webp",
-      "/products/nylonzippers/reversible nylon zipper2.webp",
-      "/products/nylonzippers/waterproofnylon zipper 2.webp",
-      "/products/nylonzippers/waterproofnylonzipper.webp",
+      "/products/sliders4.5/slider.webp",
+      "/products/sliders4.5/slider3.webp",
+      "/products/sliders4.5/slider6.webp",
+      "/products/sliders4.5/slider7.webp",
+      "/products/sliders4.5/slider8.webp",
+      "/products/sliders4.5/slider9.webp",
+      "/products/sliders4.5/slider13.webp",
+      "/products/sliders4.5/slider15.webp",
+      "/products/sliders4.5/slider16.webp",
+      "/products/sliders4.5/slider17.webp",
     ],
   },
 
   {
     id: "vislon",
-    number: "08",
-    category: "VISLON ZIPPER",
-    name: "Vislon Zipper",
-    size: "",
+    title: "Vislon Zippers",
     description:
-      "Lightweight moulded zipper construction for apparel and outerwear.",
+      "Vislon zipper systems offering a structured appearance and dependable fastening performance across apparel and related applications.",
     images: [
       "/products/vislonzipper/1.webp",
-      "/products/vislonzipper/6626d5fa8038c74ef5c8be7e7b324a84_271d730c-79bf-4656-936e-18097c9347ba.webp",
-      "/products/vislonzipper/IMG_9558.webp",
+      "/products/vislonzipper/vislon zip.webp",
+      "/products/vislonzipper/vislon zip2.png",
+      "/products/vislonzipper/vislon0.png",
+      "/products/vislonzipper/vislon3.png",
+      "/products/vislonzipper/vislon4.png",
+      "/products/vislonzipper/vislon5.png",
+      "/products/vislonzipper/vislon6.png",
+      "/products/vislonzipper/vislon7.png",
+      "/products/vislonzipper/vislon8.png",
+      "/products/vislonzipper/vislon9.png",
     ],
   },
 ];
 
+export default function Products() {
+  const [activeCategory, setActiveCategory] = useState(productCategories[0]);
+  const [activeImage, setActiveImage] = useState(0);
 
-/* -------------------------------------------------------
-   PRODUCT GALLERY
-------------------------------------------------------- */
+  const changeCategory = (category) => {
+    setActiveCategory(category);
+    setActiveImage(0);
+  };
 
-function ProductGallery({ product }) {
   return (
-    <div className="product-gallery">
-      {product.images.map((image, index) => (
+    <section className="products" id="products">
+      <div className="productsInner">
         <motion.div
-          className="product-image-frame"
-          key={`${product.id}-${index}`}
+          className="productsHeader"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="productsEyebrow">PRODUCT RANGE</div>
+
+          <div className="productsHeadingRow">
+            <h2>
+              Components
+              <br />
+              <span>Built to Perform.</span>
+            </h2>
+
+            <p>
+              A focused range of zipper systems and fastening components
+              developed for apparel, bags, footwear, denim and other product
+              applications.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="productsCategories"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{
-            duration: 0.55,
-            delay: Math.min(index * 0.04, 0.2),
-            ease: [0.22, 1, 0.36, 1],
-          }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <Image
-            src={image}
-            alt={`${product.name} ${product.size || ""} - AF7`}
-            fill
-            sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 25vw"
-          />
+          {productCategories.map((category) => (
+            <button
+              key={category.id}
+              type="button"
+              className={`categoryButton ${
+                activeCategory.id === category.id ? "active" : ""
+              }`}
+              onClick={() => changeCategory(category)}
+            >
+              {category.title}
+            </button>
+          ))}
         </motion.div>
-      ))}
-    </div>
-  );
-}
 
-
-/* -------------------------------------------------------
-   PRODUCT SECTION
-------------------------------------------------------- */
-
-function ProductSection({ product }) {
-  return (
-    <section className="product-item">
-
-      <div className="product-item-header">
-
-        <div className="product-index">
-          <span>{product.number}</span>
-        </div>
-
-        <div className="product-heading">
-          <p className="product-category">
-            {product.category}
-          </p>
-
-          <h2>{product.name}</h2>
-        </div>
-
-        {product.size && (
-          <div className="product-size">
-            {product.size}
-          </div>
-        )}
-
-      </div>
-
-      <div className="product-description-row">
-
-        <p className="product-description">
-          {product.description}
-        </p>
-
-        <div className="product-rule" />
-
-      </div>
-
-      <ProductGallery product={product} />
-
-    </section>
-  );
-}
-
-
-/* -------------------------------------------------------
-   MAIN
-------------------------------------------------------- */
-
-export default function Products() {
-
-  /*
-    IMPORTANT:
-    products[3] = Aluminium Zipper #5
-  */
-  const heroProduct = products[3];
-
-  return (
-    <section className="products-section" id="products">
-
-      {/* =================================================
-          HEADER
-      ================================================= */}
-
-      <header className="products-header">
-
-        <div className="products-header-logo">
-          <Image
-            src={LOGO}
-            alt="AF7"
-            width={100}
-            height={38}
-          />
-        </div>
-
-        <div className="products-header-meta">
-          <span>PRODUCT COLLECTION</span>
-          <span>AF7 / APPAREL FASTENER</span>
-          <span>LAHORE · PAKISTAN</span>
-        </div>
-
-      </header>
-
-
-      {/* =================================================
-          HERO
-      ================================================= */}
-
-      <section className="products-hero">
-
-        <div className="products-hero-image">
-
-          <Image
-            src={heroProduct.images[0]}
-            alt="AF7 Aluminium #5 zipper product"
-            fill
-            priority
-            sizes="(max-width: 700px) 100vw, 58vw"
-          />
-
-          <div className="hero-image-label">
-            <span>AF7 PRODUCT 04</span>
-            <span>ALUMINIUM / #5</span>
-          </div>
-
-        </div>
-
-
-        <div className="products-hero-panel">
-
-          <div className="hero-panel-top">
-            <span>PRODUCTS</span>
-            <span>04 / 08</span>
-          </div>
-
-          <div className="hero-panel-content">
-
-            <p className="hero-panel-kicker">
-              APPAREL FASTENER
-            </p>
-
-            <h1>
-              Built Around
-              <br />
-              The Detail.
-            </h1>
-
-            <p className="hero-panel-copy">
-              A focused collection of zipper and slider
-              components developed for apparel, fashion,
-              bags, footwear and performance applications.
-            </p>
-
-          </div>
-
-          <div className="hero-panel-bottom">
-
-            <div>
-              <span className="panel-label">FEATURED</span>
-              <strong>ALUMINIUM ZIPPER</strong>
+        <motion.div
+          className="productContent"
+          key={activeCategory.id}
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="productInfo">
+            <div className="productCount">
+              {String(productCategories.indexOf(activeCategory) + 1).padStart(
+                2,
+                "0"
+              )}
+              <span>/</span>
+              {String(productCategories.length).padStart(2, "0")}
             </div>
 
-            <div>
-              <span className="panel-label">SIZE</span>
-              <strong>#5</strong>
+            <h3>{activeCategory.title}</h3>
+
+            <p>{activeCategory.description}</p>
+
+            <div className="productMeta">
+              <span>AF7</span>
+              <span>APPAREL FASTENER</span>
+            </div>
+          </div>
+
+          <div className="productShowcase">
+            <div className="productImageStage">
+              <motion.div
+                key={`${activeCategory.id}-${activeImage}`}
+                className="productImageWrap"
+                initial={{ opacity: 0, scale: 0.94 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.45 }}
+              >
+                <Image
+                  src={activeCategory.images[activeImage]}
+                  alt={`${activeCategory.title} product`}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 90vw, 55vw"
+                  className="productImage"
+                />
+              </motion.div>
             </div>
 
+            <div className="imageIndex">
+              <span>{String(activeImage + 1).padStart(2, "0")}</span>
+              <span className="indexLine" />
+              <span>
+                {String(activeCategory.images.length).padStart(2, "0")}
+              </span>
+            </div>
           </div>
 
-        </div>
-
-      </section>
-
-
-      {/* =================================================
-          INTRODUCTION
-      ================================================= */}
-
-      <section className="products-introduction">
-
-        <div className="intro-label">
-          <span>01</span>
-          <span>THE COLLECTION</span>
-        </div>
-
-        <div className="intro-content">
-
-          <h2>
-            Components For
-            <br />
-            Considered Products.
-          </h2>
-
-          <div className="intro-copy">
-
-            <p>
-              AF7 develops zipper and slider components for
-              products where construction, appearance and
-              everyday performance matter.
-            </p>
-
-            <p>
-              The collection brings together metal,
-              aluminium, nylon and moulded zipper systems,
-              alongside dedicated slider components in
-              different sizes and configurations.
-            </p>
-
+          <div className="productThumbnails">
+            {activeCategory.images.map((image, index) => (
+              <button
+                key={`${image}-${index}`}
+                type="button"
+                className={`thumbnail ${
+                  activeImage === index ? "selected" : ""
+                }`}
+                onClick={() => setActiveImage(index)}
+                aria-label={`View ${activeCategory.title} image ${index + 1}`}
+              >
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  sizes="90px"
+                  className="thumbnailImage"
+                />
+              </button>
+            ))}
           </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =================================================
-          CATEGORY STRIP
-      ================================================= */}
-
-      <section className="products-category-strip">
-
-        <div>
-          <span>01</span>
-          <strong>METAL</strong>
-        </div>
-
-        <div>
-          <span>02</span>
-          <strong>ALUMINIUM</strong>
-        </div>
-
-        <div>
-          <span>03</span>
-          <strong>SLIDERS</strong>
-        </div>
-
-        <div>
-          <span>04</span>
-          <strong>NYLON</strong>
-        </div>
-
-        <div>
-          <span>05</span>
-          <strong>VISLON</strong>
-        </div>
-
-      </section>
-
-
-      {/* =================================================
-          PRODUCT LIBRARY
-      ================================================= */}
-
-      <main className="products-list">
-
-        {products.map((product) => (
-          <ProductSection
-            key={product.id}
-            product={product}
-          />
-        ))}
-
-      </main>
-
-
-      {/* =================================================
-          CLOSING
-      ================================================= */}
-
-      <section className="products-closing">
-
-        <div className="closing-line" />
-
-        <div className="closing-content">
-
-          <p>
-            AF7 / APPAREL FASTENER
-          </p>
-
-          <h2>
-            Components Made
-            <br />
-            To Connect.
-          </h2>
-
-          <span>
-            LAHORE · PAKISTAN
-          </span>
-
-        </div>
-
-        <div className="closing-line" />
-
-      </section>
-
-
-      {/* =================================================
-          FOOTER
-      ================================================= */}
-
-      <footer className="products-footer">
-
-        <div>
-          <Image
-            src={LOGO}
-            alt="AF7"
-            width={82}
-            height={32}
-          />
-        </div>
-
-        <p>
-          AF7 / APPAREL FASTENER
-        </p>
-
-        <p>
-          PRODUCT COLLECTION
-        </p>
-
-      </footer>
-
+        </motion.div>
+      </div>
     </section>
   );
 }
