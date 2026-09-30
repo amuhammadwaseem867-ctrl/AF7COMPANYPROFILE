@@ -14,14 +14,12 @@ const productCategories = [
     images: [
       "/products/2wayzippers/1.webp",
       "/products/2wayzippers/2.webp",
+      "/products/2wayzippers/2way.webp",
+      "/products/2wayzippers/2wayzipper.webp",
       "/products/2wayzippers/3.webp",
       "/products/2wayzippers/4.webp",
-      "/products/2wayzippers/5.webp",
-      "/products/2wayzippers/7.webp",
-      "/products/2wayzippers/8.webp",
-      "/products/2wayzippers/9.webp",
-      "/products/2wayzippers/10.webp",
-      "/products/2wayzippers/images.webp",
+      "/products/2wayzippers/5brxxred_1024x1024.webp",
+      "/products/2wayzippers/6.webp",
       "/products/2wayzippers/IMG_2104-optimized.webp",
       "/products/2wayzippers/silver-two-ways-zipper.webp",
     ],
@@ -39,8 +37,8 @@ const productCategories = [
       "/products/alumuniumzippers/6.webp",
       "/products/alumuniumzippers/7.webp",
       "/products/alumuniumzippers/8.webp",
-      "/products/alumuniumzippers/17eb0fb5be5ca47779ac246a5c767a13.webp",
       "/products/alumuniumzippers/alumunium zipper.webp",
+      "/products/alumuniumzippers/alumunium.webp",
       "/products/alumuniumzippers/alumuniumzipper2.webp",
     ],
   },
@@ -55,7 +53,6 @@ const productCategories = [
       "/products/brasszippers4.5/IMG_2089.webp",
       "/products/brasszippers4.5/IMG_2091.webp",
       "/products/brasszippers4.5/IMG_2095.webp",
-      "/products/brasszippers4.5/IMG_2096.webp",
       "/products/brasszippers4.5/IMG_2100.webp",
       "/products/brasszippers4.5/IMG_2101.webp",
       "/products/brasszippers4.5/IMG_2102.webp",
@@ -68,6 +65,7 @@ const productCategories = [
     description:
       "Size 5 zipper components offering a balance of structure, durability and refined finishing for a range of product applications.",
     images: [
+      "/products/brasszippers5/71sPgkXBneL.jpg",
       "/products/brasszippers5/alumunium.webp",
       "/products/brasszippers5/IMG_2071.webp",
       "/products/brasszippers5/IMG_2074.webp",
@@ -156,6 +154,14 @@ const productCategories = [
       "Vislon zipper systems offering a structured appearance and dependable fastening performance across apparel and related applications.",
     images: [
       "/products/vislonzipper/1.webp",
+      "/products/vislonzipper/2.webp",
+      "/products/vislonzipper/3.webp",
+      "/products/vislonzipper/4.webp",
+      "/products/vislonzipper/5.webp",
+      "/products/vislonzipper/7.webp",
+      "/products/vislonzipper/8.webp",
+      "/products/vislonzipper/9.webp",
+      "/products/vislonzipper/10.webp",
       "/products/vislonzipper/vislon zip.webp",
       "/products/vislonzipper/vislon zip2.png",
       "/products/vislonzipper/vislon0.png",
@@ -169,7 +175,6 @@ const productCategories = [
     ],
   },
 ];
-
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState(productCategories[0]);
   const [activeImage, setActiveImage] = useState(0);
