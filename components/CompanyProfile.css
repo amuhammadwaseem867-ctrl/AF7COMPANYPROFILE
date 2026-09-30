@@ -65,7 +65,7 @@
 ========================================================= */
 
 .company-profile__intro {
-  width: min(1280px, calc(100% - 96px));
+  width: var(--container);
 
   margin: 0 auto;
 
@@ -160,7 +160,7 @@
 ========================================================= */
 
 .company-profile__visual {
-  width: min(1400px, calc(100% - 64px));
+  width: var(--container);
 
   margin: 0 auto;
 
@@ -452,7 +452,7 @@
 ========================================================= */
 
 .company-profile__overview {
-  width: min(1180px, calc(100% - 96px));
+  width: var(--container);
 
   margin: 0 auto;
 
@@ -540,7 +540,7 @@
 
 
 .company-profile__facts-inner {
-  width: min(1280px, calc(100% - 96px));
+  width: var(--container);
 
   margin: 0 auto;
 
@@ -663,7 +663,7 @@
 
 
 .company-profile__closing-inner {
-  width: min(1280px, calc(100% - 96px));
+  width: var(--container);
 
   min-height: 440px;
 
@@ -775,7 +775,7 @@
 
 
   .company-profile__visual {
-    width: min(1480px, calc(100% - 80px));
+    width: min(1480px, calc(100% - 96px));
 
     min-height: 680px;
 
@@ -814,7 +814,7 @@
 @media (max-width: 1100px) {
 
   .company-profile__intro {
-    width: calc(100% - 64px);
+    width: var(--container);
   }
 
 
@@ -834,7 +834,7 @@
   */
 
   .company-profile__visual {
-    width: calc(100% - 48px);
+    width: var(--container);
 
     grid-template-columns:
       minmax(0, 1.1fr)
@@ -853,7 +853,7 @@
 
 
   .company-profile__overview {
-    width: calc(100% - 64px);
+    width: var(--container);
   }
 
 
@@ -863,12 +863,12 @@
 
 
   .company-profile__facts-inner {
-    width: calc(100% - 64px);
+    width: var(--container);
   }
 
 
   .company-profile__closing-inner {
-    width: calc(100% - 64px);
+    width: var(--container);
   }
 }
 
@@ -916,7 +916,7 @@
 @media (max-width: 600px) {
 
   .company-profile__intro {
-    width: calc(100% - 36px);
+    width: calc(100% - 32px);
 
     padding: 78px 0 72px;
   }
@@ -962,7 +962,7 @@
   ======================================================= */
 
   .company-profile__visual {
-    width: calc(100% - 24px);
+    width: calc(100% - 32px);
 
     grid-template-columns: 1fr;
   }
@@ -1045,7 +1045,7 @@
   ======================================================= */
 
   .company-profile__overview {
-    width: calc(100% - 36px);
+    width: calc(100% - 32px);
 
     padding: 76px 0;
   }
@@ -1084,7 +1084,7 @@
   ======================================================= */
 
   .company-profile__facts-inner {
-    width: calc(100% - 36px);
+    width: calc(100% - 32px);
 
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
@@ -1133,7 +1133,7 @@
   ======================================================= */
 
   .company-profile__closing-inner {
-    width: calc(100% - 36px);
+    width: calc(100% - 32px);
 
     min-height: 360px;
 

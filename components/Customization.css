@@ -15,7 +15,7 @@
 }
 
 .customization-section__header-inner {
-  width: min(1400px, calc(100% - 96px));
+  width: var(--container);
   min-height: 82px;
   margin: 0 auto;
 
@@ -58,7 +58,7 @@
 ========================================= */
 
 .customization-section__intro-inner {
-  width: min(1180px, calc(100% - 120px));
+  width: var(--container);
   min-height: 380px;
   margin: 0 auto;
 
@@ -110,7 +110,7 @@
 ========================================= */
 
 .customization-section__featured {
-  width: min(1320px, calc(100% - 140px));
+  width: var(--container);
   min-height: 650px;
   margin: 0 auto;
 
@@ -287,7 +287,7 @@
 ========================================= */
 
 .customization-section__visuals {
-  width: min(1180px, calc(100% - 120px));
+  width: var(--container);
   margin: 0 auto;
   padding: 105px 0 115px;
 }
@@ -417,7 +417,7 @@
 }
 
 .customization-section__system-inner {
-  width: min(1180px, calc(100% - 120px));
+  width: var(--container);
   min-height: 500px;
   margin: 0 auto;
 
@@ -493,7 +493,7 @@
 ========================================= */
 
 .customization-section__detail {
-  width: min(1180px, calc(100% - 120px));
+  width: var(--container);
   min-height: 610px;
   margin: 0 auto;
 
@@ -610,7 +610,7 @@
 }
 
 .customization-section__statement-inner {
-  width: min(1180px, calc(100% - 120px));
+  width: var(--container);
   min-height: 340px;
   margin: 0 auto;
 
@@ -662,7 +662,7 @@
 }
 
 .customization-section__footer-inner {
-  width: min(1400px, calc(100% - 96px));
+  width: var(--container);
   height: 72px;
   margin: 0 auto;
 
@@ -711,11 +711,11 @@
   .customization-section__system-inner,
   .customization-section__detail,
   .customization-section__statement-inner {
-    width: calc(100% - 80px);
+    width: var(--container);
   }
 
   .customization-section__featured {
-    width: calc(100% - 80px);
+    width: var(--container);
   }
 
   .customization-section__featured-info {
@@ -727,7 +727,7 @@
    MOBILE
 ========================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 700px) {
   .customization-section__header-inner {
     width: calc(100% - 32px);
     min-height: 68px;

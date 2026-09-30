@@ -129,13 +129,12 @@ h6 {
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   :root {
-    --container: min(100% - 40px, 1400px);
+    --container: calc(100% - 56px);
   }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   :root {
     --container: calc(100% - 32px);
   }

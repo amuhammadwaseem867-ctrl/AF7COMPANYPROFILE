@@ -7,7 +7,7 @@
 }
 
 .productsInner {
-  width: min(1440px, calc(100% - 100px));
+  width: var(--container);
   margin: 0 auto;
 }
 
@@ -50,7 +50,7 @@
 
 .productsHeadingRow p {
   max-width: 480px;
-  margin: 0 0 5px;
+  margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   line-height: 1.8;
@@ -328,7 +328,7 @@
   }
 
   .productsInner {
-    width: min(100% - 60px, 1000px);
+    width: calc(100% - 56px);
   }
 
   .productsHeadingRow {
@@ -352,13 +352,13 @@
 
 /* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .products {
     padding: 90px 0 100px;
   }
 
   .productsInner {
-    width: calc(100% - 36px);
+    width: calc(100% - 32px);
   }
 
   .productsHeader {
@@ -461,7 +461,7 @@
   }
 
   .productsInner {
-    width: calc(100% - 28px);
+    width: calc(100% - 32px);
   }
 
   .productsHeadingRow h2 {
