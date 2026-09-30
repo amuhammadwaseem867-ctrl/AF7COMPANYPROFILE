@@ -8,7 +8,7 @@ import "./Products.css";
 const productCategories = [
   {
     id: "2way",
-    title: "2-Way Zippers",
+    title: "2-Way Brass Zippers",
     description:
       "Two-way zipper systems designed for applications requiring flexible opening, controlled movement and dependable fastening performance.",
     images: [
