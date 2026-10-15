@@ -114,6 +114,7 @@
 }
 
 .plate__size {
+  font-family: var(--display);
   position: absolute;
   top: 12px;
   right: 14px;
@@ -168,6 +169,7 @@
 }
 
 .plate__monogram {
+  font-family: var(--display);
   font-size: clamp(6rem, 11vw, 10rem);
   line-height: 1;
   color: #e8dcc6;
@@ -324,6 +326,7 @@
 }
 
 .index__name {
+  font-family: var(--display);
   display: flex;
   align-items: center;
   gap: 18px;
@@ -479,7 +482,7 @@
 
 .drawer__title {
   font-size: clamp(2.2rem, 3.6vw, 3.4rem);
-  letter-spacing: -0.045em;
+  letter-spacing: -0.03em;
   line-height: 0.98;
 }
 

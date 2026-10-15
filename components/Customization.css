@@ -93,10 +93,11 @@
 }
 
 .custom__closing {
+  font-family: var(--display);
   margin-top: clamp(96px, 12vw, 180px);
   font-size: var(--fs-h1);
   font-weight: 500;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.035em;
   line-height: 0.98;
   text-align: right;
 }

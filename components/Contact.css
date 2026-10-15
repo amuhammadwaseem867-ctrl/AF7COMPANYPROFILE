@@ -36,9 +36,10 @@
 }
 
 .contact__big {
+  font-family: var(--display);
   font-size: clamp(2rem, 3.4vw, 3.25rem);
   font-weight: 500;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   line-height: 1;
   font-variant-numeric: tabular-nums;
   margin-bottom: auto;
@@ -125,6 +126,7 @@
 }
 
 .footer__tagline {
+  font-family: var(--display);
   font-size: clamp(1.4rem, 2.4vw, 2.2rem);
   letter-spacing: -0.03em;
   line-height: 1.1;

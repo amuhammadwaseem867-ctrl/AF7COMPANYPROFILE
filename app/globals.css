@@ -20,13 +20,16 @@
   --line-dark: rgba(238, 240, 243, 0.14);
 
   /* Type */
-  --sans: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
-  --mono: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
-  --serif: var(--font-serif), Georgia, serif;
+  --sans: var(--font-poppins), "Helvetica Neue", Arial, sans-serif;
+  --display: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+  /* Small uppercase labels and numerals */
+  --mono: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+  /* Accent words inside headings */
+  --serif: var(--font-poppins), "Helvetica Neue", Arial, sans-serif;
 
-  --fs-display: clamp(3.4rem, 10.2vw, 11.5rem);
-  --fs-h1: clamp(2.6rem, 6.4vw, 6.75rem);
-  --fs-h2: clamp(2.1rem, 4.6vw, 4.6rem);
+  --fs-display: clamp(2.9rem, 8.6vw, 9.5rem);
+  --fs-h1: clamp(2.3rem, 5.6vw, 5.75rem);
+  --fs-h2: clamp(1.9rem, 4vw, 4rem);
   --fs-h3: clamp(1.35rem, 1.9vw, 1.75rem);
   --fs-lead: clamp(1.15rem, 1.55vw, 1.45rem);
   --fs-body: 1rem;
@@ -77,7 +80,6 @@ body {
   font-family: var(--sans);
   font-size: var(--fs-body);
   line-height: 1.6;
-  font-feature-settings: "ss01", "cv11";
   overflow-x: clip;
 }
 
@@ -119,8 +121,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 500;
-  letter-spacing: -0.035em;
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
   line-height: 1;
   text-wrap: balance;
 }
@@ -149,8 +152,8 @@ p {
   gap: 10px;
   font-family: var(--mono);
   font-size: var(--fs-label);
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   line-height: 1;
 }
@@ -166,8 +169,8 @@ p {
 .serif {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 300;
+  letter-spacing: -0.03em;
 }
 
 .section-head {

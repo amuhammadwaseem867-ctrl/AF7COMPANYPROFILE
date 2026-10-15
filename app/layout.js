@@ -1,24 +1,20 @@
-﻿import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import Providers from "../components/Providers";
 import "./globals.css";
 
-const sans = Geist({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-montserrat",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const mono = Geist_Mono({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-poppins",
   display: "swap",
-});
-
-const serif = Instrument_Serif({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-  weight: "400",
+  weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
 });
 
@@ -36,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${sans.variable} ${mono.variable} ${serif.variable}`}
+      className={`${montserrat.variable} ${poppins.variable}`}
     >
       <body>
         <Providers>{children}</Providers>
