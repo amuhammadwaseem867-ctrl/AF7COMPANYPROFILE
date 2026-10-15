@@ -1,45 +1,40 @@
 ﻿import Preloader from "../components/Preloader";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import CompanyProfile from "../components/CompanyProfile";
+import About from "../components/About";
 import Products from "../components/Products";
-import Applications from "../components/Applications";
 import Manufacturing from "../components/Manufacturing";
+import Technology from "../components/Technology";
+import Finishes from "../components/Finishes";
 import Quality from "../components/Quality";
 import Customization from "../components/Customization";
-import PackagingDispatch from "../components/PackagingDispatch";
-import GlobalBusiness from "../components/GlobalBusiness";
+import Applications from "../components/Applications";
+import WhyAF7 from "../components/WhyAF7";
+import Purpose from "../components/Purpose";
 import Contact from "../components/Contact";
+import { SmoothScroll } from "../components/motion";
 
 export default function HomePage() {
   return (
     <>
+      <SmoothScroll />
       <Preloader />
-
       <Navbar />
 
       <main>
         <Hero />
-
-        <CompanyProfile />
-
+        <About />
         <Products />
-
-        <Applications />
-
         <Manufacturing />
-
+        <Technology />
+        <Finishes />
         <Quality />
-
         <Customization />
-
-        <PackagingDispatch />
-
-        <GlobalBusiness />
-
+        <Applications />
+        <WhyAF7 />
+        <Purpose />
         <Contact />
       </main>
     </>
   );
 }
-

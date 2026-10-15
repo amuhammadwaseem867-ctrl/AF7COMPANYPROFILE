@@ -1,362 +1,111 @@
 ﻿"use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { QUALITY } from "./content";
+import { EASE, MaskLines, Parallax, Reveal } from "./motion";
 import "./Quality.css";
-
-const qualityPoints = [
-  {
-    title: "VISUAL CHECKING",
-    text: "Finished fastening components are visually reviewed for overall appearance, construction and finishing.",
-  },
-  {
-    title: "COMPONENT CHECK",
-    text: "Zippers and sliders are checked as individual components before becoming part of the finished product.",
-  },
-  {
-    title: "CONSISTENCY",
-    text: "Attention to consistency supports a more uniform product across the fastening range.",
-  },
-  {
-    title: "FINISHED PRODUCT",
-    text: "The final component is considered as part of the wider apparel or accessory construction.",
-  },
-];
-
-const qualityImages = [
-  {
-    image: "/quality/zipper-check.webp",
-    label: "ZIPPER CHECKING",
-  },
-  {
-    image: "/quality/slider-check.webp",
-    label: "SLIDER CHECKING",
-  },
-];
 
 export default function Quality() {
   return (
-    <section className="quality-section" id="quality">
-      {/* HEADER */}
-      <header className="quality-section__header">
-        <div className="quality-section__header-inner">
-          <div className="quality-section__header-left">
-            <span>QUALITY</span>
-            <i />
-            <span>AF7 / APPAREL FASTENER</span>
+    <section className="quality" id="quality">
+      <div className="wrap">
+        <div className="section-head">
+          <div className="section-head__meta">
+            <span className="section-head__index">06</span>
+            <span className="label label--dot">Quality</span>
           </div>
-
-          <span className="quality-section__header-right">
-            LAHORE · PAKISTAN
-          </span>
-        </div>
-      </header>
-
-      {/* INTRO */}
-      <div className="quality-section__intro">
-        <div className="quality-section__intro-inner">
-          <div className="quality-section__intro-title">
-            <span>QUALITY APPROACH</span>
-
-            <h2>
-              Attention To
-              <br />
-              Every Component.
-            </h2>
-          </div>
-
-          <div className="quality-section__intro-copy">
-            <p>
-              Quality at AF7 is approached through attention to the fastening
-              component at different stages of production and checking.
-            </p>
-
-            <p>
-              From individual zippers and sliders to finished components,
-              consistent inspection helps maintain focus on construction,
-              appearance and finishing.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* FEATURED QUALITY */}
-      <div className="quality-section__featured">
-        <motion.div
-          className="quality-featured__image"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{
-            duration: 0.75,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
-          <Image
-            src="/quality/inspection.webp"
-            alt="AF7 quality inspection"
-            fill
-            sizes="(max-width: 1000px) 100vw, 66vw"
-            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1280" }}
+          <MaskLines
+            className="section-head__title"
+            lines={["Quality in", <em className="serif" key="e">every stage.</em>]}
           />
-
-          <div className="quality-featured__gradient" />
-
-          <div className="quality-featured__label">
-            <span>AF7</span>
-            <i />
-            <strong>QUALITY / INSPECTION</strong>
-          </div>
-
-          <span className="quality-featured__crop quality-featured__crop--tl" />
-          <span className="quality-featured__crop quality-featured__crop--tr" />
-          <span className="quality-featured__crop quality-featured__crop--bl" />
-          <span className="quality-featured__crop quality-featured__crop--br" />
-        </motion.div>
-
-        <motion.div
-          className="quality-section__featured-info"
-          initial={{ opacity: 0, x: 25 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{
-            duration: 0.7,
-            delay: 0.08,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
-          <span className="quality-section__featured-kicker">
-            QUALITY CONTROL
-          </span>
-
-          <h3>
-            Check
-            <br />
-            Every
-            <br />
-            Detail.
-          </h3>
-
-          <p>
-            A fastening component is only effective when its construction,
-            appearance and finishing work together. AF7 keeps these details
-            within the focus of its checking process.
-          </p>
-
-          <div className="quality-section__featured-rule" />
-
-          <div className="quality-section__featured-detail">
-            <span>FOCUS</span>
-            <strong>ZIPPER + SLIDER</strong>
-          </div>
-
-          <div className="quality-section__featured-detail">
-            <span>CHECK</span>
-            <strong>COMPONENT / FINISH / APPEARANCE</strong>
-          </div>
-
-          <div className="quality-section__featured-detail">
-            <span>APPLICATION</span>
-            <strong>APPAREL + RELATED PRODUCTS</strong>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* QUALITY IN PRACTICE */}
-      <div className="quality-section__visuals">
-        <div className="quality-section__visuals-heading">
-          <div>
-            <span>QUALITY IN PRACTICE</span>
-
-            <h3>
-              Inspection At
-              <br />
-              Component Level.
-            </h3>
-          </div>
-
-          <p>
-            Inspection and checking bring attention back to the physical
-            component — its details, construction and finished appearance.
-          </p>
         </div>
 
-        <div className="quality-section__visual-grid">
-          {qualityImages.map((item, index) => (
-            <motion.figure
-              className="quality-visual"
-              key={item.label}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.12 }}
-              transition={{
-                duration: 0.65,
-                delay: index * 0.08,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              <div className="quality-visual__image">
+        <div className="quality__grid">
+          <div className="quality__media">
+            <Reveal className="quality__img quality__img--a">
+              <Parallax className="quality__frame" distance={50}>
                 <Image
-                  src={item.image}
-                  alt={item.label}
+                  src="/quality/inspection.webp"
+                  alt="Production team reviewing work on the AF7 floor"
                   fill
-                  sizes="(max-width: 700px) 100vw, 45vw"
-                  style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1280" }}
+                  sizes="(max-width: 900px) 60vw, 26vw"
                 />
-
-                <span className="quality-visual__crop quality-visual__crop--tl" />
-                <span className="quality-visual__crop quality-visual__crop--br" />
-              </div>
-
-              <figcaption>
-                <span>AF7</span>
-                <i />
-                <strong>{item.label}</strong>
-              </figcaption>
-            </motion.figure>
-          ))}
-        </div>
-      </div>
-
-      {/* QUALITY SYSTEM */}
-      <div className="quality-section__system">
-        <div className="quality-section__system-inner">
-          <div className="quality-section__system-title">
-            <span>CHECKING POINTS</span>
-
-            <h3>
-              Quality Is Built
-              <br />
-              Into The Process.
-            </h3>
+              </Parallax>
+            </Reveal>
+            <Reveal className="quality__img quality__img--b" delay={0.15}>
+              <Parallax className="quality__frame" distance={40}>
+                <Image
+                  src="/quality/detail.webp"
+                  alt="Hands checking a finished product"
+                  fill
+                  sizes="(max-width: 900px) 60vw, 24vw"
+                />
+              </Parallax>
+            </Reveal>
           </div>
 
-          <div className="quality-section__points">
-            {qualityPoints.map((point, index) => (
-              <motion.div
-                className="quality-point"
-                key={point.title}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.12 }}
-                transition={{
-                  duration: 0.55,
-                  delay: index * 0.06,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-              >
-                <div className="quality-point__top">
-                  <span>{point.title}</span>
-                  <i />
-                </div>
+          <div className="quality__copy">
+            <Reveal as="p" className="quality__intro">
+              {QUALITY.intro}
+            </Reveal>
 
-                <p>{point.text}</p>
-              </motion.div>
-            ))}
+            <ol className="quality__list">
+              {QUALITY.points.map((point, i) => (
+                <motion.li
+                  key={point}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.8 }}
+                >
+                  <motion.span
+                    className="quality__line"
+                    variants={{ hidden: { scaleX: 0 }, show: { scaleX: 1 } }}
+                    transition={{ duration: 1.2, delay: i * 0.06, ease: EASE }}
+                  />
+                  <span className="quality__no">{String(i + 1).padStart(2, "0")}</span>
+                  <motion.span
+                    className="quality__text"
+                    variants={{ hidden: { opacity: 0, x: -14 }, show: { opacity: 1, x: 0 } }}
+                    transition={{ duration: 0.9, delay: 0.1 + i * 0.06, ease: EASE }}
+                  >
+                    {point}
+                  </motion.span>
+                  <motion.svg
+                    className="quality__check"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <motion.path
+                      d="M5 12.5l4.2 4.2L19 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      variants={{ hidden: { pathLength: 0 }, show: { pathLength: 1 } }}
+                      transition={{ duration: 0.8, delay: 0.35 + i * 0.06, ease: EASE }}
+                    />
+                  </motion.svg>
+                </motion.li>
+              ))}
+            </ol>
           </div>
         </div>
-      </div>
 
-      {/* PRODUCT DETAIL */}
-      <div className="quality-section__detail">
-        <motion.div
-          className="quality-section__detail-image"
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{
-            duration: 0.75,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
-          <Image
-            src="/quality/detail.webp"
-            alt="AF7 fastening component detail"
-            fill
-            sizes="(max-width: 1000px) 100vw, 57vw"
-            style={{ objectFit: "cover", objectPosition: "center", aspectRatio: "1920 / 1280" }}
+        <div className="quality__objective">
+          <Reveal as="span" className="label label--dot">Our objective</Reveal>
+          <MaskLines
+            as="blockquote"
+            className="quality__quote"
+            lines={[
+              "To deliver products that combine",
+              <>
+                <em className="serif">reliable functionality</em> with consistent
+              </>,
+              "appearance and finishing.",
+            ]}
           />
-
-          <div className="quality-section__detail-overlay" />
-
-          <div className="quality-section__detail-label">
-            <span>AF7</span>
-            <i />
-            <span>COMPONENT DETAIL</span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="quality-section__detail-copy"
-          initial={{ opacity: 0, x: 25 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{
-            duration: 0.7,
-            delay: 0.08,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
-          <span>FINISHED COMPONENT</span>
-
-          <h3>
-            Precision
-            <br />
-            At Component Level.
-          </h3>
-
-          <p>
-            The quality of a finished product begins with attention to the
-            individual fastening component. AF7 keeps the zipper and slider
-            at the centre of the checking process.
-          </p>
-
-          <div className="quality-section__detail-line" />
-
-          <div className="quality-section__detail-meta">
-            <span>AF7 / APPAREL FASTENER</span>
-            <span>LAHORE · PAKISTAN</span>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* STATEMENT */}
-      <div className="quality-section__statement">
-        <div className="quality-section__statement-inner">
-          <div className="quality-section__statement-mark">
-            <span>AF7</span>
-            <i />
-            <span>QUALITY</span>
-          </div>
-
-          <h3>
-            Detail Is Not
-            <br />
-            An Afterthought.
-          </h3>
-
-          <p>
-            Every fastening component becomes part of a finished product.
-            Attention to its details helps maintain the consistency expected
-            from the AF7 product range.
-          </p>
         </div>
       </div>
-
-      {/* FOOTER */}
-      <footer className="quality-section__footer">
-        <div className="quality-section__footer-inner">
-          <span>AF7 / APPAREL FASTENER</span>
-
-          <div className="quality-section__footer-mark">
-            <i />
-            <b />
-            <i />
-          </div>
-
-          <span>LAHORE · PAKISTAN</span>
-        </div>
-      </footer>
     </section>
   );
 }

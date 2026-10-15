@@ -1,0 +1,106 @@
+.about {
+  padding: var(--section-y) 0;
+  background: var(--paper);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.about__figure {
+  grid-column: 1 / span 5;
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about__image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  background: var(--paper-2);
+}
+
+.about__image img {
+  object-fit: cover;
+}
+
+.about__figure figcaption {
+  color: var(--muted-2);
+}
+
+.about__copy {
+  grid-column: 7 / span 6;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 6vw, 80px);
+  padding-top: 8px;
+}
+
+.about__statement {
+  font-size: clamp(1.6rem, 2.75vw, 2.6rem);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+
+.about__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.about__philosophy {
+  margin-top: clamp(96px, 14vw, 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.about__motto {
+  color: var(--ink);
+  font-size: var(--fs-h1);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+.about__motto em {
+  color: var(--navy);
+}
+
+@media (max-width: 900px) {
+  .about__figure,
+  .about__copy {
+    grid-column: 1 / -1;
+    position: relative;
+    top: 0;
+  }
+
+  .about__figure {
+    margin-bottom: 32px;
+  }
+
+  .about__image {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 560px) {
+  .about__cols {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

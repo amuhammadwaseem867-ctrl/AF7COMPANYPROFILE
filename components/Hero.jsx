@@ -1,162 +1,108 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
 import Image from "next/image";
-import { ArrowDownRight } from "lucide-react";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { ArrowDown } from "lucide-react";
+import { COMPANY, FINISHES, PROCESS, PRODUCTS } from "./content";
+import { EASE, MaskLines, scrollToId } from "./motion";
+import { useIntroDone } from "./Preloader";
 import "./Hero.css";
 
+const FACTS = [
+  { value: String(PRODUCTS.length).padStart(2, "0"), label: "Product lines" },
+  { value: String(PROCESS.length).padStart(2, "0"), label: "Production stages" },
+  { value: String(FINISHES.length).padStart(2, "0"), label: "Metal finishes" },
+];
+
 export default function Hero() {
+  const ref = useRef(null);
+  const ready = useIntroDone();
+  const reduce = useReducedMotion();
+
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-18%"]);
+  const fade = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
+  const fadeIn = (delay) => ({
+    initial: reduce ? false : { opacity: 0, y: 18 },
+    animate: ready ? { opacity: 1, y: 0 } : undefined,
+    transition: { duration: 1.1, delay, ease: EASE },
+  });
+
   return (
-    <section className="profile-hero" id="home">
-
-      {/* =====================================================
-          IMAGE
-      ===================================================== */}
-
-      <div className="profile-hero__image">
-
-        <Image
-          src="/hero.webp"
-          alt="AF7 Apparel Fastener"
-          fill
-          priority
-          sizes="(max-width: 800px) 100vw, 58vw"
-          className="profile-hero__image-element"
-        />
-
-        <div className="profile-hero__image-caption">
-          <span>AF7 / APPAREL FASTENER</span>
-          <span>LAHORE · PAKISTAN</span>
-        </div>
-
-      </div>
-
-
-      {/* =====================================================
-          INFORMATION PANEL
-      ===================================================== */}
-
-      <div className="profile-hero__panel">
-
-        {/* TOP */}
+    <section className="hero" id="top" ref={ref}>
+      <motion.div className="hero__media" style={{ y: reduce ? 0 : imgY }}>
         <motion.div
-          className="profile-hero__panel-top"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2,
-            ease: [0.16, 1, 0.3, 1],
-          }}
+          className="hero__media-inner"
+          initial={reduce ? false : { scale: 1.18 }}
+          animate={ready ? { scale: 1 } : undefined}
+          transition={{ duration: 2.6, ease: EASE }}
         >
-          <span>COMPANY PROFILE</span>
+          <Image
+            src="/manufacturing/machinery.webp"
+            alt="Zipper tape weaving machinery on the AF7 production floor"
+            fill
+            preload
+            sizes="100vw"
+          />
+        </motion.div>
+      </motion.div>
+      <div className="hero__shade" />
 
-          <span>2026</span>
+      <motion.div className="hero__content wrap" style={{ y: reduce ? 0 : contentY, opacity: fade }}>
+        <motion.div className="hero__top" {...fadeIn(0.3)}>
+          <span className="label label--dot">Company Profile</span>
+          <span className="label">{COMPANY.city}</span>
         </motion.div>
 
+        <div className="hero__main">
+          <motion.p className="hero__kicker" {...fadeIn(0.45)}>
+            {COMPANY.descriptor}
+          </motion.p>
 
-        {/* MAIN */}
-        <div className="profile-hero__main">
-
-          <motion.div
-            className="profile-hero__eyebrow"
-            initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.35,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-          >
-            <span>01</span>
-
-            <i />
-
-            <span>APPAREL FASTENER</span>
-          </motion.div>
-
-
-          <motion.h1
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.45,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-          >
-            Precision
-            <br />
-            In Every
-            <br />
-            Detail.
-          </motion.h1>
-
-
-          <motion.div
-            className="profile-hero__intro"
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.7,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-          >
-
-            <span className="profile-hero__intro-line" />
-
-            <p>
-              A closer look at AF7 — our products,
-              manufacturing capabilities, applications
-              and the people behind every fastening
-              solution.
-            </p>
-
-          </motion.div>
-
+          <MaskLines
+            as="h1"
+            className="hero__title"
+            immediate={ready}
+            delay={0.2}
+            stagger={0.11}
+            lines={[
+              "Precision in",
+              <>
+                every <em className="serif">detail.</em>
+              </>,
+            ]}
+          />
         </div>
 
+        <div className="hero__bottom">
+          <motion.p className="hero__intro" {...fadeIn(0.75)}>
+            Metal, aluminium, nylon and Vislon zippers with selected garment
+            accessories — tape, teeth, finishing, assembly and inspection
+            managed under one roof.
+          </motion.p>
 
-        {/* BOTTOM */}
-        <motion.div
-          className="profile-hero__panel-bottom"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            duration: 0.7,
-            delay: 0.9,
-          }}
-        >
+          <motion.dl className="hero__facts" {...fadeIn(0.9)}>
+            {FACTS.map((f) => (
+              <div key={f.label}>
+                <dt>{f.label}</dt>
+                <dd>{f.value}</dd>
+              </div>
+            ))}
+          </motion.dl>
 
-          <div className="profile-hero__location">
-            <span className="profile-hero__location-label">
-              BASED IN
-            </span>
-
-            <strong>
-              LAHORE, PAKISTAN
-            </strong>
-          </div>
-
-
-          <div className="profile-hero__scroll">
-
-            <span>
-              EXPLORE PROFILE
-            </span>
-
-            <ArrowDownRight
-              size={17}
-              strokeWidth={1.2}
-            />
-
-          </div>
-
-        </motion.div>
-
-      </div>
-
+          <motion.button
+            className="hero__scroll"
+            onClick={() => scrollToId("about")}
+            aria-label="Scroll to About"
+            {...fadeIn(1.05)}
+          >
+            <ArrowDown size={18} strokeWidth={1.4} />
+          </motion.button>
+        </div>
+      </motion.div>
     </section>
   );
 }
