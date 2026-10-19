@@ -12,37 +12,15 @@
 
 .quality__media {
   grid-column: 1 / span 6;
-  position: relative;
-  min-height: 640px;
-}
-
-.quality__img {
-  position: absolute;
-}
-
-.quality__img--a {
-  top: 0;
-  left: 0;
-  width: 62%;
-}
-
-.quality__img--b {
-  right: 0;
-  bottom: 0;
-  width: 54%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: end;
 }
 
 .quality__frame {
   border-radius: var(--radius);
   background: var(--paper-2);
-}
-
-.quality__img--a .quality__frame {
-  aspect-ratio: 3 / 4;
-}
-
-.quality__img--b .quality__frame {
-  aspect-ratio: 4 / 3.4;
 }
 
 .quality__frame img {
@@ -129,8 +107,6 @@
   }
 
   .quality__media {
-    min-height: 0;
-    aspect-ratio: 1 / 1;
     margin-bottom: 40px;
   }
 }

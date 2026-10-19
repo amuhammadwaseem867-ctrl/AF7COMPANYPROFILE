@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { PROCESS } from "./content";
+import { ratio } from "./dims";
 import { EASE, MaskLines, Reveal } from "./motion";
 import "./Manufacturing.css";
 
@@ -65,9 +66,18 @@ export default function Manufacturing() {
                 >
                   <Image
                     src={step.image}
+                    alt=""
+                    aria-hidden="true"
+                    fill
+                    sizes="20vw"
+                    className="process__backdrop"
+                  />
+                  <Image
+                    src={step.image}
                     alt={`${step.title} — AF7 production`}
                     fill
                     sizes="(max-width: 900px) 100vw, 45vw"
+                    className="process__photo"
                   />
                 </motion.div>
               </AnimatePresence>
@@ -104,7 +114,7 @@ export default function Manufacturing() {
                 <div>
                   <h3>{s.title}</h3>
                   <p>{s.text}</p>
-                  <div className="process__mobile-img">
+                  <div className="process__mobile-img" style={{ aspectRatio: ratio(s.image) }}>
                     <Image src={s.image} alt="" fill sizes="100vw" />
                   </div>
                 </div>

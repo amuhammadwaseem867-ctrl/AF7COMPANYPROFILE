@@ -21,7 +21,6 @@
 
 .about__image {
   position: relative;
-  aspect-ratio: 4 / 5;
   border-radius: var(--radius);
   background: var(--paper-2);
 }
@@ -95,7 +94,7 @@
   }
 
   .about__image {
-    aspect-ratio: 4 / 3;
+    max-width: 520px;
   }
 }
 

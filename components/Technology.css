@@ -68,6 +68,7 @@
 }
 
 .tech__item {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -75,27 +76,19 @@
 
 .tech__img {
   position: relative;
-  width: clamp(260px, 36vw, 560px);
-  aspect-ratio: 4 / 5;
-  max-height: 68vh;
+  height: min(58vh, 560px);
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--navy-2);
 }
 
-.tech__item:nth-child(even) .tech__img {
-  aspect-ratio: 1;
-  margin-top: 8vh;
-}
-
 .tech__img img {
   object-fit: cover;
   filter: grayscale(0.35);
-  transition: transform 1.2s var(--ease), filter 1.2s var(--ease);
+  transition: filter 1.2s var(--ease);
 }
 
 .tech__item:hover .tech__img img {
-  transform: scale(1.05);
   filter: grayscale(0);
 }
 
@@ -143,12 +136,8 @@
   }
 
   .tech__img {
-    width: 78vw;
-  }
-
-  .tech__item:nth-child(even) .tech__img {
-    margin-top: 0;
-    aspect-ratio: 4 / 5;
+    height: 52vh;
+    max-height: 440px;
   }
 
   .tech__track {

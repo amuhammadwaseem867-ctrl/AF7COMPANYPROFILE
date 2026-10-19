@@ -155,8 +155,9 @@ function Word({ children, progress, range }) {
   );
 }
 
-/* Image that drifts vertically against scroll for depth. */
-export function Parallax({ children, className, distance = 80 }) {
+/* Frame that drifts gently against scroll for depth. The whole frame moves,
+   so the image inside is never cropped. */
+export function Parallax({ children, className, style, distance = 40 }) {
   const ref = useRef(null);
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -166,16 +167,12 @@ export function Parallax({ children, className, distance = 80 }) {
   const y = useTransform(scrollYProgress, [0, 1], [-distance, distance]);
 
   return (
-    <div ref={ref} className={className} style={{ overflow: "hidden", position: "relative" }}>
-      <motion.div
-        style={{
-          y: reduce ? 0 : y,
-          position: "absolute",
-          inset: `-${distance}px 0`,
-        }}
-      >
-        {children}
-      </motion.div>
-    </div>
+    <motion.div
+      ref={ref}
+      className={className}
+      style={{ ...style, position: "relative", overflow: "hidden", y: reduce ? 0 : y }}
+    >
+      {children}
+    </motion.div>
   );
 }

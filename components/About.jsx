@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ABOUT } from "./content";
+import { ratio } from "./dims";
 import { MaskLines, Parallax, Reveal, ScrollWords } from "./motion";
 import "./About.css";
 
@@ -22,7 +23,11 @@ export default function About() {
 
         <div className="about__grid">
           <Reveal as="figure" className="about__figure">
-            <Parallax className="about__image" distance={60}>
+            <Parallax
+              className="about__image"
+              distance={30}
+              style={{ aspectRatio: ratio("/manufacturing/factory.webp") }}
+            >
               <Image
                 src="/manufacturing/factory.webp"
                 alt="Zipper production machinery inside the AF7 facility, Lahore"

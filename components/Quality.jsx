@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { QUALITY } from "./content";
+import { ratio } from "./dims";
 import { EASE, MaskLines, Parallax, Reveal } from "./motion";
 import "./Quality.css";
 
@@ -24,7 +25,11 @@ export default function Quality() {
         <div className="quality__grid">
           <div className="quality__media">
             <Reveal className="quality__img quality__img--a">
-              <Parallax className="quality__frame" distance={50}>
+              <Parallax
+                className="quality__frame"
+                distance={30}
+                style={{ aspectRatio: ratio("/quality/inspection.webp") }}
+              >
                 <Image
                   src="/quality/inspection.webp"
                   alt="Production team reviewing work on the AF7 floor"
@@ -34,7 +39,11 @@ export default function Quality() {
               </Parallax>
             </Reveal>
             <Reveal className="quality__img quality__img--b" delay={0.15}>
-              <Parallax className="quality__frame" distance={40}>
+              <Parallax
+                className="quality__frame"
+                distance={20}
+                style={{ aspectRatio: ratio("/quality/detail.webp") }}
+              >
                 <Image
                   src="/quality/detail.webp"
                   alt="Hands checking a finished product"

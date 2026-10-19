@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { TECHNOLOGY } from "./content";
+import { ratio } from "./dims";
 import { MaskLines, Reveal } from "./motion";
 import "./Technology.css";
 
@@ -78,7 +79,7 @@ export default function Technology() {
           >
             {TECHNOLOGY.gallery.map((g, i) => (
               <figure className="tech__item" key={g.src}>
-                <div className="tech__img">
+                <div className="tech__img" style={{ aspectRatio: ratio(g.src) }}>
                   <Image src={g.src} alt={g.caption} fill sizes="(max-width: 900px) 80vw, 36vw" />
                 </div>
                 <figcaption>

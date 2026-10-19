@@ -101,7 +101,10 @@ export const PRODUCTS = [
     family: "aluminium",
     familyLabel: "Aluminium",
     text: "A compact aluminium zipper option for applications requiring a refined profile and metallic finish.",
-    images: [`${P}/alumuniumzippers/alumuniumzipper2.webp`],
+    images: [
+      `${P}/alumuniumzippers/aluminium-4-5.webp`,
+      `${P}/alumuniumzippers/alumuniumzipper2.webp`,
+    ],
   },
   {
     id: "nylon",

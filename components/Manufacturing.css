@@ -27,8 +27,15 @@
   inset: 0;
 }
 
-.process__img img {
+/* Blurred copy fills the frame; the sharp photo sits on top uncropped. */
+.process__img .process__backdrop {
   object-fit: cover;
+  filter: blur(28px) brightness(0.55) saturate(0.8);
+  transform: scale(1.15);
+}
+
+.process__img .process__photo {
+  object-fit: contain;
 }
 
 .process__frame::after {
@@ -159,7 +166,6 @@
   .process__mobile-img {
     display: block;
     position: relative;
-    aspect-ratio: 4 / 3;
     margin-top: 24px;
     border-radius: var(--radius);
     overflow: hidden;
