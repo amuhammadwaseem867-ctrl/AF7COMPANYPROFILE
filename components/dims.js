@@ -12,10 +12,6 @@ export const DIMS = {
     1080,
     1080
   ],
-  "/manufacturing/5.webp": [
-    1080,
-    1080
-  ],
   "/manufacturing/6.webp": [
     1080,
     1080
@@ -28,6 +24,10 @@ export const DIMS = {
     1080,
     1350
   ],
+  "/manufacturing/assembly-machine.webp": [
+    1536,
+    1024
+  ],
   "/manufacturing/factory.webp": [
     1920,
     2511
@@ -36,9 +36,21 @@ export const DIMS = {
     1920,
     1280
   ],
+  "/manufacturing/plating-bath.webp": [
+    1800,
+    1200
+  ],
+  "/manufacturing/plating-line.webp": [
+    1800,
+    1200
+  ],
   "/manufacturing/production.webp": [
     1280,
     1920
+  ],
+  "/manufacturing/teeth-machines.webp": [
+    1800,
+    1200
   ],
   "/packaging/box-stack.webp": [
     1920,

@@ -13,10 +13,17 @@
   grid-column: 1 / span 6;
 }
 
-.process__frame {
+.process__sticky {
   position: sticky;
-  top: max(96px, calc(50vh - 34vh));
-  height: min(68vh, 760px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.process__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--ink);
@@ -27,15 +34,13 @@
   inset: 0;
 }
 
-/* Blurred copy fills the frame; the sharp photo sits on top uncropped. */
-.process__img .process__backdrop {
+/* The frame always matches the photo's proportions, so cover never crops. */
+.process__img .process__photo {
   object-fit: cover;
-  filter: blur(28px) brightness(0.55) saturate(0.8);
-  transform: scale(1.15);
 }
 
-.process__img .process__photo {
-  object-fit: contain;
+.process__caption {
+  color: var(--muted);
 }
 
 .process__frame::after {

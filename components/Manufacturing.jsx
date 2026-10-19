@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { PROCESS } from "./content";
-import { ratio } from "./dims";
+import { DIMS, ratio } from "./dims";
 import { EASE, MaskLines, Reveal } from "./motion";
 import "./Manufacturing.css";
 
@@ -34,6 +34,33 @@ export default function Manufacturing() {
 
   const step = PROCESS[active];
 
+  // The frame takes the exact proportions of the current photo, capped by
+  // the column width and the viewport height, and morphs between steps.
+  const stageRef = useRef(null);
+  const [bounds, setBounds] = useState({ w: 0, h: 0 });
+
+  useEffect(() => {
+    const el = stageRef.current;
+    if (!el) return;
+    const measure = () =>
+      setBounds({
+        w: el.clientWidth,
+        h: Math.min(window.innerHeight * 0.72, 780),
+      });
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+
+  const [iw, ih] = DIMS[step.image] ?? [4, 3];
+  const frameW = Math.min(bounds.w, bounds.h * (iw / ih));
+  const frameH = frameW * (ih / iw);
+
   return (
     <section className="process" id="manufacturing">
       <div className="wrap">
@@ -53,8 +80,17 @@ export default function Manufacturing() {
         </div>
 
         <div className="process__grid">
-          <div className="process__stage">
-            <div className="process__frame">
+          <div className="process__stage" ref={stageRef}>
+            <div
+              className="process__sticky"
+              style={{ top: `max(96px, calc(50vh - ${frameH / 2}px))` }}
+            >
+            <motion.div
+              className="process__frame"
+              initial={false}
+              animate={bounds.w ? { width: frameW, height: frameH } : undefined}
+              transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
+            >
               <AnimatePresence initial={false}>
                 <motion.div
                   key={step.image}
@@ -64,14 +100,6 @@ export default function Manufacturing() {
                   exit={{ opacity: 0, transition: { duration: 0.6, delay: 0.3 } }}
                   transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
                 >
-                  <Image
-                    src={step.image}
-                    alt=""
-                    aria-hidden="true"
-                    fill
-                    sizes="20vw"
-                    className="process__backdrop"
-                  />
                   <Image
                     src={step.image}
                     alt={`${step.title} — AF7 production`}
@@ -98,6 +126,19 @@ export default function Manufacturing() {
                 </span>
                 <span className="label">/ {String(PROCESS.length).padStart(2, "0")}</span>
               </div>
+            </motion.div>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.p
+                key={step.no}
+                className="process__caption label"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.4, ease: EASE }}
+              >
+                {step.no} — {step.title}
+              </motion.p>
+            </AnimatePresence>
             </div>
           </div>
 
