@@ -1,4 +1,5 @@
-// All copy is taken from the AF7 Professional Profile document.
+
+ // All copy is taken from the AF7 Professional Profile document.
 
 export const COMPANY = {
   name: "AF7",
@@ -8,10 +9,8 @@ export const COMPANY = {
   address: "33B, Punjab Small Industries Corporation, Sunder II, Lahore, Pakistan",
   phone: "+92 313 4710325",
   phoneHref: "tel:+923134710325",
-  maps:
-    "https://www.google.com/maps/search/?api=1&query=33B%20Punjab%20Small%20Industries%20Corporation%20Sunder%20II%20Lahore%20Pakistan",
-  mapsEmbed:
-    "https://www.google.com/maps?q=33B%20Punjab%20Small%20Industries%20Corporation%20Sunder%20II%20Lahore%20Pakistan&output=embed",
+  maps: "https://www.google.com/maps/search/?api=1&query=33B%20Punjab%20Small%20Industries%20Corporation%20Sunder%20II%20Lahore%20Pakistan",
+  mapsEmbed: "https://www.google.com/maps?q=33B%20Punjab%20Small%20Industries%20Corporation%20Sunder%20II%20Lahore%20Pakistan&output=embed",
   instagram: "https://www.instagram.com/af7trims?stkn=ZmVyNscHJrY2J1",
   facebook: "https://www.facebook.com/profile.php?id=61584996430125&mibextid=wwXIfr",
 };
@@ -56,12 +55,20 @@ export const PRODUCTS = [
     familyLabel: "Metal",
     text: "Robust metal zipper solutions for garments and applications requiring a distinctive, durable fastening component.",
     images: [
-      `${P}/brasszippers5/IMG_2086.webp`,
-      `${P}/brasszippers5/IMG_2079.webp`,
-      `${P}/brasszippers5/IMG_2093.webp`,
-      `${P}/brasszippers5/IMG_2078.webp`,
-      `${P}/brasszippers5/IMG_2094.webp`,
-      `${P}/brasszippers5/IMG_2085.webp`,
+      `${P}/brasszippers5/1.webp`,
+      `${P}/brasszippers5/2.webp`,
+      `${P}/brasszippers5/3.webp`,
+      `${P}/brasszippers5/4.webp`,
+      `${P}/brasszippers5/5.webp`,
+      `${P}/brasszippers5/6.webp`,
+      `${P}/brasszippers5/7.webp`,
+      `${P}/brasszippers5/8.webp`,
+      `${P}/brasszippers5/9.webp`,
+      `${P}/brasszippers5/10.webp`,
+      `${P}/brasszippers5/alumunium.webp`,
+      `${P}/brasszippers5/IMG_2071.webp`,
+      `${P}/brasszippers5/IMG_2074.webp`,
+      `${P}/brasszippers5/IMG_2077.webp`,
     ],
   },
   {
@@ -73,11 +80,11 @@ export const PRODUCTS = [
     familyLabel: "Metal",
     text: "A refined metal zipper option for applications requiring a more compact profile with reliable functionality.",
     images: [
-      `${P}/brasszippers4.5/IMG_2091.webp`,
-      `${P}/brasszippers4.5/4.5.webp`,
-      `${P}/brasszippers4.5/IMG_2089.webp`,
-      `${P}/brasszippers4.5/IMG_2100.webp`,
-      `${P}/brasszippers4.5/IMG_2102.webp`,
+      `${P}/brasszippers4.5/1.webp`,
+      `${P}/brasszippers4.5/2.webp`,
+      `${P}/brasszippers4.5/3.webp`,
+      `${P}/brasszippers4.5/4.webp`,
+      `${P}/brasszippers4.5/images.webp`,
     ],
   },
   {
@@ -89,8 +96,10 @@ export const PRODUCTS = [
     familyLabel: "Aluminium",
     text: "Lightweight aluminium zipper solutions combining functional performance with a distinctive metallic appearance.",
     images: [
-      `${P}/alumuniumzippers/aluminium-5.webp`,
-      `${P}/brasszippers5/alumunium.webp`,
+      `${P}/alumuniumzipper5/1.webp`,
+      `${P}/alumuniumzipper5/2.webp`,
+      `${P}/alumuniumzipper5/3.webp`,
+      `${P}/alumuniumzipper5/4.webp`,
     ],
   },
   {
@@ -102,8 +111,30 @@ export const PRODUCTS = [
     familyLabel: "Aluminium",
     text: "A compact aluminium zipper option for applications requiring a refined profile and metallic finish.",
     images: [
-      `${P}/alumuniumzippers/aluminium-4-5.webp`,
-      `${P}/alumuniumzippers/alumuniumzipper2.webp`,
+      `${P}/alumuniumzippers4.5/1.webp`,
+      `${P}/alumuniumzippers4.5/2.webp`,
+      `${P}/alumuniumzippers4.5/3.webp`,
+      `${P}/alumuniumzippers4.5/4.webp`,
+      `${P}/alumuniumzippers4.5/images.webp`,
+    ],
+  },
+  {
+    id: "two-way",
+    code: "2W·01",
+    size: null,
+    name: "Two-Way Zippers",
+    family: "synthetic",
+    familyLabel: "Two-Way",
+    text: "Versatile two-way zipper solutions for garments and applications requiring opening from both ends.",
+    images: [
+      `${P}/2wayzippers/black.webp`,
+      `${P}/2wayzippers/black2.webp`,
+      `${P}/2wayzippers/burgandry.webp`,
+      `${P}/2wayzippers/grey.webp`,
+      `${P}/2wayzippers/navy.webp`,
+      `${P}/2wayzippers/nvy.webp`,
+      `${P}/2wayzippers/white.webp`,
+      `${P}/2wayzippers/white%20tsape.webp`,
     ],
   },
   {
@@ -115,11 +146,12 @@ export const PRODUCTS = [
     familyLabel: "Nylon",
     text: "Flexible and versatile zipper solutions for a wide range of apparel and accessory applications.",
     images: [
-      `${P}/nylonzippers/Zip003-edited.webp`,
+      `${P}/nylonzippers/1.webp`,
       `${P}/nylonzippers/2.webp`,
-      `${P}/nylonzippers/reversible nylon zipper.webp`,
-      `${P}/nylonzippers/waterproofnylonzipper.webp`,
+      `${P}/nylonzippers/3.webp`,
+      `${P}/nylonzippers/4.webp`,
       `${P}/nylonzippers/5.webp`,
+      `${P}/nylonzippers/6.webp`,
     ],
   },
   {
@@ -131,12 +163,10 @@ export const PRODUCTS = [
     familyLabel: "Vislon",
     text: "Moulded-tooth zipper solutions suitable for casualwear, sportswear, outerwear, and other functional applications.",
     images: [
-      `${P}/vislonzipper/vislon3.png`,
-      `${P}/vislonzipper/vislon7.png`,
-      `${P}/vislonzipper/vislon0.png`,
-      `${P}/vislonzipper/vislon4.png`,
-      `${P}/vislonzipper/vislon6.png`,
-      `${P}/vislonzipper/vislon9.png`,
+      `${P}/vislonzipper/1.webp`,
+      `${P}/vislonzipper/2.webp`,
+      `${P}/vislonzipper/3.webp`,
+      `${P}/vislonzipper/4.webp`,
     ],
   },
   {
@@ -147,7 +177,10 @@ export const PRODUCTS = [
     family: "accessories",
     familyLabel: "Accessory",
     text: "Practical attachment solutions for garment tags, hangtags, labels, and product identification.",
-    images: [],
+    images: [
+      `${P}/tagstring/1.webp`,
+      `${P}/tagstring/2.webp`,
+    ],
     monogram: "Ts",
   },
   {
@@ -158,7 +191,10 @@ export const PRODUCTS = [
     family: "accessories",
     familyLabel: "Accessory",
     text: "Finishing components for suitable cords and drawstrings, designed for a neat and refined end finish.",
-    images: [],
+    images: [
+      `${P}/tipping/1.webp`,
+      `${P}/tipping/2.webp`,
+    ],
     monogram: "Tp",
   },
 ];
@@ -176,7 +212,7 @@ export const PROCESS = [
     no: "02",
     title: "Teeth Manufacturing",
     text: "Manufacturing and forming zipper teeth according to the required type and size.",
-    image: `${M}/teeth-machines.webp`,
+    image: `${M}/assembly-machine.webp`,
   },
   {
     no: "03",
@@ -212,7 +248,7 @@ export const PROCESS = [
     no: "08",
     title: "Packing & Delivery",
     text: "Completed products are prepared, packed, and organized for delivery according to customer requirements.",
-    image: "/packaging/box-stack.webp",
+    image: "/packaging/AF7_Carton_Mockup_Detail_Logo.webp",
   },
 ];
 

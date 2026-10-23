@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -26,18 +27,40 @@ function Plate({ product, large = false, image }) {
   return (
     <div className={`plate ${large ? "plate--large" : ""}`}>
       <span className="plate__code label">{product.code}</span>
-      {product.size && <span className="plate__size">{product.size}</span>}
+
+      {product.size && (
+        <span className="plate__size">{product.size}</span>
+      )}
+
       <div className="plate__img">
         <Image
           src={src}
           alt={productTitle(product)}
           fill
-          sizes={large ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 600px) 50vw, 25vw"}
+          sizes={
+            large
+              ? "(max-width: 900px) 100vw, 50vw"
+              : "(max-width: 600px) 50vw, 25vw"
+          }
+          style={{
+            objectFit: "contain",
+            objectPosition: "center",
+          }}
         />
       </div>
+
       {!large && product.images[1] && (
         <div className="plate__img plate__img--alt" aria-hidden="true">
-          <Image src={product.images[1]} alt="" fill sizes="25vw" />
+          <Image
+            src={product.images[1]}
+            alt=""
+            fill
+            sizes="(max-width: 600px) 50vw, 25vw"
+            style={{
+              objectFit: "contain",
+              objectPosition: "center",
+            }}
+          />
         </div>
       )}
     </div>
@@ -47,14 +70,18 @@ function Plate({ product, large = false, image }) {
 function ProductDrawer({ product, onClose }) {
   const [shot, setShot] = useState(0);
   const closeRef = useRef(null);
-  const isMetal = product.family === "metal" || product.family === "aluminium";
+  const isMetal =
+    product.family === "metal" || product.family === "aluminium";
   const index = PRODUCTS.indexOf(product);
 
   useEffect(() => {
     closeRef.current?.focus();
     setScrollLocked(true);
+
     const onKey = (e) => e.key === "Escape" && onClose();
+
     window.addEventListener("keydown", onKey);
+
     return () => {
       window.removeEventListener("keydown", onKey);
       setScrollLocked(false);
@@ -72,6 +99,7 @@ function ProductDrawer({ product, onClose }) {
       exit={{ opacity: 0, transition: { delay: 0.2 } }}
     >
       <div className="drawer__scrim" onClick={onClose} />
+
       <motion.div
         className="drawer__panel"
         initial={{ x: "100%" }}
@@ -82,9 +110,16 @@ function ProductDrawer({ product, onClose }) {
       >
         <div className="drawer__bar">
           <span className="label">
-            {String(index + 1).padStart(2, "0")} / {String(PRODUCTS.length).padStart(2, "0")} — Catalogue
+            {String(index + 1).padStart(2, "0")} /{" "}
+            {String(PRODUCTS.length).padStart(2, "0")} — Catalogue
           </span>
-          <button ref={closeRef} className="drawer__close" onClick={onClose} aria-label="Close">
+
+          <button
+            ref={closeRef}
+            className="drawer__close"
+            onClick={onClose}
+            aria-label="Close"
+          >
             <X size={18} strokeWidth={1.4} />
           </button>
         </div>
@@ -99,7 +134,11 @@ function ProductDrawer({ product, onClose }) {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5, ease: EASE }}
             >
-              <Plate product={product} large image={product.images[shot]} />
+              <Plate
+                product={product}
+                large
+                image={product.images[shot]}
+              />
             </motion.div>
           </AnimatePresence>
 
@@ -112,7 +151,16 @@ function ProductDrawer({ product, onClose }) {
                   onClick={() => setShot(i)}
                   aria-label={`View image ${i + 1}`}
                 >
-                  <Image src={src} alt="" fill sizes="80px" />
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    sizes="80px"
+                    style={{
+                      objectFit: "contain",
+                      objectPosition: "center",
+                    }}
+                  />
                 </button>
               ))}
             </div>
@@ -121,7 +169,9 @@ function ProductDrawer({ product, onClose }) {
 
         <div className="drawer__body">
           <span className="label label--dot">{product.familyLabel}</span>
+
           <h3 className="drawer__title">{productTitle(product)}</h3>
+
           <p className="drawer__text">{product.text}</p>
 
           <dl className="drawer__specs">
@@ -129,16 +179,19 @@ function ProductDrawer({ product, onClose }) {
               <dt>Reference</dt>
               <dd>{product.code}</dd>
             </div>
+
             <div>
               <dt>Construction</dt>
               <dd>{product.familyLabel}</dd>
             </div>
+
             {product.size && (
               <div>
                 <dt>Size</dt>
                 <dd>{product.size}</dd>
               </div>
             )}
+
             <div>
               <dt>Customization</dt>
               <dd>On request</dd>
@@ -148,6 +201,7 @@ function ProductDrawer({ product, onClose }) {
           {isMetal && (
             <div className="drawer__finishes">
               <span className="label">Applicable finishes</span>
+
               <ul>
                 {FINISHES.map((f) => (
                   <li key={f.name} title={f.name}>
@@ -160,9 +214,10 @@ function ProductDrawer({ product, onClose }) {
                   </li>
                 ))}
               </ul>
+
               <p className="drawer__note">
-                Finish availability may vary according to zipper type, material,
-                and production requirements.
+                Finish availability may vary according to zipper type,
+                material, and production requirements.
               </p>
             </div>
           )}
@@ -190,13 +245,19 @@ export default function Products() {
 
   const counts = useMemo(() => {
     const c = { all: PRODUCTS.length };
-    PRODUCTS.forEach((p) => (c[p.family] = (c[p.family] ?? 0) + 1));
+
+    PRODUCTS.forEach((p) => {
+      c[p.family] = (c[p.family] ?? 0) + 1;
+    });
+
     return c;
   }, []);
 
   const close = useCallback(() => setSelected(null), []);
 
-  const visible = PRODUCTS.filter((p) => filter === "all" || p.family === filter);
+  const visible = PRODUCTS.filter(
+    (p) => filter === "all" || p.family === filter
+  );
 
   return (
     <section className="products" id="products">
@@ -206,6 +267,7 @@ export default function Products() {
             <span className="section-head__index">02</span>
             <span className="label label--dot">Our Product Range</span>
           </div>
+
           <MaskLines
             className="section-head__title"
             lines={[
@@ -215,6 +277,7 @@ export default function Products() {
               </>,
             ]}
           />
+
           <Reveal as="p" className="section-head__lead">
             Metal, aluminium, nylon and Vislon zippers, supported by tag strings
             and tipping solutions — each specified to the intended application.
@@ -223,7 +286,11 @@ export default function Products() {
 
         <Reveal className="catalog__bar">
           <LayoutGroup id="filters">
-            <div className="catalog__filters" role="tablist" aria-label="Filter products">
+            <div
+              className="catalog__filters"
+              role="tablist"
+              aria-label="Filter products"
+            >
               {PRODUCT_FILTERS.map((f) => (
                 <button
                   key={f.id}
@@ -236,9 +303,14 @@ export default function Products() {
                     <motion.span
                       layoutId="filter-pill"
                       className="catalog__pill"
-                      transition={{ type: "spring", stiffness: 380, damping: 34 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 34,
+                      }}
                     />
                   )}
+
                   <span className="catalog__filter-label">{f.label}</span>
                   <sup>{counts[f.id] ?? 0}</sup>
                 </button>
@@ -254,6 +326,7 @@ export default function Products() {
             >
               <LayoutGrid size={15} strokeWidth={1.5} /> Grid
             </button>
+
             <button
               className={view === "index" ? "is-active" : ""}
               onClick={() => setView("index")}
@@ -282,21 +355,36 @@ export default function Products() {
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
-                    exit={{ opacity: 0, scale: 0.96, transition: { duration: 0.25 } }}
-                    transition={{ duration: 0.9, delay: (i % 4) * 0.08, ease: EASE }}
+                    exit={{
+                      opacity: 0,
+                      scale: 0.96,
+                      transition: { duration: 0.25 },
+                    }}
+                    transition={{
+                      duration: 0.9,
+                      delay: (i % 4) * 0.08,
+                      ease: EASE,
+                    }}
                   >
                     <article className="card">
                       <Plate product={p} />
+
                       <div className="card__meta">
-                        <span className="card__no">{String(PRODUCTS.indexOf(p) + 1).padStart(2, "0")}</span>
+                        <span className="card__no">
+                          {String(PRODUCTS.indexOf(p) + 1).padStart(2, "0")}
+                        </span>
+
                         <div>
                           <h3 className="card__title">{productTitle(p)}</h3>
                           <p className="card__text">{p.text}</p>
                         </div>
                       </div>
+
                       <span className="card__more">
-                        View details <ArrowRight size={14} strokeWidth={1.5} />
+                        View details{" "}
+                        <ArrowRight size={14} strokeWidth={1.5} />
                       </span>
+
                       <button
                         className="card__hit"
                         onClick={() => setSelected(p)}
@@ -311,7 +399,7 @@ export default function Products() {
             <motion.div
               key="index"
               className="catalog__index"
-                            initial={{ opacity: 0 }}
+              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.35 }}
@@ -324,35 +412,53 @@ export default function Products() {
                 <span>Description</span>
                 <span />
               </div>
+
               <AnimatePresence mode="popLayout">
                 {visible.map((p, i) => (
                   <motion.button
                     key={p.id}
                     layout
-                   
                     className="index__row"
                     onClick={() => setSelected(p)}
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.6, delay: i * 0.04, ease: EASE }}
+                    transition={{
+                      duration: 0.6,
+                      delay: i * 0.04,
+                      ease: EASE,
+                    }}
                   >
                     <span className="index__no">
                       {String(PRODUCTS.indexOf(p) + 1).padStart(2, "0")}
                     </span>
+
                     <span className="index__code">{p.code}</span>
+
                     <span className="index__name">
                       <span className="index__thumb">
                         {p.images[0] ? (
-                          <Image src={p.images[0]} alt="" fill sizes="56px" />
+                          <Image
+                            src={p.images[0]}
+                            alt=""
+                            fill
+                            sizes="56px"
+                            style={{
+                              objectFit: "contain",
+                              objectPosition: "center",
+                            }}
+                          />
                         ) : (
                           <em className="serif">{p.monogram}</em>
                         )}
                       </span>
+
                       {productTitle(p)}
                     </span>
+
                     <span className="index__family">{p.familyLabel}</span>
                     <span className="index__text">{p.text}</span>
+
                     <span className="index__arrow">
                       <ArrowUpRight size={18} strokeWidth={1.4} />
                     </span>
