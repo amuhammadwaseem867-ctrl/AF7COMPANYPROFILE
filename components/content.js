@@ -224,19 +224,19 @@ export const PROCESS = [
     no: "04",
     title: "Lacquering",
     text: "Controlled surface treatment for the required appearance and finish on applicable products.",
-    image: `${M}/plating-bath.webp`,
+    image: `${M}/IMG_2105 (1).JPG.jpeg`,
   },
   {
     no: "05",
     title: "Waxing",
     text: "Wax treatment for applicable constructions to support smooth zipper operation.",
-    image: `${M}/13.webp`,
+    image: `${M}/IMG_2105 (1).JPG.jpeg`,
   },
   {
     no: "06",
     title: "Assembly",
     text: "Modern assembling machinery brings tape, teeth, and components together into complete zippers.",
-    image: `${M}/assembly-machine.webp`,
+    image: `${M}/IMG_1869.JPG.jpeg`,
   },
   {
     no: "07",
