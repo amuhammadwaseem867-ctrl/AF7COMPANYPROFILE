@@ -109,7 +109,7 @@
   filter: grayscale(1) invert(0.92) contrast(0.9) brightness(0.95);
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 
 .footer {
   margin-top: var(--section-y);
