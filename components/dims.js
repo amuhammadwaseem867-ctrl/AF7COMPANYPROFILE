@@ -4,10 +4,6 @@ export const DIMS = {
     1080,
     1080
   ],
-  "/manufacturing/13.webp": [
-    1080,
-    1195
-  ],
   "/manufacturing/14.webp": [
     1080,
     1080
@@ -24,6 +20,14 @@ export const DIMS = {
     1080,
     1350
   ],
+  "/manufacturing/IMG_1869.JPG.jpeg": [
+    6000,
+    4000
+  ],
+  "/manufacturing/IMG_2105 (1).JPG.jpeg": [
+    6000,
+    4000
+  ],
   "/manufacturing/assembly-machine.webp": [
     1536,
     1024
@@ -36,10 +40,6 @@ export const DIMS = {
     1920,
     1280
   ],
-  "/manufacturing/plating-bath.webp": [
-    1800,
-    1200
-  ],
   "/manufacturing/plating-line.webp": [
     1800,
     1200
@@ -48,9 +48,9 @@ export const DIMS = {
     1280,
     1920
   ],
-  "/manufacturing/teeth-machines.webp": [
-    1800,
-    1200
+  "/packaging/AF7_Carton_Mockup_Detail_Logo.webp": [
+    640,
+    700
   ],
   "/packaging/box-stack.webp": [
     1920,
