@@ -70,6 +70,22 @@
 }
 
 .quality__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quality__text strong {
+  font-weight: 500;
+}
+
+.quality__text span {
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.quality__text > strong {
   font-size: clamp(1.05rem, 1.4vw, 1.25rem);
   letter-spacing: -0.02em;
 }

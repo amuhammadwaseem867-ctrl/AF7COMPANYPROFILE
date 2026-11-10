@@ -1,4 +1,4 @@
-// All copy is taken from the AF7 Professional Profile document.
+// All copy is taken from the AF7 Brand Profile document.
 
 export const COMPANY = {
   name: "AF7",
@@ -8,6 +8,8 @@ export const COMPANY = {
   address: "33B, Punjab Small Industries Corporation, Sunder II, Lahore, Pakistan",
   phone: "+92 313 4710325",
   phoneHref: "tel:+923134710325",
+  whatsapp: "https://wa.me/923134710325",
+  hours: "9:00 AM to 6:00 PM (PKT)",
   maps:
     "https://www.google.com/maps/search/?api=1&query=33B%20Punjab%20Small%20Industries%20Corporation%20Sunder%20II%20Lahore%20Pakistan",
   mapsEmbed:
@@ -28,15 +30,23 @@ export const NAV = [
 
 export const ABOUT = {
   heading: "Precision. Technology. Reliability.",
+  statement:
+    "AF7 is a zipper manufacturing brand based in Lahore, Pakistan, focused on producing metal, aluminium, nylon, and Vislon zippers, alongside selected garment accessories including tag strings and tipping.",
   body: [
-    "AF7 is a specialized zipper manufacturing brand based in Lahore, Pakistan, offering metal, aluminium, nylon, and Vislon zippers along with selected garment accessories. Our manufacturing facility combines modern machinery imported from China with integrated in-house production capabilities.",
-    "From zipper tape making and teeth manufacturing to finishing, assembly, quality inspection, and packing, key stages of production are managed under one roof.",
-    "We focus on precision manufacturing, consistent product quality, refined finishing, and reliable service to meet the requirements of garment manufacturers, fashion brands, and apparel businesses.",
+    "Supported by state-of-the-art automated zipper assembly lines and integrated in-house production capabilities, AF7 manages key stages of zipper manufacturing, from tape production and teeth formation to finishing, assembly, inspection, and preparation of finished products for delivery.",
+    "Our approach combines manufacturing discipline, attention to detail, and a practical understanding of the requirements of garment manufacturers, fashion brands, and accessory businesses. We aim to provide dependable fastening solutions with product specifications and finishes suited to each application.",
+    "From metal and aluminium zipper production to nylon and Vislon zipper offerings, our product range is designed to address varied garment and accessory applications. We also manufacture and supply selected complementary items such as tag strings and tipping, helping customers source relevant fastening and finishing components through one manufacturing partner.",
+    "We understand that a zipper contributes to the function, appearance, and overall quality of a finished product. That is why we focus on the details that matter: suitable construction, consistent finishing, smooth operation, specification alignment, and careful order preparation.",
   ],
   philosophy: "Precision in Every Detail.",
+  philosophyText:
+    "At AF7, precision is not just a slogan. It is the standard that guides our manufacturing process, product finishing, and customer relationships.",
 };
 
 const P = "/products";
+
+export const PRODUCTS_INTRO =
+  "AF7 offers a focused range of zippers and garment accessories for apparel manufacturers, fashion labels, and related industries. Availability, specifications, finishes, and customization options depend on the product type and order requirements.";
 
 export const PRODUCT_FILTERS = [
   { id: "all", label: "All" },
@@ -54,7 +64,7 @@ export const PRODUCTS = [
     name: "Metal Zippers",
     family: "metal",
     familyLabel: "Metal",
-    text: "Robust metal zipper solutions for garments and applications requiring a distinctive, durable fastening component.",
+    text: "For garment and accessory applications where metal teeth contribute to the product’s appearance and fastening function. Attention is given to tooth formation, chain construction, finishing, and the intended application.",
     images: [
       `${P}/brasszippers5/IMG_2086.webp`,
       `${P}/brasszippers5/IMG_2079.webp`,
@@ -71,7 +81,7 @@ export const PRODUCTS = [
     name: "Metal Zippers",
     family: "metal",
     familyLabel: "Metal",
-    text: "A refined metal zipper option for applications requiring a more compact profile with reliable functionality.",
+    text: "A compact metal zipper for garment and accessory applications, with attention to tooth formation, chain construction, finishing, and the intended application.",
     images: [
       `${P}/brasszippers4.5/IMG_2091.webp`,
       `${P}/brasszippers4.5/4.5.webp`,
@@ -87,7 +97,7 @@ export const PRODUCTS = [
     name: "Aluminium Zippers",
     family: "aluminium",
     familyLabel: "Aluminium",
-    text: "Lightweight aluminium zipper solutions combining functional performance with a distinctive metallic appearance.",
+    text: "An aluminium-based fastening option for designs requiring a distinctive metallic look and functional performance. Construction and finishing are considered according to the customer’s product requirements.",
     images: [
       `${P}/alumuniumzippers/aluminium-5.webp`,
       `${P}/brasszippers5/alumunium.webp`,
@@ -100,7 +110,7 @@ export const PRODUCTS = [
     name: "Aluminium Zippers",
     family: "aluminium",
     familyLabel: "Aluminium",
-    text: "A compact aluminium zipper option for applications requiring a refined profile and metallic finish.",
+    text: "A compact aluminium-based fastening option for designs requiring a distinctive metallic look and functional performance, with construction and finishing suited to the product requirements.",
     images: [
       `${P}/alumuniumzippers/aluminium-4-5.webp`,
       `${P}/alumuniumzippers/alumuniumzipper2.webp`,
@@ -113,7 +123,7 @@ export const PRODUCTS = [
     name: "Nylon Zippers",
     family: "synthetic",
     familyLabel: "Nylon",
-    text: "Flexible and versatile zipper solutions for a wide range of apparel and accessory applications.",
+    text: "A flexible and versatile fastening option for a wide variety of garments and accessories. Product selection can be discussed according to the intended application, zipper size, tape requirements, colour, and functional needs.",
     images: [
       `${P}/nylonzippers/Zip003-edited.webp`,
       `${P}/nylonzippers/2.webp`,
@@ -129,7 +139,7 @@ export const PRODUCTS = [
     name: "Vislon Zippers",
     family: "synthetic",
     familyLabel: "Vislon",
-    text: "Moulded-tooth zipper solutions suitable for casualwear, sportswear, outerwear, and other functional applications.",
+    text: "Vislon-style zippers feature moulded plastic teeth and are used across a range of apparel and accessory applications. AF7 can discuss suitable options based on the desired appearance, construction, size, and end use.",
     images: [
       `${P}/vislonzipper/vislon3.png`,
       `${P}/vislonzipper/vislon7.png`,
@@ -146,7 +156,7 @@ export const PRODUCTS = [
     name: "Tag Strings",
     family: "accessories",
     familyLabel: "Accessory",
-    text: "Practical attachment solutions for garment tags, hangtags, labels, and product identification.",
+    text: "A practical attachment solution for hangtags, labels, and retail identification on garments and accessories. Specifications and presentation can be discussed according to the customer’s product and branding requirements.",
     images: [],
     monogram: "Ts",
   },
@@ -154,78 +164,92 @@ export const PRODUCTS = [
     id: "tipping",
     code: "T·02",
     size: null,
-    name: "Tipping & TPU Tippings",
+    name: "Tipping",
     family: "accessories",
     familyLabel: "Accessory",
-    text: "Finishing components for suitable cords and drawstrings, designed for a neat and refined end finish.",
+    text: "Tipping is used to finish the ends of suitable cords and drawstrings, helping create a neat and complete appearance. Available material, shape, size, and colour options should be confirmed against the required application and production capabilities.",
     images: [],
     monogram: "Tp",
+  },
+  {
+    id: "tpu-tippings",
+    code: "T·03",
+    size: null,
+    name: "TPU Tippings",
+    family: "accessories",
+    familyLabel: "Accessory",
+    text: "A thermoplastic polyurethane finishing option for compatible cords and drawstrings. TPU tippings help deliver a clean end finish and a practical component for garment applications, subject to the selected specifications.",
+    images: [],
+    monogram: "Tpu",
   },
 ];
 
 const M = "/manufacturing";
 
+export const PROCESS_INTRO =
+  "AF7’s Lahore factory brings key manufacturing stages together under one roof. Our integrated production approach supports process coordination and direct oversight from component preparation to finished zipper assembly.";
+
 export const PROCESS = [
   {
     no: "01",
     title: "Tape Making",
-    text: "Production of zipper tape forming the foundation of the finished zipper.",
+    text: "Producing zipper tape as the foundation of the zipper construction.",
     image: `${M}/7.webp`,
   },
   {
     no: "02",
     title: "Teeth Manufacturing",
-    text: "Manufacturing and forming zipper teeth according to the required type and size.",
+    text: "Forming metal or aluminium teeth for applicable zipper types and sizes.",
     image: `${M}/teeth-machines.webp`,
   },
   {
     no: "03",
     title: "Plating",
-    text: "Application of selected surface finishes to applicable metal zipper components.",
+    text: "Applying relevant plating finishes to compatible metal components.",
     image: `${M}/plating-line.webp`,
   },
   {
     no: "04",
     title: "Lacquering",
-    text: "Controlled surface treatment for the required appearance and finish on applicable products.",
+    text: "Applying appropriate lacquer treatments to support the specified appearance and surface finish.",
     image: `${M}/plating-bath.webp`,
   },
   {
     no: "05",
     title: "Waxing",
-    text: "Wax treatment for applicable constructions to support smooth zipper operation.",
+    text: "Applying wax treatment where required to support smooth zipper movement.",
     image: `${M}/13.webp`,
   },
   {
     no: "06",
     title: "Assembly",
-    text: "Modern assembling machinery brings tape, teeth, and components together into complete zippers.",
+    text: "Using state-of-the-art automated zipper assembly lines to bring the relevant components together.",
     image: `${M}/assembly-machine.webp`,
   },
   {
     no: "07",
-    title: "Finishing & Quality Inspection",
-    text: "Checking construction, appearance, finishing, operation, and conformity with agreed requirements.",
+    title: "Finishing & Inspection",
+    text: "Checking completed products for relevant construction, appearance, operation, and conformity to agreed specifications.",
     image: "/quality/slider-check.webp",
   },
   {
     no: "08",
-    title: "Packing & Delivery",
-    text: "Completed products are prepared, packed, and organized for delivery according to customer requirements.",
+    title: "Packing & Dispatch Preparation",
+    text: "Organizing finished orders and preparing them for delivery in accordance with customer requirements.",
     image: "/packaging/box-stack.webp",
   },
 ];
 
 export const TECHNOLOGY = {
-  heading: "Modern Machinery. Controlled Manufacturing.",
+  heading: "Modern Equipment. Greater Production Control.",
   body: [
-    "AF7 is equipped with modern machinery imported from China, including advanced automated zipper assembling equipment. Our production setup supports efficient manufacturing while maintaining close control over key production stages.",
-    "By combining modern technology with controlled processes and skilled manufacturing, we work to achieve consistent products and dependable production results.",
+    "AF7’s factory operates with state-of-the-art automated zipper assembly lines and modern manufacturing technology. This advanced setup ensures a seamless, synchronized workflow across all production stages, giving us absolute quality control from raw tape to final dispatch.",
+    "We believe that effective manufacturing combines the right equipment with process discipline, skilled handling, and clear product specifications. Our focus is on practical production efficiency, consistent workmanship, and reliable preparation of finished orders.",
   ],
   gallery: [
     { src: `${M}/factory.webp`, caption: "Production floor" },
     { src: `${M}/11.webp`, caption: "Automated assembly" },
-    { src: `${M}/6.webp`, caption: "Imported machinery" },
+    { src: `${M}/6.webp`, caption: "Automated machinery" },
     { src: `${M}/machinery.webp`, caption: "Tape weaving" },
     { src: "/quality/zipper-check.webp", caption: "Machine operation" },
     { src: `${M}/production.webp`, caption: "Assembly operation" },
@@ -235,6 +259,7 @@ export const TECHNOLOGY = {
 };
 
 // Gradients approximate each finish as a metal sample, for orientation only.
+// Order follows the Brand Profile document.
 export const FINISHES = [
   { name: "Antique Silver", tone: "Aged · Cool", g: ["#5f6267", "#c4c7cb", "#8a8d92", "#4c4f54"] },
   { name: "Antique Brass", tone: "Aged · Warm", g: ["#4b3a1e", "#a8874c", "#7a6234", "#3a2c15"] },
@@ -242,101 +267,103 @@ export const FINISHES = [
   { name: "Shiny Silver", tone: "Bright · Cool", g: ["#9aa1a8", "#ffffff", "#cfd4d9", "#8b9299"] },
   { name: "Antique Copper", tone: "Aged · Red", g: ["#3f2216", "#b06d43", "#7a4329", "#331a10"] },
   { name: "Dull / Matt Silver", tone: "Matt · Neutral", g: ["#8f9398", "#bfc2c6", "#a6a9ad", "#878b90"] },
-  { name: "Gun Metal", tone: "Dark · Cool", g: ["#1e2124", "#6a7077", "#3b3f44", "#17191c"] },
   { name: "Shiny Black", tone: "Gloss · Deep", g: ["#050506", "#55585d", "#141518", "#020203"] },
-  { name: "Shiny Gold", tone: "Gloss · Warm", g: ["#9c7314", "#fde6a0", "#cf9f33", "#8a6410"] },
   { name: "Shiny Nickel", tone: "Gloss · Neutral", g: ["#868b90", "#f4f5f6", "#b9bdc1", "#7a7f84"] },
+  { name: "Shiny Gold", tone: "Gloss · Warm", g: ["#9c7314", "#fde6a0", "#cf9f33", "#8a6410"] },
+  { name: "Gun Metal", tone: "Dark · Cool", g: ["#1e2124", "#6a7077", "#3b3f44", "#17191c"] },
 ];
 
-export const QUALITY = {
-  heading: "Quality in Every Stage",
+export const FINISHES_COPY = {
   intro:
-    "At AF7, quality is considered throughout the manufacturing process. Our quality focus includes:",
+    "A quality finish defines both the zipper’s durability and the garment’s aesthetic. For applicable metal zipper constructions, AF7 delivers superior in-house finishing, including precision plating, protective lacquering, and specialized waxing. Exact finish availability is tailored to your material and project specifications.",
+  note:
+    "Product enquiries may include zipper size, material, tape colour, finish, construction, quantity, and intended application. Specific options should be confirmed with AF7 before a product specification is finalized.",
+};
+
+export const QUALITY = {
+  heading: "Quality Is Built Into Every Stage",
+  intro:
+    "AF7 approaches quality as an ongoing responsibility throughout manufacturing. Inspection is focused on the characteristics relevant to each product and the specifications agreed with the customer.",
   points: [
-    "Product construction and teeth alignment",
-    "Zipper assembly and operation",
-    "Surface appearance and finishing",
-    "Product consistency",
-    "Compliance with agreed specifications",
-    "Final inspection and packing",
+    { title: "Construction and alignment", text: "Reviewing relevant zipper chain construction, teeth alignment, and assembly." },
+    { title: "Appearance and finishing", text: "Checking the applicable surface finish, colour, coating, and visible consistency." },
+    { title: "Operation", text: "Checking zipper movement and fastening function where applicable." },
+    { title: "Specification conformity", text: "Reviewing the product against agreed size, material, finish, and order details." },
+    { title: "Packing preparation", text: "Ensuring finished orders are organized and prepared for dispatch." },
   ],
-  objective:
-    "To deliver products that combine reliable functionality with consistent appearance and finishing.",
 };
 
 export const CUSTOMIZATION = {
-  heading: "Built Around Your Requirements",
+  heading: "Customization & Product Development",
   intro:
-    "Every garment has different design and fastening requirements. AF7 works with customers to identify suitable zipper types, sizes, materials, finishes, colours, and specifications according to the intended application.",
+    "Different garments and accessories require different fastening solutions. AF7 welcomes discussions about product requirements and suitable zipper specifications, subject to the product type and manufacturing capabilities.",
   items: [
-    "Zipper type and size",
-    "Metal or aluminium construction",
-    "Nylon and Vislon options",
-    "Tape colour and specifications",
-    "Applicable finishes",
-    "Product configuration",
-    "Packing and order requirements",
+    "Zipper type and size: metal, aluminium, nylon, or Vislon-style",
+    "Applicable finish and colour requirements",
+    "Tape specifications and colour matching, subject to availability",
+    "Product configuration and intended end use",
+    "Order identification and packing requirements",
   ],
-  closing: "Your requirements. Our manufacturing expertise.",
 };
 
 export const APPLICATIONS = {
-  heading: "Designed for Modern Apparel",
+  heading: "Applications",
   intro:
-    "AF7 zipper solutions can be used across a broad range of garment and fashion applications, including:",
+    "AF7 zipper and accessory products can be considered for a variety of applications, depending on the selected product and its specifications:",
   items: [
-    "Apparel & Fashion",
+    "Apparel & Fashion Garments",
     "Denim & Jeans",
     "Jackets & Outerwear",
-    "Casualwear",
-    "Sportswear",
-    "Bags & Accessories",
-    "Footwear",
-    "Garment Tags & Drawstrings",
+    "Casualwear & Selected Sportswear",
+    "Bags & Compatible Accessories",
+    "Footwear & Other Suitable Products",
+    "Hangtags, Labels, Cords & Drawstring Finishing",
   ],
-  closing:
-    "The appropriate zipper construction is selected according to the design, material, function, and requirements of the finished product.",
 };
 
 export const WHY = {
-  heading: "One Manufacturing Partner. Multiple Solutions.",
+  heading: "Why AF7",
   items: [
-    {
-      title: "Integrated Production",
-      text: "Key manufacturing stages are managed in-house, providing greater production control.",
-    },
-    {
-      title: "Modern Technology",
-      text: "Advanced machinery imported from China supports manufacturing and automated assembly.",
-    },
-    {
-      title: "Diverse Product Range",
-      text: "Metal, aluminium, nylon, and Vislon zippers, supported by tag strings and tipping solutions.",
-    },
-    {
-      title: "Controlled Finishing",
-      text: "Applicable plating, lacquering, and waxing processes are integrated into production.",
-    },
-    {
-      title: "Quality Focus",
-      text: "Attention to construction, finishing, functionality, and agreed product specifications.",
-    },
-    {
-      title: "Customer-Focused Manufacturing",
-      text: "We work closely with customers to understand requirements and deliver suitable solutions.",
-    },
+    { title: "Integrated In-House Capabilities", text: "Key stages of zipper manufacturing are managed within our Lahore facility." },
+    { title: "Advanced Automated Machinery", text: "State-of-the-art equipment supports high-speed, precision production and seamless automated assembly." },
+    { title: "Broad Product Offering", text: "Metal, aluminium, nylon, and Vislon zippers, plus tag strings and tipping." },
+    { title: "Finishing Capabilities", text: "In-house plating, lacquering, and waxing for applicable products." },
+    { title: "Attention to Detail", text: "Focus on construction, finish, function, and agreed specifications." },
+    { title: "Customer-Focused Coordination", text: "Product discussions based on intended use and order requirements." },
+    { title: "End-to-End Production Flow", text: "Coordination from applicable manufacturing stages through finished product preparation and delivery." },
+  ],
+};
+
+export const PACKAGING = {
+  heading: "Packaging & Delivery",
+  body: [
+    "Completed products are organized and packed according to the applicable product and order requirements. Packaging and identification arrangements can be discussed during order confirmation.",
+    "AF7 aims to support clear order coordination, careful preparation, and dependable dispatch planning.",
+  ],
+  images: [
+    { src: "/packaging/box-stack.webp", caption: "Branded cartons" },
+    { src: "/packaging/corrugated-box.webp", caption: "Corrugated shipping box" },
+    { src: "/packaging/lld-bag.webp", caption: "Product packing bags" },
   ],
 };
 
 export const PURPOSE = {
   vision:
-    "To establish AF7 as a trusted and internationally competitive zipper manufacturing brand, recognized for precision, consistent quality, modern technology, and dependable customer partnerships.",
+    "To establish AF7 as a trusted and internationally competitive zipper brand, recognized for manufacturing capability, dependable product quality, modern production technology, and long-term customer partnerships.",
   mission:
-    "To manufacture and deliver reliable zipper and garment accessory solutions through modern technology, integrated production, controlled processes, and continuous attention to customer requirements.",
-  commitment: [
-    "At AF7, we believe that excellence is created through the details.",
-    "Every tape, tooth, finish, assembly, and final inspection contributes to the quality of the finished product. We continuously focus on improving our manufacturing processes, maintaining product consistency, and delivering solutions that meet customer expectations.",
+    "To deliver reliable zipper and garment accessory solutions through integrated manufacturing processes, appropriate technology, careful inspection, and a customer-focused approach to product requirements.",
+  values: [
+    { title: "Precision", text: "Careful attention to product construction, dimensions, finishing, and detail." },
+    { title: "Quality", text: "Consistent workmanship and inspection against agreed requirements." },
+    { title: "Innovation", text: "Continued use of modern machinery and effective production methods." },
+    { title: "Reliability", text: "A disciplined approach to order coordination, product specifications, and dispatch." },
+    { title: "Partnership", text: "Responsive communication and a clear understanding of customer needs." },
+    { title: "Continuous Improvement", text: "Reviewing processes and looking for practical ways to improve consistency and efficiency." },
   ],
+  philosophy: {
+    heading: "Precision Is More Than a Promise.",
+    text: "At AF7, precision is reflected in the way components are manufactured, processes are coordinated, finishes are applied, and completed products are checked. We believe dependable products are built through appropriate technology, careful workmanship, clear specifications, and attention to the customer’s intended application.",
+  },
 };
 
 export const CONTACT = {

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import { PROCESS } from "./content";
+import { PROCESS, PROCESS_INTRO } from "./content";
 import { DIMS, ratio } from "./dims";
 import { EASE, MaskLines, Reveal } from "./motion";
 import "./Manufacturing.css";
@@ -71,11 +71,10 @@ export default function Manufacturing() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["From tape to", <em className="serif" key="f">finished zipper.</em>]}
+            lines={["In-house", <em className="serif" key="f">manufacturing process.</em>]}
           />
           <Reveal as="p" className="section-head__lead">
-            AF7 operates an integrated manufacturing process that provides
-            greater control over production, finishing, and product consistency.
+            {PROCESS_INTRO}
           </Reveal>
         </div>
 
@@ -102,7 +101,7 @@ export default function Manufacturing() {
                 >
                   <Image
                     src={step.image}
-                    alt={`${step.title} — AF7 production`}
+                    alt={`${step.title}, AF7 production`}
                     fill
                     sizes="(max-width: 900px) 100vw, 45vw"
                     className="process__photo"
@@ -136,7 +135,7 @@ export default function Manufacturing() {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.4, ease: EASE }}
               >
-                {step.no} — {step.title}
+                Step {step.no}: {step.title}
               </motion.p>
             </AnimatePresence>
             </div>

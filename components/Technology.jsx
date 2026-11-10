@@ -53,7 +53,7 @@ export default function Technology() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Modern machinery.", <em className="serif" key="c">Controlled manufacturing.</em>]}
+            lines={["Modern equipment.", <em className="serif" key="c">Greater production control.</em>]}
           />
         </div>
 

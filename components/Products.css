@@ -169,6 +169,7 @@
 }
 
 .plate__monogram {
+  white-space: nowrap;
   font-family: var(--display);
   font-size: clamp(6rem, 11vw, 10rem);
   line-height: 1;
@@ -177,6 +178,7 @@
 }
 
 .card:hover .plate__monogram {
+  white-space: nowrap;
   transform: scale(1.08) rotate(-4deg);
 }
 
@@ -200,7 +202,7 @@
 .catalog__grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: clamp(16px, 2vw, 28px);
   row-gap: clamp(40px, 5vw, 64px);
 }

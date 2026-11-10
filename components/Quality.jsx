@@ -18,7 +18,7 @@ export default function Quality() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Quality in", <em className="serif" key="e">every stage.</em>]}
+            lines={["Quality is built into", <em className="serif" key="e">every stage.</em>]}
           />
         </div>
 
@@ -62,7 +62,7 @@ export default function Quality() {
             <ol className="quality__list">
               {QUALITY.points.map((point, i) => (
                 <motion.li
-                  key={point}
+                  key={point.title}
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.8 }}
@@ -78,7 +78,8 @@ export default function Quality() {
                     variants={{ hidden: { opacity: 0, x: -14 }, show: { opacity: 1, x: 0 } }}
                     transition={{ duration: 0.9, delay: 0.1 + i * 0.06, ease: EASE }}
                   >
-                    {point}
+                    <strong>{point.title}</strong>
+                    <span>{point.text}</span>
                   </motion.span>
                   <motion.svg
                     className="quality__check"
@@ -100,20 +101,6 @@ export default function Quality() {
           </div>
         </div>
 
-        <div className="quality__objective">
-          <Reveal as="span" className="label label--dot">Our objective</Reveal>
-          <MaskLines
-            as="blockquote"
-            className="quality__quote"
-            lines={[
-              "To deliver products that combine",
-              <>
-                <em className="serif">reliable functionality</em> with consistent
-              </>,
-              "appearance and finishing.",
-            ]}
-          />
-        </div>
       </div>
     </section>
   );

@@ -19,9 +19,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "AF7 — Zipper Manufacturing & Garment Accessories",
+  title: "AF7 | Zipper Manufacturing & Garment Accessories",
   description:
-    "AF7 is a specialized zipper manufacturing brand in Lahore, Pakistan — metal, aluminium, nylon and Vislon zippers with selected garment accessories. Precision in Every Detail.",
+    "AF7 is a zipper manufacturing brand in Lahore, Pakistan, producing metal, aluminium, nylon and Vislon zippers with tag strings and tipping. Precision in Every Detail.",
 };
 
 export const viewport = {

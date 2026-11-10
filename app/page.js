@@ -11,6 +11,7 @@ import Customization from "../components/Customization";
 import Applications from "../components/Applications";
 import WhyAF7 from "../components/WhyAF7";
 import Purpose from "../components/Purpose";
+import Packaging from "../components/Packaging";
 import Contact from "../components/Contact";
 import { SmoothScroll } from "../components/motion";
 
@@ -32,6 +33,7 @@ export default function HomePage() {
         <Customization />
         <Applications />
         <WhyAF7 />
+        <Packaging />
         <Purpose />
         <Contact />
       </main>

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, LayoutGrid, List, X } from "lucide-react";
-import { FINISHES, PRODUCT_FILTERS, PRODUCTS } from "./content";
+import { FINISHES, PRODUCT_FILTERS, PRODUCTS, PRODUCTS_INTRO } from "./content";
 import { EASE, MaskLines, Reveal, scrollToId, setScrollLocked } from "./motion";
 import "./Products.css";
 
@@ -82,7 +82,7 @@ function ProductDrawer({ product, onClose }) {
       >
         <div className="drawer__bar">
           <span className="label">
-            {String(index + 1).padStart(2, "0")} / {String(PRODUCTS.length).padStart(2, "0")} — Catalogue
+            Catalogue {String(index + 1).padStart(2, "0")} / {String(PRODUCTS.length).padStart(2, "0")}
           </span>
           <button ref={closeRef} className="drawer__close" onClick={onClose} aria-label="Close">
             <X size={18} strokeWidth={1.4} />
@@ -208,16 +208,10 @@ export default function Products() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={[
-              "Zippers and garment",
-              <>
-                accessories, <em className="serif">by line.</em>
-              </>,
-            ]}
+            lines={["Product", <em className="serif" key="p">portfolio.</em>]}
           />
           <Reveal as="p" className="section-head__lead">
-            Metal, aluminium, nylon and Vislon zippers, supported by tag strings
-            and tipping solutions — each specified to the intended application.
+            {PRODUCTS_INTRO}
           </Reveal>
         </div>
 

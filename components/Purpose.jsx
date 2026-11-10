@@ -1,7 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { PURPOSE } from "./content";
-import { MaskLines, Reveal, ScrollWords } from "./motion";
+import { EASE, MaskLines, Reveal, ScrollWords } from "./motion";
 import "./Purpose.css";
 
 export default function Purpose() {
@@ -19,23 +20,45 @@ export default function Purpose() {
           </Reveal>
         </div>
 
+        <div className="purpose__values">
+          <div className="section-head__meta">
+            <span className="section-head__index">11</span>
+            <span className="label label--dot">Our Values</span>
+          </div>
+          <ol className="purpose__values-list">
+            {PURPOSE.values.map((v, i) => (
+              <motion.li
+                key={v.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.9, delay: (i % 3) * 0.08, ease: EASE }}
+              >
+                <span className="purpose__value-no">{String(i + 1).padStart(2, "0")}</span>
+                <h3>{v.title}</h3>
+                <p>{v.text}</p>
+              </motion.li>
+            ))}
+          </ol>
+        </div>
+
         <div className="purpose__commitment">
           <div className="section-head__meta">
-            <span className="section-head__index">10</span>
-            <span className="label label--dot">Our Commitment</span>
+            <span className="section-head__index">12</span>
+            <span className="label label--dot">Our Manufacturing Philosophy</span>
           </div>
           <div className="purpose__body">
             <MaskLines
               as="h2"
               className="purpose__lead"
               lines={[
-                "Excellence is created",
+                "Precision is more",
                 <>
-                  through the <em className="serif">details.</em>
+                  than a <em className="serif">promise.</em>
                 </>,
               ]}
             />
-            <ScrollWords className="purpose__statement" text={PURPOSE.commitment[1]} />
+            <ScrollWords className="purpose__statement" text={PURPOSE.philosophy.text} />
           </div>
         </div>
       </div>

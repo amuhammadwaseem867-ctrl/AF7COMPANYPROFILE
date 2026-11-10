@@ -79,9 +79,9 @@ export default function Hero() {
 
         <div className="hero__bottom">
           <motion.p className="hero__intro" {...fadeIn(0.75)}>
-            Metal, aluminium, nylon and Vislon zippers with selected garment
-            accessories — tape, teeth, finishing, assembly and inspection
-            managed under one roof.
+            Metal, aluminium, nylon and Vislon zippers with tag strings and
+            tipping, made on state-of-the-art automated zipper assembly lines
+            in Lahore.
           </motion.p>
 
           <motion.dl className="hero__facts" {...fadeIn(0.9)}>

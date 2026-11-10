@@ -17,7 +17,7 @@ export default function Customization() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Built around", <em className="serif" key="y">your requirements.</em>]}
+            lines={["Customization &", <em className="serif" key="y">product development.</em>]}
           />
         </div>
 
@@ -77,14 +77,6 @@ export default function Customization() {
           </div>
         </div>
 
-        <MaskLines
-          as="p"
-          className="custom__closing"
-          lines={[
-            "Your requirements.",
-            <em className="serif" key="o">Our manufacturing expertise.</em>,
-          ]}
-        />
       </div>
     </section>
   );

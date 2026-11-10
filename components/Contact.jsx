@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUp, ArrowUpRight, MapPin, Phone } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import { COMPANY, CONTACT, NAV } from "./content";
 import { MaskLines, Reveal, scrollToId } from "./motion";
 import "./Contact.css";
@@ -18,7 +18,7 @@ export default function Contact() {
       <div className="wrap">
         <div className="section-head">
           <div className="section-head__meta">
-            <span className="section-head__index">11</span>
+            <span className="section-head__index">13</span>
             <span className="label label--dot">Contact AF7</span>
           </div>
           <MaskLines
@@ -32,18 +32,33 @@ export default function Contact() {
 
         <div className="contact__grid">
           <Reveal className="contact__card contact__card--phone">
-            <span className="label">Phone</span>
+            <span className="label">Phone / WhatsApp</span>
             <a href={COMPANY.phoneHref} className="contact__big">
               {COMPANY.phone}
             </a>
-            <a href={COMPANY.phoneHref} className="btn btn--light">
-              <Phone size={16} strokeWidth={1.5} />
-              Call the AF7 team
-            </a>
+            <p className="contact__hours">
+              <Clock size={15} strokeWidth={1.5} />
+              Business hours: {COMPANY.hours}
+            </p>
+            <div className="contact__actions">
+              <a href={COMPANY.phoneHref} className="btn btn--light">
+                <Phone size={16} strokeWidth={1.5} />
+                Call
+              </a>
+              <a
+                href={COMPANY.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--ghost"
+              >
+                <MessageCircle size={16} strokeWidth={1.5} />
+                WhatsApp
+              </a>
+            </div>
           </Reveal>
 
           <Reveal className="contact__card" delay={0.1}>
-            <span className="label">Factory address</span>
+            <span className="label">Factory</span>
             <address className="contact__address">{COMPANY.address}</address>
             <a href={COMPANY.maps} target="_blank" rel="noopener noreferrer" className="contact__link">
               <MapPin size={15} strokeWidth={1.5} />
@@ -83,7 +98,7 @@ export default function Contact() {
         <div className="wrap">
           <div className="footer__top">
             <p className="footer__tagline">
-              AF7 — <em className="serif">Precision in every detail.</em>
+              AF7. <em className="serif">Precision in every detail.</em>
             </p>
             <nav className="footer__nav" aria-label="Footer">
               {NAV.map((n) => (

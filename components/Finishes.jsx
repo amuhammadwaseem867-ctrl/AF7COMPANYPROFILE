@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FINISHES } from "./content";
+import { FINISHES, FINISHES_COPY } from "./content";
 import { EASE, MaskLines, Reveal } from "./motion";
 import "./Finishes.css";
 
@@ -22,12 +22,10 @@ export default function Finishes() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Finishing that", <em className="serif" key="c">completes the product.</em>]}
+            lines={["Product finishes &", <em className="serif" key="c">specifications.</em>]}
           />
           <Reveal as="p" className="section-head__lead">
-            The finish of a zipper contributes significantly to the appearance and
-            character of the finished garment. For applicable metal zipper
-            constructions, AF7 offers a range of finishing options.
+            {FINISHES_COPY.intro}
           </Reveal>
         </div>
 
@@ -87,8 +85,7 @@ export default function Finishes() {
         </div>
 
         <Reveal as="p" className="finishes__note">
-          Finish availability may vary according to zipper type, material, and
-          production requirements. Swatches are indicative.
+          {FINISHES_COPY.note} Swatches are indicative.
         </Reveal>
       </div>
     </section>

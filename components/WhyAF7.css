@@ -61,7 +61,7 @@
 .why__grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
@@ -89,6 +89,22 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.8s var(--ease);
+}
+
+/* Seven reasons: the first spans two columns so rows of four stay even. */
+.why__grid li:first-child {
+  grid-column: span 2;
+  background: var(--ink);
+  color: var(--on-dark);
+}
+
+.why__grid li:first-child p,
+.why__grid li:first-child .why__no {
+  color: var(--on-dark-muted);
+}
+
+.why__grid li:first-child:hover {
+  background: var(--navy);
 }
 
 .why__grid li:hover {
@@ -121,6 +137,12 @@
 @media (max-width: 1000px) {
   .why__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why__grid li:first-child {
+    grid-column: auto;
   }
 }
 

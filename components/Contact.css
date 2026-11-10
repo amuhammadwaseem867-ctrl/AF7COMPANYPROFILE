@@ -37,12 +37,27 @@
 
 .contact__big {
   font-family: var(--display);
-  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  font-size: clamp(1.6rem, 2.6vw, 2.6rem);
   font-weight: 500;
+  white-space: nowrap;
   letter-spacing: -0.03em;
   line-height: 1;
   font-variant-numeric: tabular-nums;
   margin-bottom: auto;
+}
+
+.contact__hours {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--on-dark-muted);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .contact__address {

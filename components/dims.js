@@ -56,6 +56,14 @@ export const DIMS = {
     1920,
     1440
   ],
+  "/packaging/corrugated-box.webp": [
+    1920,
+    1440
+  ],
+  "/packaging/lld-bag.webp": [
+    1920,
+    1358
+  ],
   "/quality/detail.webp": [
     1920,
     1280

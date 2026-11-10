@@ -35,15 +35,18 @@ export default function About() {
                 sizes="(max-width: 900px) 100vw, 40vw"
               />
             </Parallax>
-            <figcaption className="label">AF7 facility — Lahore, Pakistan</figcaption>
+            <figcaption className="label">AF7 facility, Lahore, Pakistan</figcaption>
           </Reveal>
 
           <div className="about__copy">
-            <ScrollWords className="about__statement" text={ABOUT.body[0]} />
+            <ScrollWords className="about__statement" text={ABOUT.statement} />
 
             <div className="about__cols">
-              <Reveal as="p" delay={0.05}>{ABOUT.body[1]}</Reveal>
-              <Reveal as="p" delay={0.15}>{ABOUT.body[2]}</Reveal>
+              {ABOUT.body.map((p, i) => (
+                <Reveal as="p" key={i} delay={0.05 + (i % 2) * 0.1}>
+                  {p}
+                </Reveal>
+              ))}
             </div>
           </div>
         </div>
@@ -59,6 +62,9 @@ export default function About() {
               </>,
             ]}
           />
+          <Reveal as="p" className="about__philosophy-text">
+            {ABOUT.philosophyText}
+          </Reveal>
         </div>
       </div>
     </section>
