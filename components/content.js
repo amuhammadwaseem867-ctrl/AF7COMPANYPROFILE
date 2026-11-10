@@ -361,71 +361,16 @@ export const WHY = {
 
 export const PACKAGING = {
   heading: "Packaging & Delivery",
-  intro:
+  body: [
     "Completed products are organized and packed according to the applicable product and order requirements. Packaging and identification arrangements can be discussed during order confirmation.",
-  closing:
     "AF7 aims to support clear order coordination, careful preparation, and dependable dispatch planning.",
-  // Packaging artwork from the AF7 Visual Identity Guidelines, section 06.
-  carton: {
-    image: "/packaging/carton-navy.webp",
-    title: "Built to protect. Made to be recognised.",
-    text: "A shipping carton with the logo on both long sides and the monogram on each end. The carton sticker always sits on an end panel, centred, so it can be read when cartons are stacked.",
-    specs: [
-      ["Size (L × W × D)", "15 × 10 × 6 in"],
-      ["Style", "Regular slotted carton"],
-      ["Print", "1 colour, AF7 Navy"],
-      ["Sticker", "6 × 4 in, end panel"],
-    ],
-  },
-  boards: {
-    title: "Three boards. One identity.",
-    text: "The same 15 × 10 × 6 in carton and die line in three board options. Natural kraft is the everyday standard; white and navy are for premium and presentation shipments.",
-    items: [
-      {
-        name: "Natural Kraft",
-        tag: "Standard",
-        image: "/packaging/carton-kraft.webp",
-        swatch: "#c49a68",
-        specs: [["Board", "Brown kraft, unbleached"], ["Print", "AF7 Navy, 1 colour flexo"], ["Use", "Everyday shipping and bulk orders"]],
-      },
-      {
-        name: "White Board",
-        image: "/packaging/carton-white.webp",
-        swatch: "#f3f3f0",
-        specs: [["Board", "White top corrugated"], ["Print", "AF7 Navy, 1 colour flexo"], ["Use", "Sample kits and brand orders"]],
-      },
-      {
-        name: "Navy Flood",
-        image: "/packaging/carton-navy-flood.webp",
-        swatch: "#243146",
-        specs: [["Board", "White top, full navy print"], ["Print", "Navy flood, logo knocked out"], ["Use", "Premium and presentation"]],
-      },
-    ],
-  },
-  details: [
-    {
-      label: "Carton sticker",
-      title: "Clear information, every carton.",
-      text: "The sticker identifies every outgoing carton. A black header carries the logo and line, and four write on fields hold the order details.",
-      image: "/packaging/carton-sticker.webp",
-      specs: [["Size", "6 × 4 in, landscape"], ["Stock", "White self adhesive paper"], ["Fields", "Handwritten or thermal print"], ["Placement", "Centred on end panel"]],
-    },
-    {
-      label: "LLD polybag",
-      title: "Clean, clear and protective.",
-      text: "A transparent self seal bag. The logo is printed in navy on the front, and a product sticker identifies the contents. The product stays visible through the film.",
-      image: "/packaging/polybag.webp",
-      specs: [["Size", "6.5 × 11.5 in"], ["Lip flap", "1.5 in, adhesive"], ["Material", "LLDPE, clear"], ["Print", "1 colour, AF7 Navy"]],
-    },
   ],
-  productSticker: {
-    image: "/packaging/product-sticker.webp",
-    caption: "Product sticker: 3 × 2 in, white self adhesive, black and white",
-  },
-  dieline: {
-    image: "/packaging/carton-dieline.webp",
-    caption: "Corrugated carton die line: 15 × 10 × 6 in regular slotted carton. Long sides carry the logo; end panels carry the full logo and the carton sticker.",
-  },
+  // Mockups updated to the packaging design in the AF7 Visual Identity Guidelines, section 06.
+  images: [
+    { src: "/packaging/box-stack.webp", caption: "Corrugated cartons" },
+    { src: "/packaging/corrugated-box.webp", caption: "Carton with packing sticker" },
+    { src: "/packaging/lld-bag.webp", caption: "LLD polybags with product sticker" },
+  ],
 };
 
 export const PURPOSE = {
