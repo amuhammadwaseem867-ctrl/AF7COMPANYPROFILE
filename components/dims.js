@@ -52,17 +52,37 @@ export const DIMS = {
     640,
     700
   ],
-  "/packaging/box-stack.webp": [
-    1920,
-    1440
+  "/packaging/carton-dieline.webp": [
+    3124,
+    1089
   ],
-  "/packaging/corrugated-box.webp": [
-    1920,
-    1440
+  "/packaging/carton-kraft.webp": [
+    1023,
+    572
   ],
-  "/packaging/lld-bag.webp": [
-    1920,
-    1358
+  "/packaging/carton-navy-flood.webp": [
+    1023,
+    572
+  ],
+  "/packaging/carton-navy.webp": [
+    1672,
+    858
+  ],
+  "/packaging/carton-sticker.webp": [
+    1879,
+    1489
+  ],
+  "/packaging/carton-white.webp": [
+    1023,
+    572
+  ],
+  "/packaging/polybag.webp": [
+    1755,
+    1551
+  ],
+  "/packaging/product-sticker.webp": [
+    634,
+    457
   ],
   "/quality/detail.webp": [
     1920,
