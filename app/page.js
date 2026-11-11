@@ -33,7 +33,7 @@ export default function HomePage() {
         <Customization />
         <Applications />
         <WhyAF7 />
-        <Packaging />
+      
         <Purpose />
         <Contact />
       </main>
