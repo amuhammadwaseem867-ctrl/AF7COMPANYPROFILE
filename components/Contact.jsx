@@ -23,7 +23,7 @@ export default function Contact() {
           </div>
           <MaskLines
             className="section-head__title contact__title"
-            lines={["Let’s create the", <em className="serif" key="r">right connection.</em>]}
+            lines={["Let’s create the", "right connection."]}
           />
           <Reveal as="p" className="section-head__lead">
             {CONTACT.intro}
@@ -98,7 +98,7 @@ export default function Contact() {
         <div className="wrap">
           <div className="footer__top">
             <p className="footer__tagline">
-              AF7. <em className="serif">Precision in every detail.</em>
+              AF7. Precision in every detail.
             </p>
             <nav className="footer__nav" aria-label="Footer">
               {NAV.map((n) => (

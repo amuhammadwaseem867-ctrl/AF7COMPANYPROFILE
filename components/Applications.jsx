@@ -17,7 +17,7 @@ export default function Applications() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Applications across", <em className="serif" key="m">apparel & accessories.</em>]}
+            lines={["Applications across", "apparel & accessories."]}
           />
           <Reveal as="p" className="section-head__lead">
             {APPLICATIONS.intro}

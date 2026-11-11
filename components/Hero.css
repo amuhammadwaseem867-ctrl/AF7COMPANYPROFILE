@@ -72,11 +72,6 @@
   line-height: 0.98;
 }
 
-.hero__title em {
-  font-weight: 300;
-  letter-spacing: -0.03em;
-  color: #e8dcc6;
-}
 
 .hero__bottom {
   display: grid;

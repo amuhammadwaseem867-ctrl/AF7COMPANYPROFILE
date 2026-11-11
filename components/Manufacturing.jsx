@@ -71,7 +71,7 @@ export default function Manufacturing() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["In-house", <em className="serif" key="f">manufacturing process.</em>]}
+            lines={["In-house", "manufacturing process."]}
           />
           <Reveal as="p" className="section-head__lead">
             {PROCESS_INTRO}

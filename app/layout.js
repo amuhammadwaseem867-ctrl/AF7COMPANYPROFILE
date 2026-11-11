@@ -7,7 +7,6 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   display: "swap",
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
 });
 
 const poppins = Poppins({
@@ -15,7 +14,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
   display: "swap",
   weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
 });
 
 export const metadata = {

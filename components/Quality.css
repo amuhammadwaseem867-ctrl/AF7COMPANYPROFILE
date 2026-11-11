@@ -112,9 +112,6 @@
   line-height: 1.02;
 }
 
-.quality__quote em {
-  color: var(--navy);
-}
 
 @media (max-width: 900px) {
   .quality__media,

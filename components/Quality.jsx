@@ -18,7 +18,7 @@ export default function Quality() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Quality is built into", <em className="serif" key="e">every stage.</em>]}
+            lines={["Quality is built into", "every stage."]}
           />
         </div>
 

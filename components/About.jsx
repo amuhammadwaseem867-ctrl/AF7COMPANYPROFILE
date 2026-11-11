@@ -17,7 +17,7 @@ export default function About() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Precision.", "Technology.", <em className="serif" key="r">Reliability.</em>]}
+            lines={["Precision.", "Technology.", "Reliability."]}
           />
         </div>
 
@@ -58,7 +58,7 @@ export default function About() {
             className="about__motto"
             lines={[
               <>
-                Precision in every <em className="serif">detail.</em>
+                Precision in every detail.
               </>,
             ]}
           />

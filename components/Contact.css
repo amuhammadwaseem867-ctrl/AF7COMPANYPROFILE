@@ -4,9 +4,6 @@
   color: var(--on-dark);
 }
 
-.contact__title em {
-  color: #e8dcc6;
-}
 
 .contact__grid {
   display: grid;
@@ -147,9 +144,6 @@
   line-height: 1.1;
 }
 
-.footer__tagline em {
-  color: #e8dcc6;
-}
 
 .footer__nav {
   display: grid;

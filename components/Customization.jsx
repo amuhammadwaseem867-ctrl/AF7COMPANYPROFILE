@@ -17,7 +17,7 @@ export default function Customization() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Customization &", <em className="serif" key="y">product development.</em>]}
+            lines={["Customization &", "product development."]}
           />
         </div>
 

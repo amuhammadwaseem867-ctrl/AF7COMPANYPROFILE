@@ -71,7 +71,7 @@ export default function Hero() {
             lines={[
               "Precision in",
               <>
-                every <em className="serif">detail.</em>
+                every detail.
               </>,
             ]}
           />

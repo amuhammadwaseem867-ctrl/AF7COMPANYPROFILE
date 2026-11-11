@@ -375,8 +375,11 @@
   mix-blend-mode: multiply;
 }
 
-.index__thumb em {
-  font-size: 1.6rem;
+
+.index__mono {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--navy);
 }
 

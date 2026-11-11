@@ -17,7 +17,7 @@ function Plate({ product, large = false, image }) {
     return (
       <div className={`plate plate--mono ${large ? "plate--large" : ""}`}>
         <span className="plate__code label">{product.code}</span>
-        <span className="plate__monogram serif">{product.monogram}</span>
+        <span className="plate__monogram">{product.monogram}</span>
         <span className="plate__note label">Garment accessory</span>
       </div>
     );
@@ -269,7 +269,7 @@ export default function Products() {
 
           <MaskLines
             className="section-head__title"
-            lines={["Product", <em className="serif" key="p">portfolio.</em>]}
+            lines={["Product", "portfolio."]}
           />
 
           <Reveal as="p" className="section-head__lead">
@@ -442,7 +442,7 @@ export default function Products() {
                             }}
                           />
                         ) : (
-                          <em className="serif">{p.monogram}</em>
+                          <span className="index__mono">{p.monogram}</span>
                         )}
                       </span>
 

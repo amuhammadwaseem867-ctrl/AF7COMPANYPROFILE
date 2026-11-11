@@ -33,7 +33,7 @@ export default function WhyAF7() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Why choose", <em className="serif" key="s">AF7.</em>]}
+            lines={["Why choose", "AF7."]}
           />
         </div>
 

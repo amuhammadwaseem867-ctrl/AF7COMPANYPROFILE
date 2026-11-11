@@ -77,9 +77,6 @@
   line-height: 0.95;
 }
 
-.about__motto em {
-  color: var(--navy);
-}
 
 .about__philosophy-text {
   max-width: 46ch;

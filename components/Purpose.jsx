@@ -54,7 +54,7 @@ export default function Purpose() {
               lines={[
                 "Precision is more",
                 <>
-                  than a <em className="serif">promise.</em>
+                  than a promise.
                 </>,
               ]}
             />

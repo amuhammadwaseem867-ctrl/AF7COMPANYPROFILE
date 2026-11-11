@@ -17,7 +17,7 @@ export default function Packaging() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Packed with care,", <em className="serif" key="d">ready for dispatch.</em>]}
+            lines={["Packed with care,", "ready for dispatch."]}
           />
           <Reveal as="p" className="section-head__lead">
             {PACKAGING.body[0]}

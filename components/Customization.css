@@ -4,11 +4,6 @@
   color: var(--on-dark);
 }
 
-.custom .section-head__title em,
-.custom__closing em {
-  color: #e8dcc6;
-}
-
 .custom__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

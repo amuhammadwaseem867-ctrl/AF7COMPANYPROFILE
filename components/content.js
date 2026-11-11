@@ -283,19 +283,19 @@ export const TECHNOLOGY = {
   ],
 };
 
-// Gradients approximate each finish as a metal sample, for orientation only.
+// Muted gradients approximate each finish as a natural metal sample, for orientation only.
 // Order follows the Brand Profile document.
 export const FINISHES = [
-  { name: "Antique Silver", tone: "Aged · Cool", g: ["#5f6267", "#c4c7cb", "#8a8d92", "#4c4f54"] },
-  { name: "Antique Brass", tone: "Aged · Warm", g: ["#4b3a1e", "#a8874c", "#7a6234", "#3a2c15"] },
-  { name: "Golden Brass", tone: "Bright · Warm", g: ["#8a6a25", "#ecd18b", "#b8913f", "#76561a"] },
-  { name: "Shiny Silver", tone: "Bright · Cool", g: ["#9aa1a8", "#ffffff", "#cfd4d9", "#8b9299"] },
-  { name: "Antique Copper", tone: "Aged · Red", g: ["#3f2216", "#b06d43", "#7a4329", "#331a10"] },
-  { name: "Dull / Matt Silver", tone: "Matt · Neutral", g: ["#8f9398", "#bfc2c6", "#a6a9ad", "#878b90"] },
-  { name: "Shiny Black", tone: "Gloss · Deep", g: ["#050506", "#55585d", "#141518", "#020203"] },
-  { name: "Shiny Nickel", tone: "Gloss · Neutral", g: ["#868b90", "#f4f5f6", "#b9bdc1", "#7a7f84"] },
-  { name: "Shiny Gold", tone: "Gloss · Warm", g: ["#9c7314", "#fde6a0", "#cf9f33", "#8a6410"] },
-  { name: "Gun Metal", tone: "Dark · Cool", g: ["#1e2124", "#6a7077", "#3b3f44", "#17191c"] },
+  { name: "Antique Silver", tone: "Aged · Cool", g: ["#6b6c6a", "#9c9c97", "#82827d", "#5d5e5b"] },
+  { name: "Antique Brass", tone: "Aged · Warm", g: ["#5b4b2f", "#8b7449", "#715e3a", "#4e4029"] },
+  { name: "Golden Brass", tone: "Bright · Warm", g: ["#8c7243", "#bea068", "#a3885a", "#7a6239"] },
+  { name: "Shiny Silver", tone: "Bright · Cool", g: ["#a3a6a8", "#d6d8d8", "#bfc1c2", "#96999b"] },
+  { name: "Antique Copper", tone: "Aged · Red", g: ["#5b3726", "#8a5a3d", "#714a32", "#4d2f21"] },
+  { name: "Dull / Matt Silver", tone: "Matt · Neutral", g: ["#95979a", "#adafb1", "#a1a3a5", "#8d8f92"] },
+  { name: "Shiny Black", tone: "Gloss · Deep", g: ["#18191b", "#3b3d40", "#26282a", "#121315"] },
+  { name: "Shiny Nickel", tone: "Gloss · Neutral", g: ["#9c9e9a", "#cbccc6", "#b3b4af", "#8e908c"] },
+  { name: "Shiny Gold", tone: "Gloss · Warm", g: ["#9a7c42", "#cfb47c", "#b4975c", "#876b37"] },
+  { name: "Gun Metal", tone: "Dark · Cool", g: ["#36393c", "#5d6165", "#474a4e", "#2e3134"] },
 ];
 
 export const FINISHES_COPY = {

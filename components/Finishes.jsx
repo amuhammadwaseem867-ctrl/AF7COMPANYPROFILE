@@ -6,7 +6,7 @@ import { FINISHES, FINISHES_COPY } from "./content";
 import { EASE, MaskLines, Reveal } from "./motion";
 import "./Finishes.css";
 
-const metal = (g, angle = 135) => `linear-gradient(${angle}deg, ${g[0]} 0%, ${g[1]} 38%, ${g[2]} 62%, ${g[3]} 100%)`;
+const metal = (g, angle = 160) => `linear-gradient(${angle}deg, ${g[0]} 0%, ${g[1]} 42%, ${g[2]} 72%, ${g[3]} 100%)`;
 
 export default function Finishes() {
   const [active, setActive] = useState(0);
@@ -22,7 +22,7 @@ export default function Finishes() {
           </div>
           <MaskLines
             className="section-head__title"
-            lines={["Product finishes &", <em className="serif" key="c">specifications.</em>]}
+            lines={["Product finishes &", "specifications."]}
           />
           <Reveal as="p" className="section-head__lead">
             {FINISHES_COPY.intro}

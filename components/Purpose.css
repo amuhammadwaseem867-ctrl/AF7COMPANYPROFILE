@@ -99,9 +99,6 @@
   font-size: var(--fs-h2);
 }
 
-.purpose__lead em {
-  color: var(--navy);
-}
 
 .purpose__statement {
   font-size: clamp(1.4rem, 2.5vw, 2.4rem);
