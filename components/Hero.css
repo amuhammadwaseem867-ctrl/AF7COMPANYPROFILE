@@ -19,7 +19,7 @@
 
 .hero__media img {
   object-fit: cover;
-  object-position: 40% 50%;
+  object-position: 50% 40%;
   filter: grayscale(0.55) contrast(1.05) brightness(0.9);
 }
 
