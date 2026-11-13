@@ -112,9 +112,12 @@
 
 .plate__code {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 14px;
+  left: 14px;
   z-index: 2;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
   color: var(--muted);
 }
 
@@ -124,6 +127,9 @@
   top: 12px;
   right: 14px;
   z-index: 2;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
   font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: -0.03em;
@@ -134,17 +140,16 @@
 
 .plate__img {
   position: absolute;
-  inset: 14% 12% 10%;
+  inset: 0;
   transition: transform 1.1s var(--ease), opacity 0.7s var(--ease);
 }
 
+/* Product photos fill the plate edge to edge */
 .plate__img img {
   width: 100%;
   height: 100%;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center !important;
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 18px 18px rgba(14, 21, 32, 0.12));
 }
 
 .plate__img--alt {
@@ -206,13 +211,13 @@
 }
 
 .plate--large .plate__img {
-  inset: 10% 14% 8%;
+  inset: 0;
 }
 
 .plate--large .plate__img img {
   width: 100%;
   height: 100%;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center !important;
 }
 
@@ -492,10 +497,8 @@
 }
 
 .drawer__thumbs img {
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center !important;
-  padding: 6px;
-  mix-blend-mode: multiply;
 }
 
 .drawer__body {

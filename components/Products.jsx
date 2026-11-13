@@ -42,7 +42,7 @@ function Plate({ product, large = false, image }) {
               : "(max-width: 600px) 50vw, 25vw"
           }
           style={{
-            objectFit: "contain",
+            objectFit: "cover",
             objectPosition: "center",
           }}
         />
@@ -56,7 +56,7 @@ function Plate({ product, large = false, image }) {
             fill
             sizes="(max-width: 600px) 50vw, 25vw"
             style={{
-              objectFit: "contain",
+              objectFit: "cover",
               objectPosition: "center",
             }}
           />
@@ -156,7 +156,7 @@ function ProductDrawer({ product, onClose }) {
                     fill
                     sizes="80px"
                     style={{
-                      objectFit: "contain",
+                      objectFit: "cover",
                       objectPosition: "center",
                     }}
                   />
@@ -206,7 +206,7 @@ function ProductDrawer({ product, onClose }) {
                   <li key={f.name} title={f.name}>
                     <i
                       style={{
-                        background: `linear-gradient(135deg, ${f.g.join(", ")})`,
+                        background: f.swatch,
                       }}
                     />
                     {f.name}
@@ -437,7 +437,7 @@ export default function Products() {
                             fill
                             sizes="56px"
                             style={{
-                              objectFit: "contain",
+                              objectFit: "cover",
                               objectPosition: "center",
                             }}
                           />
