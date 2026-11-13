@@ -21,6 +21,7 @@ export const COMPANY = {
 export const NAV = [
   { id: "about", label: "About" },
   { id: "products", label: "Products" },
+  { id: "pullers", label: "Pullers" },
   { id: "manufacturing", label: "Manufacturing" },
   { id: "finishes", label: "Finishes" },
   { id: "quality", label: "Quality" },
@@ -57,6 +58,24 @@ export const PRODUCT_FILTERS = [
   { id: "accessories", label: "Accessories" },
 ];
 
+const TAPE_SET = [
+  ["black", "Black", "#1c1c1e"],
+  ["navy", "Navy", "#1f2b47"],
+  ["burgundy", "Burgundy", "#6b1d2c"],
+  ["red", "Red", "#b0262f"],
+  ["forest-green", "Forest Green", "#2e4a38"],
+  ["olive", "Olive", "#4d5130"],
+  ["brown", "Brown", "#4a3427"],
+  ["grey", "Grey", "#85888c"],
+];
+
+const tapesFor = (folder) =>
+  TAPE_SET.map(([slug, name, color]) => ({
+    name,
+    color,
+    image: `${P}/tapes/${folder}/${slug}.webp`,
+  }));
+
 export const PRODUCTS = [
   {
     id: "metal-5",
@@ -66,6 +85,7 @@ export const PRODUCTS = [
     family: "metal",
     familyLabel: "Metal",
     text: "For garment and accessory applications where metal teeth contribute to the product’s appearance and fastening function. Attention is given to tooth formation, chain construction, finishing, and the intended application.",
+    tapes: tapesFor("metal5-black-golden-brass-separating"),
     images: [
       `${P}/photos2/metal5-cream-antique-brass.webp`,
       `${P}/photos2/metal5-black-golden-brass-separating.webp`,
@@ -84,6 +104,7 @@ export const PRODUCTS = [
     family: "metal",
     familyLabel: "Metal",
     text: "A compact metal zipper for garment and accessory applications, with attention to tooth formation, chain construction, finishing, and the intended application.",
+    tapes: tapesFor("metal45-black-antique-brass"),
     images: [
       `${P}/photos2/metal45-black-golden-brass.webp`,
       `${P}/photos2/metal45-black-antique-copper.webp`,
@@ -99,6 +120,7 @@ export const PRODUCTS = [
     family: "aluminium",
     familyLabel: "Aluminium",
     text: "An aluminium-based fastening option for designs requiring a distinctive metallic look and functional performance. Construction and finishing are considered according to the customer’s product requirements.",
+    tapes: tapesFor("alu5-black-silver-separating-2"),
     images: [
       `${P}/photos2/alu5-black-silver-separating-2.webp`,
       `${P}/photos2/alu5-navy-silver-separating.webp`,
@@ -115,6 +137,7 @@ export const PRODUCTS = [
     family: "aluminium",
     familyLabel: "Aluminium",
     text: "A compact aluminium-based fastening option for designs requiring a distinctive metallic look and functional performance, with construction and finishing suited to the product requirements.",
+    tapes: tapesFor("alu45-black-light-gold"),
     images: [
       `${P}/photos2/alu45-black-light-gold.webp`,
       `${P}/photos2/alu45-white-silver.webp`,
@@ -128,6 +151,12 @@ export const PRODUCTS = [
     family: "synthetic",
     familyLabel: "Two-Way",
     text: "Versatile two-way zipper solutions for garments and applications requiring opening from both ends.",
+    tapes: [
+      { name: "Black", color: "#1c1c1e", image: `${P}/2wayzippers2/black.webp` },
+      { name: "Navy", color: "#1f2b47", image: `${P}/2wayzippers2/navy.webp` },
+      { name: "Grey", color: "#7d7570", image: `${P}/2wayzippers2/grey.webp` },
+      { name: "White", color: "#f1efe9", image: `${P}/2wayzippers2/white.webp` },
+    ],
     images: [
       `${P}/2wayzippers2/black.webp`,
       `${P}/2wayzippers2/black2.webp`,
@@ -147,6 +176,7 @@ export const PRODUCTS = [
     family: "synthetic",
     familyLabel: "Nylon",
     text: "A flexible and versatile fastening option for a wide variety of garments and accessories. Product selection can be discussed according to the intended application, zipper size, tape requirements, colour, and functional needs.",
+    tapes: tapesFor("nylon-black-silver-slider"),
     images: [
       `${P}/photos2/nylon-black-silver-slider.webp`,
       `${P}/photos2/nylon-black-invisible.webp`,
@@ -160,11 +190,17 @@ export const PRODUCTS = [
     family: "synthetic",
     familyLabel: "Vislon",
     text: "Vislon-style zippers feature moulded plastic teeth and are used across a range of apparel and accessory applications. AF7 can discuss suitable options based on the desired appearance, construction, size, and end use.",
-    images: [
-      `${P}/vislonzipper2/3.webp`,
-      `${P}/vislonzipper2/2.webp`,
-      `${P}/vislonzipper2/4.webp`,
+    tapes: [
+      { name: "Blue", color: "#1f4fb8", image: `${P}/vislon-colours/blue.webp` },
+      { name: "Red", color: "#d0202a", image: `${P}/vislon-colours/red.webp` },
+      { name: "Orange", color: "#f07a1a", image: `${P}/vislon-colours/orange.webp` },
+      { name: "Yellow", color: "#f2cf2e", image: `${P}/vislon-colours/yellow.webp` },
+      { name: "Green", color: "#3f9a45", image: `${P}/vislon-colours/green.webp` },
+      { name: "Purple", color: "#5b2a8c", image: `${P}/vislon-colours/purple.webp` },
+      { name: "Pink", color: "#e8579b", image: `${P}/vislon-colours/pink.webp` },
+      { name: "Black", color: "#1c1c1e", image: `${P}/vislon-colours/black.webp` },
     ],
+    images: [`${P}/vislon-colours/blue.webp`],
   },
   {
     id: "tag-strings",
@@ -408,3 +444,22 @@ export const CONTACT = {
   intro:
     "For product enquiries, samples, specifications, customization, or manufacturing requirements, contact the AF7 team.",
 };
+
+export const PULLERS_INTRO =
+  "Pullers for #4.5 and #5 zippers, produced in a range of shapes and metal finishes. Shape, size and finish can be matched to the zipper and the garment.";
+
+const PULLER_LIST = [
+  [195, "Matt nickel"], [197, "Black"], [199, "Gunmetal"], [201, "Nickel"],
+  [203, "Gold"], [205, "Nickel"], [207, "Antique brass"], [209, "Black nickel"],
+  [211, "Gunmetal"], [213, "Nickel"], [215, "Nickel"], [217, "Nickel"],
+  [221, "Black nickel"], [223, "Nickel"], [225, "Antique brass"], [227, "Gunmetal"],
+  [229, "Gunmetal"], [231, "Gold"], [233, "Gunmetal"], [235, "Antique brass"],
+  [237, "Gold"], [239, "Nickel"], [241, "Matt nickel"], [243, "Nickel"],
+  [245, "Nickel"], [247, "Golden brass"], [249, "Gunmetal"], [251, "Antique copper"],
+];
+
+export const PULLERS = PULLER_LIST.map(([n, finish], i) => ({
+  code: `P·${String(i + 1).padStart(2, "0")}`,
+  finish,
+  image: `${P}/pullers/p${n}.webp`,
+}));
