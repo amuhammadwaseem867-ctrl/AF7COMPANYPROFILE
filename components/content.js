@@ -67,6 +67,10 @@ export const PRODUCTS = [
     familyLabel: "Metal",
     text: "For garment and accessory applications where metal teeth contribute to the product’s appearance and fastening function. Attention is given to tooth formation, chain construction, finishing, and the intended application.",
     images: [
+      `${P}/edited/metal-cream-antique-brass.webp`,
+      `${P}/edited/metal-black-antique-brass-separating.webp`,
+      `${P}/edited/metal-olive-nickel-separating.webp`,
+      `${P}/edited/metal-black-antique-silver-separating.webp`,
       `${P}/brasszippers5/1.webp`,
       `${P}/brasszippers5/2.webp`,
       `${P}/brasszippers5/3.webp`,
@@ -78,9 +82,6 @@ export const PRODUCTS = [
       `${P}/brasszippers5/9.webp`,
       `${P}/brasszippers5/10.webp`,
       `${P}/brasszippers5/alumunium.webp`,
-      `${P}/brasszippers5/IMG_2071.webp`,
-      `${P}/brasszippers5/IMG_2074.webp`,
-      `${P}/brasszippers5/IMG_2077.webp`,
     ],
   },
   {
@@ -92,6 +93,10 @@ export const PRODUCTS = [
     familyLabel: "Metal",
     text: "A compact metal zipper for garment and accessory applications, with attention to tooth formation, chain construction, finishing, and the intended application.",
     images: [
+      `${P}/edited/metal-black-golden-brass.webp`,
+      `${P}/edited/metal-black-antique-brass.webp`,
+      `${P}/edited/metal-black-antique-copper.webp`,
+      `${P}/edited/metal-black-antique-brass-2.webp`,
       `${P}/brasszippers4.5/1.webp`,
       `${P}/brasszippers4.5/2.webp`,
       `${P}/brasszippers4.5/3.webp`,
@@ -107,6 +112,8 @@ export const PRODUCTS = [
     familyLabel: "Aluminium",
     text: "An aluminium-based fastening option for designs requiring a distinctive metallic look and functional performance. Construction and finishing are considered according to the customer’s product requirements.",
     images: [
+      `${P}/edited/alu-black-silver-separating.webp`,
+      `${P}/edited/alu-navy-silver-separating.webp`,
       `${P}/alumuniumzipper5/1.webp`,
       `${P}/alumuniumzipper5/2.webp`,
       `${P}/alumuniumzipper5/3.webp`,
@@ -122,6 +129,9 @@ export const PRODUCTS = [
     familyLabel: "Aluminium",
     text: "A compact aluminium-based fastening option for designs requiring a distinctive metallic look and functional performance, with construction and finishing suited to the product requirements.",
     images: [
+      `${P}/edited/alu-black-gunmetal.webp`,
+      `${P}/edited/alu-white-silver.webp`,
+      `${P}/edited/alu-black-light-gold.webp`,
       `${P}/alumuniumzippers4.5/1.webp`,
       `${P}/alumuniumzippers4.5/2.webp`,
       `${P}/alumuniumzippers4.5/3.webp`,
@@ -157,6 +167,8 @@ export const PRODUCTS = [
     familyLabel: "Nylon",
     text: "A flexible and versatile fastening option for a wide variety of garments and accessories. Product selection can be discussed according to the intended application, zipper size, tape requirements, colour, and functional needs.",
     images: [
+      `${P}/edited/nylon-black-invisible.webp`,
+      `${P}/edited/nylon-black-silver-slider.webp`,
       `${P}/nylonzippers/1.webp`,
       `${P}/nylonzippers/2.webp`,
       `${P}/nylonzippers/3.webp`,
@@ -190,6 +202,7 @@ export const PRODUCTS = [
     text: "A practical attachment solution for hangtags, labels, and retail identification on garments and accessories. Specifications and presentation can be discussed according to the customer’s product and branding requirements.",
     images: [
       `${P}/tagstring/1.webp`,
+      `${P}/edited/tagstring-white.webp`,
       `${P}/tagstring/2.webp`,
     ],
     monogram: "Ts",
