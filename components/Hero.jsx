@@ -41,7 +41,7 @@ export default function Hero() {
           transition={{ duration: 2.6, ease: EASE }}
         >
           <Image
-            src="/manufacturing/assembly-machine.webp"
+            src="/factory/assembly-line.webp"
             alt="Zipper teeth making machine on the AF7 production floor"
             fill
             preload
