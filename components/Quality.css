@@ -123,3 +123,35 @@
     margin-bottom: 40px;
   }
 }
+
+.quality__tag {
+  margin-left: 6px;
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+/* The Atelier Line: the 8 in-house stages, in order. */
+.quality__line-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.quality__line-flow ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+
+.quality__line-flow li:not(:last-child)::after {
+  content: "→";
+  margin: 0 10px;
+  color: var(--brass);
+}
