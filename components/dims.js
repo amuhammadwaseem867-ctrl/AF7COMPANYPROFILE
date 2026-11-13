@@ -1,5 +1,57 @@
 // Intrinsic sizes of photos, so frames match each image and nothing is cropped.
 export const DIMS = {
+  "/factory/assembly-line.webp": [
+    2000,
+    1550
+  ],
+  "/factory/assembly-machines.webp": [
+    1080,
+    1080
+  ],
+  "/factory/assembly-row.webp": [
+    1080,
+    1080
+  ],
+  "/factory/brass-sliders.webp": [
+    1548,
+    2000
+  ],
+  "/factory/chain-assembly.webp": [
+    1333,
+    2000
+  ],
+  "/factory/chain-guide.webp": [
+    1080,
+    1080
+  ],
+  "/factory/chain-machine.webp": [
+    1080,
+    1350
+  ],
+  "/factory/forming-machine.webp": [
+    1080,
+    1080
+  ],
+  "/factory/production-line.webp": [
+    1080,
+    1195
+  ],
+  "/factory/production-machinery.webp": [
+    1080,
+    1080
+  ],
+  "/factory/tape-looms.webp": [
+    1080,
+    1080
+  ],
+  "/factory/tape-weaving.webp": [
+    1333,
+    2000
+  ],
+  "/manufacturing/lacquering.webp": [
+    1920,
+    1280
+  ],
   "/manufacturing/11.webp": [
     1080,
     1080

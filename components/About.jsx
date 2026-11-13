@@ -26,10 +26,10 @@ export default function About() {
             <Parallax
               className="about__image"
               distance={30}
-              style={{ aspectRatio: ratio("/manufacturing/factory.webp") }}
+              style={{ aspectRatio: ratio("/factory/assembly-row.webp") }}
             >
               <Image
-                src="/manufacturing/factory.webp"
+                src="/factory/assembly-row.webp"
                 alt="Zipper production machinery inside the AF7 facility, Lahore"
                 fill
                 sizes="(max-width: 900px) 100vw, 40vw"
