@@ -35,6 +35,7 @@ export const ABOUT = {
   body: [
     "Supported by state-of-the-art automated zipper assembly lines and integrated in-house production capabilities, AF7 manages key stages of zipper manufacturing, from tape production and teeth formation to finishing, assembly, inspection, and preparation of finished products for delivery.",
     "Our approach combines manufacturing discipline, attention to detail, and a practical understanding of the requirements of garment manufacturers, fashion brands, and accessory businesses. We aim to provide dependable fastening solutions with product specifications and finishes suited to each application.",
+    "Built around a focused zipper manufacturing operation in Lahore, AF7 brings together production expertise, modern equipment, and a commitment to consistent workmanship. Our factory is equipped with state-of-the-art automated zipper assembly lines and supports a range of in-house processes that help us maintain direct oversight of product construction and finishing.",
     "From metal and aluminium zipper production to nylon and Vislon zipper offerings, our product range is designed to address varied garment and accessory applications. We also manufacture and supply selected complementary items such as tag strings and tipping, helping customers source relevant fastening and finishing components through one manufacturing partner.",
     "We understand that a zipper contributes to the function, appearance, and overall quality of a finished product. That is why we focus on the details that matter: suitable construction, consistent finishing, smooth operation, specification alignment, and careful order preparation.",
   ],
@@ -283,39 +284,56 @@ export const TECHNOLOGY = {
   ],
 };
 
-// Muted gradients approximate each finish as a natural metal sample, for orientation only.
+// Same ten finishes, swatches and slugs as the AF7 website (af7 repo, data/company.js).
+// Each slug has a matching metal layer in /public/finishes/zipper-v3/metal-<slug>.webp.
 // Order follows the Brand Profile document.
 export const FINISHES = [
-  { name: "Antique Silver", tone: "Aged · Cool", g: ["#6b6c6a", "#9c9c97", "#82827d", "#5d5e5b"] },
-  { name: "Antique Brass", tone: "Aged · Warm", g: ["#5b4b2f", "#8b7449", "#715e3a", "#4e4029"] },
-  { name: "Golden Brass", tone: "Bright · Warm", g: ["#8c7243", "#bea068", "#a3885a", "#7a6239"] },
-  { name: "Shiny Silver", tone: "Bright · Cool", g: ["#a3a6a8", "#d6d8d8", "#bfc1c2", "#96999b"] },
-  { name: "Antique Copper", tone: "Aged · Red", g: ["#5b3726", "#8a5a3d", "#714a32", "#4d2f21"] },
-  { name: "Dull / Matt Silver", tone: "Matt · Neutral", g: ["#95979a", "#adafb1", "#a1a3a5", "#8d8f92"] },
-  { name: "Shiny Black", tone: "Gloss · Deep", g: ["#18191b", "#3b3d40", "#26282a", "#121315"] },
-  { name: "Shiny Nickel", tone: "Gloss · Neutral", g: ["#9c9e9a", "#cbccc6", "#b3b4af", "#8e908c"] },
-  { name: "Shiny Gold", tone: "Gloss · Warm", g: ["#9a7c42", "#cfb47c", "#b4975c", "#876b37"] },
-  { name: "Gun Metal", tone: "Dark · Cool", g: ["#36393c", "#5d6165", "#474a4e", "#2e3134"] },
+  { name: "Antique Silver", swatch: "linear-gradient(135deg, #8d9094, #c9cbcd 45%, #6e7175)", slug: "antique-silver" },
+  { name: "Antique Brass", swatch: "linear-gradient(135deg, #6f5a35, #b39663 45%, #5a4727)", slug: "antique-brass" },
+  { name: "Golden Brass", swatch: "linear-gradient(135deg, #b8913f, #f1d58b 45%, #a17a2c)", slug: "golden-brass" },
+  { name: "Shiny Silver", swatch: "linear-gradient(135deg, #c7cbd0, #ffffff 45%, #a9aeb4)", slug: "shiny-silver" },
+  { name: "Antique Copper", swatch: "linear-gradient(135deg, #6b3f26, #b57650 45%, #573020)", slug: "antique-copper" },
+  { name: "Dull / Matt Silver", swatch: "linear-gradient(135deg, #a3a6a9, #bfc1c3 50%, #9a9da0)", slug: "matt-silver" },
+  { name: "Shiny Black", swatch: "linear-gradient(135deg, #0d0e10, #4a4d52 45%, #050506)", slug: "shiny-black" },
+  { name: "Shiny Nickel", swatch: "linear-gradient(135deg, #a9adb1, #eef0f2 45%, #8e9296)", slug: "shiny-nickel" },
+  { name: "Shiny Gold", swatch: "linear-gradient(135deg, #c99a2e, #ffe28a 45%, #b0811d)", slug: "shiny-gold" },
+  { name: "Gun Metal", swatch: "linear-gradient(135deg, #2f3236, #6a6e74 45%, #232528)", slug: "gun-metal" },
+];
+
+// Tape colours in the finish preview; each has /public/finishes/zipper-v3/tape-<slug>.webp.
+export const TAPES = [
+  { name: "Black", color: "#1c1c1e", slug: "black" },
+  { name: "Navy", color: "#1f2b47", slug: "navy" },
+  { name: "Burgundy", color: "#6b1d2c", slug: "burgundy" },
+  { name: "Red", color: "#b0262f", slug: "red" },
+  { name: "Forest Green", color: "#2e4a38", slug: "forest-green" },
+  { name: "Olive", color: "#4d5130", slug: "olive" },
+  { name: "Brown", color: "#4a3427", slug: "brown" },
+  { name: "Grey", color: "#85888c", slug: "grey" },
 ];
 
 export const FINISHES_COPY = {
   intro:
     "A quality finish defines both the zipper’s durability and the garment’s aesthetic. For applicable metal zipper constructions, AF7 delivers superior in-house finishing, including precision plating, protective lacquering, and specialized waxing. Exact finish availability is tailored to your material and project specifications.",
-  note:
+  note: "Metal zipper finishes are subject to confirmation for the selected product.",
+  enquiry:
     "Product enquiries may include zipper size, material, tape colour, finish, construction, quantity, and intended application. Specific options should be confirmed with AF7 before a product specification is finalized.",
 };
 
 export const QUALITY = {
-  heading: "Quality Is Built Into Every Stage",
-  intro:
-    "AF7 approaches quality as an ongoing responsibility throughout manufacturing. Inspection is focused on the characteristics relevant to each product and the specifications agreed with the customer.",
+  heading: "Quality Is Built Into Every Stage.",
+  intro: "Ongoing inspection across all 8 in-house manufacturing stages to match buyer specifications.",
   points: [
-    { title: "Construction and alignment", text: "Reviewing relevant zipper chain construction, teeth alignment, and assembly." },
-    { title: "Appearance and finishing", text: "Checking the applicable surface finish, colour, coating, and visible consistency." },
-    { title: "Operation", text: "Checking zipper movement and fastening function where applicable." },
-    { title: "Specification conformity", text: "Reviewing the product against agreed size, material, finish, and order details." },
-    { title: "Packing preparation", text: "Ensuring finished orders are organized and prepared for dispatch." },
+    { title: "The Architecture", tag: "Chain & Alignment", text: "Uniform pitch and seamless teeth interlocking." },
+    { title: "The Finish", tag: "Surface & Colorway", text: "Consistent and custom matched plating, lacquer, and tape shade." },
+    { title: "The Glide", tag: "Function & Motion", text: "Effortless waxed pull and secure auto-lock hardware engineered for daily wear." },
+    { title: "The Fit", tag: "Spec & Trim Audit", text: "Exact gauge, premium alloy, and strict adherence to your approved tech pack and samples." },
+    { title: "The Showcase", tag: "Dispatch & Packaging", text: "Custom labeled LLD polybags and crush-proof export boxes." },
   ],
+  line: {
+    label: "The Atelier Line",
+    steps: ["Tape Weaving", "Teeth Forming", "Plating", "Lacquering", "Waxing", "Assembly", "QC", "Packing"],
+  },
 };
 
 export const CUSTOMIZATION = {

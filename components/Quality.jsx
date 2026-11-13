@@ -78,7 +78,9 @@ export default function Quality() {
                     variants={{ hidden: { opacity: 0, x: -14 }, show: { opacity: 1, x: 0 } }}
                     transition={{ duration: 0.9, delay: 0.1 + i * 0.06, ease: EASE }}
                   >
-                    <strong>{point.title}</strong>
+                    <strong>
+                      {point.title} <em className="quality__tag">{point.tag}</em>
+                    </strong>
                     <span>{point.text}</span>
                   </motion.span>
                   <motion.svg
@@ -98,6 +100,15 @@ export default function Quality() {
                 </motion.li>
               ))}
             </ol>
+
+            <Reveal className="quality__line-flow">
+              <span className="label">{QUALITY.line.label}</span>
+              <ol>
+                {QUALITY.line.steps.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ol>
+            </Reveal>
           </div>
         </div>
 
