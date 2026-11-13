@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Products from "../components/Products";
+import Pullers from "../components/Pullers";
 import Manufacturing from "../components/Manufacturing";
 import Technology from "../components/Technology";
 import Finishes from "../components/Finishes";
@@ -26,6 +27,7 @@ export default function HomePage() {
         <Hero />
         <About />
         <Products />
+        <Pullers />
         <Manufacturing />
         <Technology />
         <Finishes />

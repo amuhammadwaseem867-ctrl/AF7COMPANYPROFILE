@@ -68,6 +68,10 @@ function Plate({ product, large = false, image }) {
 
 function ProductDrawer({ product, onClose }) {
   const [shot, setShot] = useState(0);
+  const [tape, setTape] = useState(product.id === "vislon" ? 0 : null);
+  const tapes = product.tapes ?? [];
+  const mainImage =
+    tape !== null && tapes[tape] ? tapes[tape].image : product.images[shot];
   const closeRef = useRef(null);
   const isMetal =
     product.family === "metal" || product.family === "aluminium";
@@ -126,7 +130,7 @@ function ProductDrawer({ product, onClose }) {
         <div className="drawer__gallery">
           <AnimatePresence mode="wait">
             <motion.div
-              key={shot}
+              key={tape !== null ? `tape-${tape}` : `shot-${shot}`}
               className="drawer__shot"
               initial={{ opacity: 0, scale: 1.03 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -136,7 +140,7 @@ function ProductDrawer({ product, onClose }) {
               <Plate
                 product={product}
                 large
-                image={product.images[shot]}
+                image={mainImage}
               />
             </motion.div>
           </AnimatePresence>
@@ -146,8 +150,11 @@ function ProductDrawer({ product, onClose }) {
               {product.images.map((src, i) => (
                 <button
                   key={src}
-                  className={i === shot ? "is-active" : ""}
-                  onClick={() => setShot(i)}
+                  className={tape === null && i === shot ? "is-active" : ""}
+                  onClick={() => {
+                    setTape(null);
+                    setShot(i);
+                  }}
                   aria-label={`View image ${i + 1}`}
                 >
                   <Image
@@ -172,6 +179,39 @@ function ProductDrawer({ product, onClose }) {
           <h3 className="drawer__title">{productTitle(product)}</h3>
 
           <p className="drawer__text">{product.text}</p>
+
+          {tapes.length > 0 && (
+            <div className="drawer__tapes">
+              <span className="label">
+                Tape colour
+                {tape !== null && (
+                  <em className="drawer__tape-name">{tapes[tape].name}</em>
+                )}
+              </span>
+
+              <div className="drawer__tape-list" role="radiogroup" aria-label="Tape colour">
+                {tapes.map((t, i) => (
+                  <button
+                    key={t.name}
+                    type="button"
+                    role="radio"
+                    aria-checked={tape === i}
+                    aria-label={t.name}
+                    title={t.name}
+                    className={tape === i ? "is-active" : ""}
+                    style={{ background: t.color }}
+                    onClick={() => setTape(i)}
+                  />
+                ))}
+              </div>
+
+              <p className="drawer__note">
+                {product.id === "vislon"
+                  ? "Shown in the colours photographed. Other tape and teeth colours on request."
+                  : "The finish stays the same while the tape colour changes. Colours are a guide; exact shades are matched on request."}
+              </p>
+            </div>
+          )}
 
           <dl className="drawer__specs">
             <div>
