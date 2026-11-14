@@ -73,7 +73,7 @@ const tapesFor = (folder) =>
   TAPE_SET.map(([slug, name, color]) => ({
     name,
     color,
-    image: `${P}/tapes/${folder}/${slug}.webp`,
+    image: `${P}/tapes2/${folder}/${slug}.webp`,
   }));
 
 export const PRODUCTS = [
@@ -191,16 +191,16 @@ export const PRODUCTS = [
     familyLabel: "Vislon",
     text: "Vislon-style zippers feature moulded plastic teeth and are used across a range of apparel and accessory applications. AF7 can discuss suitable options based on the desired appearance, construction, size, and end use.",
     tapes: [
-      { name: "Blue", color: "#1f4fb8", image: `${P}/vislon-colours/blue.webp` },
-      { name: "Red", color: "#d0202a", image: `${P}/vislon-colours/red.webp` },
-      { name: "Orange", color: "#f07a1a", image: `${P}/vislon-colours/orange.webp` },
-      { name: "Yellow", color: "#f2cf2e", image: `${P}/vislon-colours/yellow.webp` },
-      { name: "Green", color: "#3f9a45", image: `${P}/vislon-colours/green.webp` },
-      { name: "Purple", color: "#5b2a8c", image: `${P}/vislon-colours/purple.webp` },
-      { name: "Pink", color: "#e8579b", image: `${P}/vislon-colours/pink.webp` },
-      { name: "Black", color: "#1c1c1e", image: `${P}/vislon-colours/black.webp` },
+      { name: "Blue", color: "#1f4fb8", image: `${P}/vislon-colours2/blue.webp` },
+      { name: "Red", color: "#d0202a", image: `${P}/vislon-colours2/red.webp` },
+      { name: "Orange", color: "#f07a1a", image: `${P}/vislon-colours2/orange.webp` },
+      { name: "Yellow", color: "#f2cf2e", image: `${P}/vislon-colours2/yellow.webp` },
+      { name: "Green", color: "#3f9a45", image: `${P}/vislon-colours2/green.webp` },
+      { name: "Purple", color: "#5b2a8c", image: `${P}/vislon-colours2/purple.webp` },
+      { name: "Pink", color: "#e8579b", image: `${P}/vislon-colours2/pink.webp` },
+      { name: "Black", color: "#1c1c1e", image: `${P}/vislon-colours2/black.webp` },
     ],
-    images: [`${P}/vislon-colours/blue.webp`],
+    images: [`${P}/vislon-colours2/blue.webp`],
   },
   {
     id: "tag-strings",
